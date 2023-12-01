@@ -6,7 +6,6 @@ public class JumpscareController : MonoBehaviour
 {
     public GameObject jumpscareImage;
     public float jumpscareDuration = 3f;
-    public int = 0;
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
