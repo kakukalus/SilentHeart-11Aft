@@ -14,15 +14,34 @@ public class MainCharacterController : MonoBehaviour
     public bool isFlip;
     private Animator baseCharacterAnimator;
     private MainCharacterAnimation mainCharacterAnimation;
+    private MainCharacterHealth mainCharacterHealth;
+    private MainCharacterSanity mainCharacterSanity;
+
+    
 
     private void Start()
     {
+        mainCharacterHealth = GetComponent<MainCharacterHealth>();
+        mainCharacterSanity = GetComponent<MainCharacterSanity>();
+
         baseCharacterAnimator = GetComponentInChildren<Animator>();
         mainCharacterAnimation = GetComponentInChildren<MainCharacterAnimation>();
         speedSlider.onValueChanged.AddListener(HandleSliderValueChanged);
         isFlip = false;
 
     }
+
+    void TakeDamage(float damage)
+    {
+        mainCharacterHealth.TakeDamage(damage);
+    }
+
+    void LoseSanity(float sanityLoss)
+    {
+        mainCharacterSanity.LoseSanity(sanityLoss);
+    }
+
+
     private void Update()
     {
 

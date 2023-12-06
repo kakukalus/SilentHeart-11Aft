@@ -1,56 +1,68 @@
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections;
 
 public class MainCharacterSanity : MonoBehaviour
 {
     public float maxSanity = 100;
     private Animator baseCharacterAnimator;
     public Image MainCharacterHpBar; // Referensi ke UI Image untuk Sanity bar
-    private float currentSanity = 100f;  // Nilai hp saat ini
+    private float currentSanity;  // Nilai sanity saat ini
+    public float sanityRegenAmount = 2f; // Jumlah sanity yang diregenerasi per detik
+    public float regenSanityDelay = 3f; // Waktu tunda sebelum memulai regenerasi sanity
+    private float lastDamageTime; // Waktu saat terakhir kali menerima damage
+
     private void Start()
     {
         baseCharacterAnimator = GetComponentInChildren<Animator>();
         currentSanity = maxSanity;
         baseCharacterAnimator.SetBool("isAlive", true);
-    }
-
-    public void TakeDamage(int damageAmount)
-    {
-        currentSanity -= damageAmount;
-
-        if (currentSanity <= 0)
-        {
-            Die();
-        }
+        StartCoroutine(RegenerateSanity());
     }
 
     private void Die()
     {
-        // Logika kematian karakter, seperti memunculkan layar kekalahan atau mereset level
+        // Logika kematian karakter
         Debug.Log("MainCharacter has died!");
     }
 
-    // Mengatur fillAmount berdasarkan nilai hp dalam rentang 0-100
-    public void SetMainCharacterBar(float hp)
+    public void SetMainCharacterBar(float sanity)
     {
-        // Memastikan nilai hp berada dalam rentang yang valid (0-100)
-        hp = Mathf.Clamp(hp, 0f, 100f);
-        // Menetapkan fillAmount pada Sanity bar berdasarkan nilai hp yang valid
-        MainCharacterHpBar.fillAmount = hp / 100f;
+        sanity = Mathf.Clamp(sanity, 0f, maxSanity);
+        MainCharacterHpBar.fillAmount = sanity / maxSanity;
     }
 
-    // Metode untuk mengurangkan Hp pemain
-    public void TakeDamage(float damage)
+    public void LoseSanity(float damage)
     {
-        // Mengurangkan nilai hp pemain berdasarkan jumlah kerusakan
         currentSanity -= damage;
-        // Memastikan nilai hp tidak kurang dari 0
         currentSanity = Mathf.Max(0f, currentSanity);
-        // Memperbarui Sanity bar setelah menerima kerusakan
         SetMainCharacterBar(currentSanity);
+        lastDamageTime = Time.time; // Memperbarui waktu terakhir menerima damage
     }
 
-    // Metode untuk mendapatkan nilai hp saat ini
+    private IEnumerator RegenerateSanity()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(1f); // Tunggu 1 detik
+            if (Time.time >= lastDamageTime + regenSanityDelay)
+            {
+                // Regenerasi sanity jika waktu terakhir damage + delay <= waktu sekarang
+                GainSanity(sanityRegenAmount);
+            }
+        }
+    }
+
+    public void GainSanity(float amount)
+    {
+        if (currentSanity < maxSanity)
+        {
+            currentSanity += amount;
+            currentSanity = Mathf.Min(currentSanity, maxSanity); // Pastikan sanity tidak melebihi maxSanity
+            SetMainCharacterBar(currentSanity);
+        }
+    }
+
     public float GetCurrentSanity()
     {
         return currentSanity;

@@ -14,20 +14,26 @@ public class MainCharacterHealth : MonoBehaviour
         baseCharacterAnimator.SetBool("isAlive", true);
     }
 
-    public void TakeDamage(int damageAmount)
+    public void RespawnAtLastCheckpoint()
     {
-        currentHealth -= damageAmount;
-
-        if (currentHealth <= 0)
+        if (Checkpoint.LastCheckpointPosition != null)
         {
-            Die();
+            transform.position = Checkpoint.LastCheckpointPosition;
+            currentHealth = Checkpoint.LastCheckpointHealth; // Set HP ke nilai saat checkpoint terakhir
+            SetMainCharacterBar(currentHealth);
+            // Anda bisa menambahkan animasi atau efek khusus saat respawn
         }
     }
 
     private void Die()
     {
-        // Logika kematian karakter, seperti memunculkan layar kekalahan atau mereset level
         Debug.Log("MainCharacter has died!");
+
+        // Temukan RespawnManager dan tampilkan panel respawn
+        FindObjectOfType<RespawnManager>().ShowRespawnPanel();
+
+        // Optional: Pause the game if needed
+        Time.timeScale = 0f;
     }
 
     // Mengatur fillAmount berdasarkan nilai hp dalam rentang 0-100
@@ -39,15 +45,17 @@ public class MainCharacterHealth : MonoBehaviour
         MainCharacterHpBar.fillAmount = hp / 100f;
     }
 
-    // Metode untuk mengurangkan Hp pemain
+    // Metode TakeDamage diupdate untuk memanggil Die() jika HP habis
     public void TakeDamage(float damage)
     {
-        // Mengurangkan nilai hp pemain berdasarkan jumlah kerusakan
         currentHealth -= damage;
-        // Memastikan nilai hp tidak kurang dari 0
         currentHealth = Mathf.Max(0f, currentHealth);
-        // Memperbarui health bar setelah menerima kerusakan
         SetMainCharacterBar(currentHealth);
+
+        if (currentHealth <= 0)
+        {
+            Die(); // Pemanggilan metode Die ketika HP habis
+        }
     }
 
     // Metode untuk mendapatkan nilai hp saat ini
@@ -55,4 +63,12 @@ public class MainCharacterHealth : MonoBehaviour
     {
         return currentHealth;
     }
+
+        public void Heal(float healAmount)
+    {
+        currentHealth += healAmount;
+        currentHealth = Mathf.Min(currentHealth, maxHealth); // Ensure HP does not exceed maxHealth
+        SetMainCharacterBar(currentHealth); // Update the UI
+    }
+
 }
