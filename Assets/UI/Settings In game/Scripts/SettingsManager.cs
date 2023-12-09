@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class SettingsManager : MonoBehaviour
 {
     public GameObject settingsPanel; // Referensi ke panel pengaturan Anda
-
+    
     // Fungsi untuk mem-pause game dan menampilkan panel pengaturan
     public void OpenSettings()
     {

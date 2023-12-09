@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
+using UnityEngine.SceneManagement;
 
 public class Checkpoint : MonoBehaviour
 {
@@ -39,5 +40,8 @@ public class Checkpoint : MonoBehaviour
         {
             LastCheckpointHealth = playerHealth.GetCurrentHealth();
         }
+
+        SaveSystem.SaveGameData(transform.position, LastCheckpointHealth, SceneManager.GetActiveScene().buildIndex);
+
     }
 }

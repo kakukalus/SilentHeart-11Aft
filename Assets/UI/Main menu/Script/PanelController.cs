@@ -21,8 +21,36 @@ public class PanelController : MonoBehaviour
 
     public void NewGame()
     {
+        ResetGameData(); // Panggil metode untuk mengatur ulang data game
         SceneManager.LoadScene("TestCharacterDimas"); // Memuat ulang scene
+        Time.timeScale = 1; // Melanjutkan waktu game
     }
+
+    private void ResetGameData()
+    {
+        // Reset posisi checkpoint dan kesehatan pemain
+        PlayerPrefs.DeleteKey("CheckpointX");
+        PlayerPrefs.DeleteKey("CheckpointY");
+        PlayerPrefs.DeleteKey("CheckpointZ");
+        PlayerPrefs.DeleteKey("PlayerHealth");
+        PlayerPrefs.DeleteKey("CurrentLevel");
+        PlayerPrefs.DeleteKey("PlayerSanity");
+
+        // Reset semua item fragment / memory yang telah dikumpulkan
+        PlayerPrefs.SetInt("TotalCollectedItems", 0);
+        PlayerPrefs.DeleteKey("Item Memory 1");
+        PlayerPrefs.DeleteKey("Item Memory 2");
+        PlayerPrefs.DeleteKey("Item Memory 3");
+
+        // Reset semua koleksi dan item yang telah dikumpulkan
+        // Ini akan tergantung pada bagaimana Anda menyimpan data koleksi
+        // Contoh: PlayerPrefs.DeleteKey("CollectedItems");
+
+        // Jika Anda menggunakan sistem save yang berbeda, tambahkan logika untuk mengatur ulang atau menghapus save data di sini
+
+        PlayerPrefs.Save(); // Jangan lupa untuk menyimpan perubahan setelah menghapus keys
+    }
+
 
     // Fungsi untuk menampilkan panel memori
     public void ShowMemoryPanel()

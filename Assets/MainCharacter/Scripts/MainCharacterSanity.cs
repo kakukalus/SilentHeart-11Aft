@@ -15,10 +15,13 @@ public class MainCharacterSanity : MonoBehaviour
     private void Start()
     {
         baseCharacterAnimator = GetComponentInChildren<Animator>();
-        currentSanity = maxSanity;
+        // Muat nilai sanity yang tersimpan atau gunakan maxSanity jika belum ada yang tersimpan
+        currentSanity = PlayerPrefs.GetFloat("PlayerSanity", maxSanity);
+        SetMainCharacterBar(currentSanity); // Pastikan Anda memperbarui bar sanity di UI
         baseCharacterAnimator.SetBool("isAlive", true);
         StartCoroutine(RegenerateSanity());
     }
+
 
     private void Die()
     {
@@ -66,5 +69,22 @@ public class MainCharacterSanity : MonoBehaviour
     public float GetCurrentSanity()
     {
         return currentSanity;
+    }
+
+        private void OnDisable()
+    {
+        SaveSanity(); // Simpan nilai sanity saat script dinonaktifkan atau sebelum scene berubah
+    }
+
+    public void SaveSanity()
+    {
+        PlayerPrefs.SetFloat("PlayerSanity", currentSanity); // Simpan nilai sanity saat ini
+        PlayerPrefs.Save(); // Pastikan untuk menyimpan perubahan ke PlayerPrefs
+    }
+
+    public void LoadSanity()
+    {
+        currentSanity = PlayerPrefs.GetFloat("PlayerSanity", maxSanity); // Muat nilai sanity yang tersimpan atau gunakan maxSanity jika belum ada yang tersimpan
+        SetMainCharacterBar(currentSanity); // Perbarui bar sanity di UI
     }
 }

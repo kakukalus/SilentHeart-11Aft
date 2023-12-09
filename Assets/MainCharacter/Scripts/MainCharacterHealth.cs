@@ -1,5 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
 
 public class MainCharacterHealth : MonoBehaviour
 {
@@ -10,9 +12,20 @@ public class MainCharacterHealth : MonoBehaviour
     private void Start()
     {
         baseCharacterAnimator = GetComponentInChildren<Animator>();
-        currentHealth = maxHealth;
+        if (SceneManager.GetActiveScene().buildIndex == SaveSystem.LoadCurrentLevel())
+        {
+            // Posisi dan kesehatan pemain diatur ke nilai yang disimpan
+            transform.position = SaveSystem.LoadCheckpointPosition();
+            currentHealth = SaveSystem.LoadPlayerHealth();
+        }
+        else
+        {
+            currentHealth = maxHealth;
+        }
+        SetMainCharacterBar(currentHealth);
         baseCharacterAnimator.SetBool("isAlive", true);
     }
+
 
     public void RespawnAtLastCheckpoint()
     {

@@ -3244,7 +3244,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 105219454}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1357245596}
+        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
+        m_MethodName: LoadGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &586184237
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7967,6 +7979,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1357245594}
   - component: {fileID: 1357245595}
+  - component: {fileID: 1357245596}
   m_Layer: 0
   m_Name: Script Management
   m_TagString: Untagged
@@ -8008,6 +8021,18 @@ MonoBehaviour:
   settingSoundBtn: {fileID: 1711254761}
   settingTextBtn: {fileID: 1417596367}
   popUpQuit: {fileID: 1206382185}
+--- !u!114 &1357245596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1357245592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 046abfb64a305684c86018f2224c426a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1372407746
 GameObject:
   m_ObjectHideFlags: 0
@@ -10132,7 +10157,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1599911877
 Transform:
   m_ObjectHideFlags: 0
@@ -10559,7 +10584,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1697774131
 RectTransform:
   m_ObjectHideFlags: 0

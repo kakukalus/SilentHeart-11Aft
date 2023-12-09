@@ -16,6 +16,23 @@ public class ItemMemory : MonoBehaviour
     private bool isPickedUp = false;
 
 
+    // Di dalam metode Start() atau Awake()
+    private void Start()
+    {
+        // Periksa apakah item ini sudah dikumpulkan
+        if (PlayerPrefs.GetInt(itemMemoryName, 0) == 1)
+        {
+            isPickedUp = true;
+            gameObject.SetActive(false); // Sembunyikan jika sudah dikumpulkan
+        }
+        else
+        {
+            isPickedUp = false;
+        }
+
+        UpdateCollectionTextOnStart();
+    }
+
     // Metode untuk mengambil item memory
     public void PickUp()
     {
@@ -23,15 +40,17 @@ public class ItemMemory : MonoBehaviour
         {
             isPickedUp = true;
 
-            // Tambahkan logika untuk memperbarui TextMeshProUGUI
+            // Menyimpan status item sebagai telah dikumpulkan
+            PlayerPrefs.SetInt(itemMemoryName, 1); // 1 untuk dikumpulkan
+            PlayerPrefs.Save();
+
+            // Update UI dan lainnya
             UpdateCollectionText();
-
             Debug.Log($"Collected memory: {itemMemoryName}");
-
-            // Menonaktifkan objek
             gameObject.SetActive(false);
         }
     }
+
 
     
     // Fungsi untuk memperbarui teks koleksi
@@ -39,17 +58,20 @@ public class ItemMemory : MonoBehaviour
     {
         if (collectionText != null)
         {
-            // Misalkan Anda ingin menambahkan jumlah koleksi
-            // Anda perlu memparse teks yang ada dan menambahkannya dengan 1
             int currentCount = int.Parse(collectionText.text);
             currentCount++;
             collectionText.text = currentCount.ToString();
+
+            // Menyimpan jumlah koleksi saat ini
+            PlayerPrefs.SetInt("TotalCollectedItems", currentCount);
+            PlayerPrefs.Save();
         }
         else
         {
             Debug.LogError("Collection Text is not set on " + gameObject.name);
         }
     }
+
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -72,4 +94,32 @@ public class ItemMemory : MonoBehaviour
             pickButton.GetComponent<Button>().onClick.RemoveListener(PickUp);
         }
     }
+
+    // Memperbarui teks koleksi saat scene dimulai
+    private void UpdateCollectionTextOnStart()
+    {
+        // Mendapatkan jumlah total item koleksi dari PlayerPrefs
+        int totalCollectedItems = PlayerPrefs.GetInt("TotalCollectedItems", 0);
+        // Pastikan referensi TextMeshProUGUI sudah diatur
+        if (collectionText != null)
+        {
+            collectionText.text = totalCollectedItems.ToString();
+        }
+        else
+        {
+            Debug.LogError("Collection Text is not set in the inspector.");
+        }
+    }
+
+
+    public void ResetGame()
+    {
+        // Reset jumlah total item koleksi
+        PlayerPrefs.SetInt("TotalCollectedItems", 0);
+        PlayerPrefs.Save();
+
+            // Pastikan untuk memperbarui UI setelah mereset
+        UpdateCollectionTextOnStart();
+    }
+
 }
