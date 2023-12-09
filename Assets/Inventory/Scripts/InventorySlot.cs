@@ -11,6 +11,12 @@ public class InventorySlot : MonoBehaviour, IPointerDownHandler, IPointerUpHandl
     // Item yang ditugaskan ke slot
     private Item assignedItem;
 
+    public Item AssignedItem
+    {
+        get { return assignedItem; }
+        set { assignedItem = value; }
+    }
+
     // Properti boolean untuk mengecek apakah slot kosong
     public bool IsEmpty => assignedItem == null;
 
@@ -115,6 +121,7 @@ public class InventorySlot : MonoBehaviour, IPointerDownHandler, IPointerUpHandl
     // Menugaskan item ke slot
     public void AssignItem(Item item)
     {
+        AssignedItem = item;
         assignedItem = item;
         button.GetComponent<Image>().sprite = item.GetComponent<SpriteRenderer>().sprite;
         button.interactable = true;

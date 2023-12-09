@@ -14,7 +14,14 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene(currentLevel);
         Time.timeScale = 1; // Melanjutkan waktu game
 
+        Inventory playerInventory = FindObjectOfType<Inventory>();
+        if (playerInventory != null)
+        {
+            playerInventory.LoadInventory();
+        }
         // Setelah scene dimuat, Anda perlu menemukan karakter pemain dan mengatur posisi dan kesehatannya.
         // Ini bisa dilakukan melalui Start atau Awake method dalam script karakter pemain, atau menggunakan sistem event.
     }
+
+    
 }

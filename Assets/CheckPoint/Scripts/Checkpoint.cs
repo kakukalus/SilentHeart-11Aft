@@ -43,5 +43,11 @@ public class Checkpoint : MonoBehaviour
 
         SaveSystem.SaveGameData(transform.position, LastCheckpointHealth, SceneManager.GetActiveScene().buildIndex);
 
+        // Menyimpan data inventori
+        Inventory playerInventory = FindObjectOfType<Inventory>();
+        if (playerInventory != null)
+        {
+            SaveSystem.SaveInventory(playerInventory);
+        }
     }
 }

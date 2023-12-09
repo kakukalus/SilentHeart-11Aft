@@ -30,4 +30,20 @@ public static class SaveSystem
     {
         return PlayerPrefs.GetInt("CurrentLevel", SceneManager.GetActiveScene().buildIndex); // Return current scene if not found
     }
+
+    public static void SaveInventory(Inventory inventory)
+    {
+        for (int i = 0; i < inventory.slots.Length; i++)
+        {
+            if (!inventory.slots[i].IsEmpty)
+            {
+                PlayerPrefs.SetString($"InventorySlot{i}", inventory.slots[i].AssignedItem.itemName);
+            }
+            else
+            {
+                PlayerPrefs.DeleteKey($"InventorySlot{i}");
+            }
+        }
+        PlayerPrefs.Save();
+    }
 }

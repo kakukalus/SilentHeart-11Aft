@@ -41,6 +41,13 @@ public class PanelController : MonoBehaviour
         PlayerPrefs.DeleteKey("Item Memory 1");
         PlayerPrefs.DeleteKey("Item Memory 2");
         PlayerPrefs.DeleteKey("Item Memory 3");
+        
+        // Tambahkan penghapusan kunci untuk inventori
+        int numberOfInventorySlots = 2; // Ganti dengan jumlah sebenarnya dari slot inventori Anda
+        for (int i = 0; i < numberOfInventorySlots; i++)
+        {
+            PlayerPrefs.DeleteKey($"InventorySlot{i}");
+        }
 
         // Reset semua koleksi dan item yang telah dikumpulkan
         // Ini akan tergantung pada bagaimana Anda menyimpan data koleksi
