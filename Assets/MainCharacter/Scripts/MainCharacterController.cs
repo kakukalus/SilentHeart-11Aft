@@ -4,6 +4,7 @@ using UnityEngine.UI;
 
 public class MainCharacterController : MonoBehaviour
 {
+    public int lastDirection = 1; // 1 untuk kanan, -1 untuk kiri
     public Slider speedSlider;
     public Button TurnBackButton;
     public float walkSpeed = 7f;
@@ -119,20 +120,18 @@ public class MainCharacterController : MonoBehaviour
         baseCharacterAnimator.SetFloat("isMovingForward", sliderValue);
         baseCharacterAnimator.SetFloat("isMovingBackward", sliderValue);
     }
+
     public void HandleButtonTurnBackValueChanged()
     {
-        if (isFlip)
-        {
-            isFlip = false;
-        }
-        else
-        {
-            isFlip = true;
-        }
-        mainCharacterAnimation.FlipScale(isFlip);
-
-        // Event ini dipanggil setiap kali nilai slider berubah
+        isFlip = !isFlip; // Toggle the flip state
+        lastDirection = isFlip ? -1 : 1; // Update lastDirection based on the flip state
+        
+        // Flip the character's sprite and update the scale to reflect the direction
+        baseCharacterAnimator.transform.localScale = new Vector3(lastDirection, 1, 1);
+        
+        mainCharacterAnimation.FlipScale(isFlip); // Make sure this method also reflects the flip
     }
+
 
     private void HandleSliderValueChanged(float value)
     {
