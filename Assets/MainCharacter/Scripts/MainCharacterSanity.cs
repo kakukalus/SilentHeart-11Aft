@@ -16,10 +16,12 @@ public class MainCharacterSanity : MonoBehaviour
     {
         baseCharacterAnimator = GetComponentInChildren<Animator>();
         // Muat nilai sanity yang tersimpan atau gunakan maxSanity jika belum ada yang tersimpan
-        currentSanity = PlayerPrefs.GetFloat("PlayerSanity", maxSanity);
-        SetMainCharacterBar(currentSanity); // Pastikan Anda memperbarui bar sanity di UI
+              currentSanity = SaveSystem.LoadPlayerSanity();
+        SetMainCharacterBar(currentSanity);
         baseCharacterAnimator.SetBool("isAlive", true);
         StartCoroutine(RegenerateSanity());
+
+
     }
 
 
@@ -71,27 +73,26 @@ public class MainCharacterSanity : MonoBehaviour
         return currentSanity;
     }
 
-        private void OnDisable()
-    {
-        SaveSanity(); // Simpan nilai sanity saat script dinonaktifkan atau sebelum scene berubah
-    }
-
     public void SetSanity(float sanityValue)
     {
         currentSanity = sanityValue;
         SetMainCharacterBar(currentSanity);
     }
 
+    //     private void OnDisable()
+    // {
+    //     SaveSanity(); // Simpan nilai sanity saat script dinonaktifkan atau sebelum scene berubah
+    // }
 
-    public void SaveSanity()
-    {
-        PlayerPrefs.SetFloat("PlayerSanity", currentSanity); // Simpan nilai sanity saat ini
-        PlayerPrefs.Save(); // Pastikan untuk menyimpan perubahan ke PlayerPrefs
-    }
+    // public void SaveSanity()
+    // {
+    //     PlayerPrefs.SetFloat("PlayerSanity", currentSanity); // Simpan nilai sanity saat ini
+    //     PlayerPrefs.Save(); // Pastikan untuk menyimpan perubahan ke PlayerPrefs
+    // }
 
-    public void LoadSanity()
-    {
-        currentSanity = PlayerPrefs.GetFloat("PlayerSanity", maxSanity); // Muat nilai sanity yang tersimpan atau gunakan maxSanity jika belum ada yang tersimpan
-        SetMainCharacterBar(currentSanity); // Perbarui bar sanity di UI
-    }
+    // public void LoadSanity()
+    // {
+    //     currentSanity = PlayerPrefs.GetFloat("PlayerSanity", maxSanity); // Muat nilai sanity yang tersimpan atau gunakan maxSanity jika belum ada yang tersimpan
+    //     SetMainCharacterBar(currentSanity); // Perbarui bar sanity di UI
+    // }
 }

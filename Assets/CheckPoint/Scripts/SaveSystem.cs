@@ -3,20 +3,18 @@ using UnityEngine.SceneManagement;
 
 public static class SaveSystem
 {
-public static void SaveGameData(Vector3 checkpointPosition, float checkpointHealth, float checkpointSanity, int sceneIndex)
+    public static void SaveGameData(Vector3 checkpointPosition, float health,  float sanity, int currentLevel)
     {
         PlayerPrefs.SetFloat("CheckpointX", checkpointPosition.x);
         PlayerPrefs.SetFloat("CheckpointY", checkpointPosition.y);
         PlayerPrefs.SetFloat("CheckpointZ", checkpointPosition.z);
-        
-        PlayerPrefs.SetFloat("CheckpointHealth", checkpointHealth);
-        PlayerPrefs.SetFloat("CheckpointSanity", checkpointSanity);
+        PlayerPrefs.SetFloat("PlayerHealth", health);
+        PlayerPrefs.SetFloat("PlayerSanity", sanity);
 
-        // Menyimpan indeks scene
-        PlayerPrefs.SetInt("SceneIndex", sceneIndex);
-
+        PlayerPrefs.SetInt("CurrentLevel", currentLevel);
         PlayerPrefs.Save();
     }
+
     public static Vector3 LoadCheckpointPosition()
     {
         float x = PlayerPrefs.GetFloat("CheckpointX");
@@ -28,6 +26,11 @@ public static void SaveGameData(Vector3 checkpointPosition, float checkpointHeal
     public static float LoadPlayerHealth()
     {
         return PlayerPrefs.GetFloat("PlayerHealth", 100f); // Return default health if not found
+    }
+
+    public static float LoadPlayerSanity()
+    {
+        return PlayerPrefs.GetFloat("PlayerSanity", 100f); // Return default sanity if not found
     }
 
     public static int LoadCurrentLevel()
