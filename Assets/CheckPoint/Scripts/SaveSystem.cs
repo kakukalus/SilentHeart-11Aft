@@ -3,16 +3,20 @@ using UnityEngine.SceneManagement;
 
 public static class SaveSystem
 {
-    public static void SaveGameData(Vector3 checkpointPosition, float health, int currentLevel)
+public static void SaveGameData(Vector3 checkpointPosition, float checkpointHealth, float checkpointSanity, int sceneIndex)
     {
         PlayerPrefs.SetFloat("CheckpointX", checkpointPosition.x);
         PlayerPrefs.SetFloat("CheckpointY", checkpointPosition.y);
         PlayerPrefs.SetFloat("CheckpointZ", checkpointPosition.z);
-        PlayerPrefs.SetFloat("PlayerHealth", health);
-        PlayerPrefs.SetInt("CurrentLevel", currentLevel);
+        
+        PlayerPrefs.SetFloat("CheckpointHealth", checkpointHealth);
+        PlayerPrefs.SetFloat("CheckpointSanity", checkpointSanity);
+
+        // Menyimpan indeks scene
+        PlayerPrefs.SetInt("SceneIndex", sceneIndex);
+
         PlayerPrefs.Save();
     }
-
     public static Vector3 LoadCheckpointPosition()
     {
         float x = PlayerPrefs.GetFloat("CheckpointX");

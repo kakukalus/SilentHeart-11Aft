@@ -76,6 +76,13 @@ public class MainCharacterSanity : MonoBehaviour
         SaveSanity(); // Simpan nilai sanity saat script dinonaktifkan atau sebelum scene berubah
     }
 
+    public void SetSanity(float sanityValue)
+    {
+        currentSanity = sanityValue;
+        SetMainCharacterBar(currentSanity);
+    }
+
+
     public void SaveSanity()
     {
         PlayerPrefs.SetFloat("PlayerSanity", currentSanity); // Simpan nilai sanity saat ini

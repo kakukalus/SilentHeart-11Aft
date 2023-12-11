@@ -34,7 +34,12 @@ public class MainCharacterHealth : MonoBehaviour
             transform.position = Checkpoint.LastCheckpointPosition;
             currentHealth = Checkpoint.LastCheckpointHealth; // Set HP ke nilai saat checkpoint terakhir
             SetMainCharacterBar(currentHealth);
-            // Anda bisa menambahkan animasi atau efek khusus saat respawn
+            MainCharacterSanity playerSanity = GetComponent<MainCharacterSanity>();
+            if (playerSanity != null)
+            {
+                playerSanity.SetSanity(Checkpoint.LastCheckpointSanity); // Set Sanity ke nilai saat checkpoint terakhir
+            }
+            // [Sisa kode sama]
         }
     }
 

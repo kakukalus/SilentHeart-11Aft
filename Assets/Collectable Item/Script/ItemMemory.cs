@@ -77,23 +77,37 @@ public class ItemMemory : MonoBehaviour
     {
         if (other.CompareTag("Player") && !isPickedUp)
         {
-            // Mengaktifkan tombol ambil jika tersedia
-            pickButton.EnableButton();
-            // Atur tombol pick untuk memanggil PickUp ketika diklik
-            pickButton.GetComponent<Button>().onClick.AddListener(PickUp);
+            // Pastikan pickButton tidak null sebelum mengaksesnya
+            if (pickButton != null)
+            {
+                pickButton.EnableButton();
+                pickButton.GetComponent<Button>().onClick.AddListener(PickUp);
+            }
+            else
+            {
+                Debug.LogError("PickButton is not assigned in the inspector.");
+            }
         }
     }
+
 
     private void OnTriggerExit2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
-            // Menonaktifkan tombol ambil jika tersedia
-            pickButton.DisableButton();
-            // Hapus listener untuk menghindari panggilan berlebihan
-            pickButton.GetComponent<Button>().onClick.RemoveListener(PickUp);
+            // Pastikan pickButton tidak null sebelum mengaksesnya
+            if (pickButton != null)
+            {
+                pickButton.DisableButton();
+                pickButton.GetComponent<Button>().onClick.RemoveListener(PickUp);
+            }
+            else
+            {
+                Debug.LogError("PickButton is not assigned in the inspector.");
+            }
         }
     }
+
 
     // Memperbarui teks koleksi saat scene dimulai
     private void UpdateCollectionTextOnStart()

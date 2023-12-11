@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 public class Checkpoint : MonoBehaviour
 {
     public static Vector3 LastCheckpointPosition;
+    public static float LastCheckpointSanity; // Menyimpan Sanity pemain saat checkpoint terakhir
     public static float LastCheckpointHealth; // Menyimpan HP pemain saat checkpoint terakhir
     public Sprite lampOn;
     public Light2D checkpointLight;
@@ -34,14 +35,20 @@ public class Checkpoint : MonoBehaviour
         isActivated = true;
         LastCheckpointPosition = transform.position;
 
-        // Menyimpan HP pemain saat ini
+        // Menyimpan HP dan sanity pemain saat ini
+        MainCharacterSanity playerSanity = FindObjectOfType<MainCharacterSanity>();
         MainCharacterHealth playerHealth = FindObjectOfType<MainCharacterHealth>();
         if (playerHealth != null)
         {
             LastCheckpointHealth = playerHealth.GetCurrentHealth();
         }
+        if (playerSanity != null)
+        {
+            LastCheckpointSanity = playerSanity.GetCurrentSanity();
+        }
 
-        SaveSystem.SaveGameData(transform.position, LastCheckpointHealth, SceneManager.GetActiveScene().buildIndex);
+
+        SaveSystem.SaveGameData(transform.position, LastCheckpointHealth, LastCheckpointSanity, SceneManager.GetActiveScene().buildIndex);
 
         // Menyimpan data inventori
         Inventory playerInventory = FindObjectOfType<Inventory>();
