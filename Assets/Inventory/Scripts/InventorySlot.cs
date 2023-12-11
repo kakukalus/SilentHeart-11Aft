@@ -43,10 +43,8 @@ public class InventorySlot : MonoBehaviour, IPointerDownHandler, IPointerUpHandl
     {
         // Menambahkan listener ke tombol
         button.onClick.AddListener(() => {
-            MainCharacterHealth health = FindObjectOfType<MainCharacterHealth>();
-
-            // Mengecek apakah item HP dan kesehatan tidak penuh
-            if (assignedItem != null && assignedItem is ItemHP && health.GetCurrentHealth() < health.maxHealth)
+            // Mengecek apakah ada item yang diassign dan bukan null
+            if (assignedItem != null)
             {
                 clickCount++;
 
@@ -57,9 +55,40 @@ public class InventorySlot : MonoBehaviour, IPointerDownHandler, IPointerUpHandl
 
                 if (clickCount > 1 && Time.time - lastClickTime < clickDelay)
                 {
-                    // Menggunakan item saat dua kali klik
-                    assignedItem.Use();
-                    ClearSlot();
+                    // Logika penggunaan item sesajen
+                    if (assignedItem != null && assignedItem is ItemSesajen)
+                    {
+                        // Simpan referensi ke item sebelum memanggil Use()
+                        ItemSesajen sesajenItem = (ItemSesajen)assignedItem;
+                        
+                        // Coba gunakan item
+                        sesajenItem.Use();
+                        
+                        // Periksa jika item berhasil digunakan dan pocong diusir
+                        if (sesajenItem.HasBeenUsedSuccessfully)
+                        {
+                            // Hanya clear slot jika item berhasil digunakan
+                            ClearSlot();
+                        }
+                    }
+                    // Logika penggunaan item HP
+                    else if (assignedItem is ItemHP)
+                    {
+                        MainCharacterHealth health = FindObjectOfType<MainCharacterHealth>();
+                        // Mengecek apakah kesehatan tidak penuh
+                        if (health.GetCurrentHealth() < health.maxHealth)
+                        {
+                            // Pemanggilan metode Use() spesifik untuk item HP
+                            assignedItem.Use();
+                            ClearSlot();
+                        }
+                        else
+                        {
+                            Debug.Log("Health is full, cannot use HP item.");
+                        }
+                    }
+
+                    // Reset jumlah klik
                     clickCount = 0;
                 }
                 else if (Time.time - lastClickTime > clickDelay)
@@ -71,10 +100,11 @@ public class InventorySlot : MonoBehaviour, IPointerDownHandler, IPointerUpHandl
             }
             else
             {
-                Debug.Log("Health is full, no item assigned, or not an HP item. Button will not function.");
+                Debug.Log("No item assigned to this slot, cannot use.");
             }
         });
     }
+
 
     // Dipanggil setiap frame
     public void Update()
