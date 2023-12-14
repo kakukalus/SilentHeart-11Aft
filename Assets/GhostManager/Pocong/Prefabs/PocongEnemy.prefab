@@ -94,8 +94,9 @@ GameObject:
   m_Component:
   - component: {fileID: 749583351863166759}
   - component: {fileID: 7524097022930909036}
+  - component: {fileID: 5711755724950190411}
   m_Layer: 0
-  m_Name: TriggerTouch
+  m_Name: TriggerJumpscare
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -145,7 +146,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.042589784, y: 2.3613422}
@@ -161,6 +162,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.8977158, y: 5.1051}
   m_EdgeRadius: 0
+--- !u!114 &5711755724950190411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2431972689741808530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9de3900ed9525e54398f4931536ffb0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2509086703508905833
 GameObject:
   m_ObjectHideFlags: 0
@@ -256,6 +269,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6390839801016712092}
   - component: {fileID: 7259482187676685249}
+  - component: {fileID: 7612531929872758507}
   m_Layer: 0
   m_Name: TriggerTriggerRun
   m_TagString: Untagged
@@ -323,6 +337,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 38.730465, y: 5.5135126}
   m_EdgeRadius: 0
+--- !u!114 &7612531929872758507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6353476983351447230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca6585177a174d74eb7bf4c677bda404, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pocongTriggerTurnBack: {fileID: 6799137528400252605}
+  startChase: 0
 --- !u!1 &8177207267844474712
 GameObject:
   m_ObjectHideFlags: 0
@@ -333,6 +361,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5294797326264278473}
   - component: {fileID: 6255186443337484651}
+  - component: {fileID: 6799137528400252605}
   m_Layer: 0
   m_Name: TriggerTurnBack
   m_TagString: Untagged
@@ -400,6 +429,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 29.614754, y: 5.5135126}
   m_EdgeRadius: 0
+--- !u!114 &6799137528400252605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8177207267844474712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99d567756e3e6cf46b7f72205a9ffaa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enterTriggerArea: 0
+  startChase: 0
 --- !u!1 &8739756506583654513
 GameObject:
   m_ObjectHideFlags: 0
@@ -411,6 +454,7 @@ GameObject:
   - component: {fileID: 6022625623761398579}
   - component: {fileID: 772306842074698956}
   - component: {fileID: 2161065542549696721}
+  - component: {fileID: 5172838886722459486}
   m_Layer: 0
   m_Name: PocongEnemy
   m_TagString: Untagged
@@ -509,3 +553,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.9984455, y: 4.669202}
   m_EdgeRadius: 0
+--- !u!114 &5172838886722459486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8739756506583654513}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e12145f7a310e6489e71eb001436c6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 3.5
+  stoppingDistance: 5
+  isChase: 0

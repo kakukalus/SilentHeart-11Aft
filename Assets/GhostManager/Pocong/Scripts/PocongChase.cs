@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class PocongChase : MonoBehaviour
@@ -7,8 +8,11 @@ public class PocongChase : MonoBehaviour
 
     private Transform player;
 
+    public bool isChase;
+
     void Start()
     {
+        isChase = false;
         // Menemukan referensi ke pemain (dalam hal ini, kita mengasumsikan pemain ada dalam scene)
         player = GameObject.FindGameObjectWithTag("Player").transform;
     }
@@ -16,7 +20,7 @@ public class PocongChase : MonoBehaviour
     void Update()
     {
         // Pastikan pemain ditemukan sebelum mencoba mengejar
-        if (player != null)
+        if (player != null && isChase == true)
         {
             // Hitung vektor arah dari musuh ke pemain
             Vector3 direction = player.position - transform.position;
@@ -31,5 +35,10 @@ public class PocongChase : MonoBehaviour
                 transform.Translate(normalizedDirection * speed * Time.deltaTime);
             }
         }
+    }
+
+    public void DestroyThis()
+    {
+        Destroy(gameObject);
     }
 }
