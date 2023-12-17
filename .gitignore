@@ -2,6 +2,8 @@
 /logs
 /Temp
 /Assets/TextMesh Pro
+/Packages
+/ProjectSettings
 
 #Ignore all .meta file
 *.meta
