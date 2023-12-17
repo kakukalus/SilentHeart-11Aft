@@ -258,6 +258,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9de3900ed9525e54398f4931536ffb0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 0
   jumpscareController: {fileID: 0}
 --- !u!1 &2509086703508905833
 GameObject:
@@ -780,7 +781,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e12145f7a310e6489e71eb001436c6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3.5
+  speed: 4
   stoppingDistance: 2
   isChase: 0
   facingThreshold: 0.1

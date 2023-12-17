@@ -10,7 +10,14 @@ public class PocongAnimation : MonoBehaviour
         defaultScale = transform.localScale;
         currentScale = defaultScale;
         currentScale.x = -currentScale.x;
+        // Mendapatkan nilai acak antara 0 dan 1
+        float randomValue = Random.Range(0f, 1f);
 
+        // Mengecek apakah nilai acak di atas atau di bawah 0.5
+        if (randomValue < 0.5f)
+        {
+            FlipScale(true);
+        }
     }
     public void FlipScale(bool flip)
     {
