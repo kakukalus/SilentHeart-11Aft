@@ -22,7 +22,7 @@ public class PanelController : MonoBehaviour
     public void NewGame()
     {
         ResetGameData(); // Panggil metode untuk mengatur ulang data game
-        SceneManager.LoadScene("TestCharacterDimas"); // Memuat ulang scene
+        SceneManager.LoadScene("MapLevel1"); // Memuat ulang scene
         Time.timeScale = 1; // Melanjutkan waktu game
     }
 
@@ -41,7 +41,7 @@ public class PanelController : MonoBehaviour
         PlayerPrefs.DeleteKey("Item Memory 1");
         PlayerPrefs.DeleteKey("Item Memory 2");
         PlayerPrefs.DeleteKey("Item Memory 3");
-        
+
         // Tambahkan penghapusan kunci untuk inventori
         int numberOfInventorySlots = 2; // Ganti dengan jumlah sebenarnya dari slot inventori Anda
         for (int i = 0; i < numberOfInventorySlots; i++)

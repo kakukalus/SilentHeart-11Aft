@@ -15,17 +15,18 @@ public class ItemMemory : MonoBehaviour
     private void Start()
     {
         // Periksa apakah item ini sudah dikumpulkan berdasarkan data yang tersimpan.
-        if (PlayerPrefs.GetInt(itemMemoryName, 0) == 1)
-        {
-            isPickedUp = true;
-            gameObject.SetActive(false); // Nonaktifkan game object jika item sudah dikumpulkan sebelumnya.
-        }
-        else
-        {
-            isPickedUp = false;
-        }
+        // if (PlayerPrefs.GetInt(itemMemoryName, 0) == 1)
+        // {
+        //     isPickedUp = true;
+        //     gameObject.SetActive(false); // Nonaktifkan game object jika item sudah dikumpulkan sebelumnya.
+        // }
+        // else
+        // {
+        //     isPickedUp = false;
+        // }
 
-        UpdateCollectionTextOnStart(); // Perbarui teks koleksi ketika scene dimulai.
+        // UpdateCollectionTextOnStart(); 
+        // Perbarui teks koleksi ketika scene dimulai.
     }
 
     // Metode untuk mengambil item memory.
@@ -36,8 +37,8 @@ public class ItemMemory : MonoBehaviour
             isPickedUp = true;
 
             // Menyimpan status item sebagai telah dikumpulkan.
-            PlayerPrefs.SetInt(itemMemoryName, 1); // Simpan dengan nilai 1 yang menandakan telah dikumpulkan.
-            PlayerPrefs.Save();
+            // PlayerPrefs.SetInt(itemMemoryName, 1); // Simpan dengan nilai 1 yang menandakan telah dikumpulkan.
+            // PlayerPrefs.Save();
 
             // Perbarui UI dan tampilkan log.
             UpdateCollectionText();
@@ -56,8 +57,8 @@ public class ItemMemory : MonoBehaviour
             collectionText.text = currentCount.ToString(); // Perbarui teks UI dengan jumlah terbaru.
 
             // Simpan jumlah koleksi yang telah diperbarui.
-            PlayerPrefs.SetInt("TotalCollectedItems", currentCount);
-            PlayerPrefs.Save();
+            // PlayerPrefs.SetInt("TotalCollectedItems", currentCount);
+            // PlayerPrefs.Save();
         }
         else
         {
@@ -116,9 +117,9 @@ public class ItemMemory : MonoBehaviour
     public void ResetGame()
     {
         // Reset jumlah total item koleksi.
-        PlayerPrefs.SetInt("TotalCollectedItems", 0);
-        PlayerPrefs.Save();
+        // PlayerPrefs.SetInt("TotalCollectedItems", 0);
+        // PlayerPrefs.Save();
 
-        UpdateCollectionTextOnStart(); // Perbarui UI setelah mereset.
+        // UpdateCollectionTextOnStart(); // Perbarui UI setelah mereset.
     }
 }
