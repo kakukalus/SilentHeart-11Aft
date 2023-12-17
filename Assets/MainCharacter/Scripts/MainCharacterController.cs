@@ -4,6 +4,7 @@ using UnityEngine.UI;
 
 public class MainCharacterController : MonoBehaviour
 {
+    public int lastDirection = 1; // 1 untuk kanan, -1 untuk kiri
     public Slider speedSlider;
     public Button TurnBackButton;
     public float walkSpeed = 7f;
@@ -14,6 +15,10 @@ public class MainCharacterController : MonoBehaviour
     public bool isFlip;
     private Animator baseCharacterAnimator;
     private MainCharacterAnimation mainCharacterAnimation;
+    private MainCharacterHealth mainCharacterHealth;
+    private MainCharacterSanity mainCharacterSanity;
+
+
 
     private void Start()
     {
@@ -37,6 +42,18 @@ public class MainCharacterController : MonoBehaviour
         isFlip = false;
 
     }
+
+    void TakeDamage(float damage)
+    {
+        mainCharacterHealth.TakeDamage(damage);
+    }
+
+    void LoseSanity(float sanityLoss)
+    {
+        mainCharacterSanity.LoseSanity(sanityLoss);
+    }
+
+
     private void Update()
     {
 
@@ -114,20 +131,18 @@ public class MainCharacterController : MonoBehaviour
         baseCharacterAnimator.SetFloat("isMovingForward", sliderValue);
         baseCharacterAnimator.SetFloat("isMovingBackward", sliderValue);
     }
+
     public void HandleButtonTurnBackValueChanged()
     {
-        if (isFlip)
-        {
-            isFlip = false;
-        }
-        else
-        {
-            isFlip = true;
-        }
-        mainCharacterAnimation.FlipScale(isFlip);
+        isFlip = !isFlip; // Toggle the flip state
+        lastDirection = isFlip ? -1 : 1; // Update lastDirection based on the flip state
 
-        // Event ini dipanggil setiap kali nilai slider berubah
+        // Flip the character's sprite and update the scale to reflect the direction
+        baseCharacterAnimator.transform.localScale = new Vector3(lastDirection, 1, 1);
+
+        mainCharacterAnimation.FlipScale(isFlip); // Make sure this method also reflects the flip
     }
+
 
     private void HandleSliderValueChanged(float value)
     {

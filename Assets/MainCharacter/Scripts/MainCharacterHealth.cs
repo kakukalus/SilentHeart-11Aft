@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class MainCharacterHealth : MonoBehaviour
 {
@@ -11,7 +12,18 @@ public class MainCharacterHealth : MonoBehaviour
     {
         MainCharacterHpBar = GameObject.Find("Canvas/HealthBar/HealthBar Fill").GetComponent<Image>();
         baseCharacterAnimator = GetComponentInChildren<Animator>();
-        currentHealth = maxHealth;
+        // if (SceneManager.GetActiveScene().buildIndex == SaveSystem.LoadCurrentLevel())
+        // {
+        //     // Jika scene saat ini sama dengan level yang disimpan, muat posisi dan kesehatan dari save data.
+        //     transform.position = SaveSystem.LoadCheckpointPosition();
+        //     currentHealth = SaveSystem.LoadPlayerHealth();
+        // }
+        // else
+        // {
+        //     // Jika bukan, gunakan nilai kesehatan maksimum.
+        //     currentHealth = maxHealth;
+        // }
+        SetMainCharacterBar(currentHealth); // Atur UI health bar.
         baseCharacterAnimator.SetBool("isAlive", true);
     }
 
@@ -27,22 +39,22 @@ public class MainCharacterHealth : MonoBehaviour
     // Mengatur fillAmount berdasarkan nilai hp dalam rentang 0-100
     public void SetMainCharacterBar(float hp)
     {
-        // Memastikan nilai hp berada dalam rentang yang valid (0-100)
+        // Mengatur UI health bar sesuai dengan nilai kesehatan saat ini.
         hp = Mathf.Clamp(hp, 0f, 100f);
-        // Menetapkan fillAmount pada health bar berdasarkan nilai hp yang valid
         MainCharacterHpBar.fillAmount = hp / 100f;
     }
 
-    // Metode untuk mengurangkan Hp pemain
     public void TakeDamage(float damage)
     {
-        // Mengurangkan nilai hp pemain berdasarkan jumlah kerusakan
+        // Mengurangi nilai kesehatan karakter ketika menerima damage.
         currentHealth -= damage;
-        // Memastikan nilai hp tidak kurang dari 0
         currentHealth = Mathf.Max(0f, currentHealth);
-        // Memperbarui health bar setelah menerima kerusakan
         SetMainCharacterBar(currentHealth);
-    }
 
+        // if (currentHealth <= 0)
+        // {
+        //     Die(); // Memanggil metode Die ketika kesehatan habis.
+        // }
+    }
 
 }

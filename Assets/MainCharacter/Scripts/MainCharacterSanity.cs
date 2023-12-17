@@ -1,58 +1,83 @@
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections;
 
 public class MainCharacterSanity : MonoBehaviour
 {
-    public float maxSanity = 100;
-    private Animator baseCharacterAnimator;
-    public Image MainCharacterHpBar; // Referensi ke UI Image untuk Sanity bar
-    private float currentSanity = 100f;  // Nilai hp saat ini
+    public float maxSanity = 100; // Nilai maksimum sanity yang bisa dimiliki karakter.
+    private Animator baseCharacterAnimator; // Animator untuk karakter utama.
+    public Image MainCharacterHpBar; // UI Image untuk menampilkan bar sanity.
+    private float currentSanity;  // Nilai sanity saat ini dari karakter.
+    public float sanityRegenAmount = 2f; // Jumlah sanity yang diregenerasi per detik.
+    public float regenSanityDelay = 3f; // Waktu tunda sebelum memulai regenerasi sanity.
+    private float lastDamageTime; // Waktu saat terakhir kali menerima damage.
+
     private void Start()
     {
         baseCharacterAnimator = GetComponentInChildren<Animator>();
-        currentSanity = maxSanity;
+        currentSanity = SaveSystem.LoadPlayerSanity(); // Muat nilai sanity yang tersimpan atau gunakan maxSanity jika belum ada yang tersimpan.
+        SetMainCharacterBar(currentSanity);
         baseCharacterAnimator.SetBool("isAlive", true);
-    }
-
-    public void TakeDamage(int damageAmount)
-    {
-        currentSanity -= damageAmount;
-
-        if (currentSanity <= 0)
-        {
-            Die();
-        }
+        StartCoroutine(RegenerateSanity()); // Memulai coroutine untuk regenerasi sanity secara otomatis.
     }
 
     private void Die()
     {
-        // Logika kematian karakter, seperti memunculkan layar kekalahan atau mereset level
+        // Logika kematian karakter. Ini dapat diisi dengan aksi yang diinginkan saat karakter mati.
         Debug.Log("MainCharacter has died!");
     }
 
-    // Mengatur fillAmount berdasarkan nilai hp dalam rentang 0-100
-    public void SetMainCharacterBar(float hp)
+    public void SetMainCharacterBar(float sanity)
     {
-        // Memastikan nilai hp berada dalam rentang yang valid (0-100)
-        hp = Mathf.Clamp(hp, 0f, 100f);
-        // Menetapkan fillAmount pada Sanity bar berdasarkan nilai hp yang valid
-        MainCharacterHpBar.fillAmount = hp / 100f;
+        // Mengatur UI sanity bar sesuai dengan nilai sanity saat ini.
+        sanity = Mathf.Clamp(sanity, 0f, maxSanity);
+        MainCharacterHpBar.fillAmount = sanity / maxSanity;
     }
 
-    // Metode untuk mengurangkan Hp pemain
-    public void TakeDamage(float damage)
+    public void LoseSanity(float damage)
     {
-        // Mengurangkan nilai hp pemain berdasarkan jumlah kerusakan
+        // Mengurangi nilai sanity karakter ketika menerima damage.
         currentSanity -= damage;
-        // Memastikan nilai hp tidak kurang dari 0
-        currentSanity = Mathf.Max(0f, currentSanity);
-        // Memperbarui Sanity bar setelah menerima kerusakan
+        currentSanity = Mathf.Max(0f, currentSanity); // Pastikan sanity tidak turun di bawah 0.
         SetMainCharacterBar(currentSanity);
+        lastDamageTime = Time.time; // Memperbarui waktu terakhir menerima damage.
     }
 
-    // Metode untuk mendapatkan nilai hp saat ini
+    private IEnumerator RegenerateSanity()
+    {
+        // Coroutine untuk regenerasi sanity.
+        while (true)
+        {
+            yield return new WaitForSeconds(1f); // Tunggu 1 detik antara setiap iterasi.
+            if (Time.time >= lastDamageTime + regenSanityDelay)
+            {
+                // Jika sudah melewati delay setelah menerima damage, regenerasi sanity.
+                GainSanity(sanityRegenAmount);
+            }
+        }
+    }
+
+    public void GainSanity(float amount)
+    {
+        // Menambah nilai sanity.
+        if (currentSanity < maxSanity)
+        {
+            currentSanity += amount;
+            currentSanity = Mathf.Min(currentSanity, maxSanity); // Pastikan sanity tidak melebihi batas maksimum.
+            SetMainCharacterBar(currentSanity);
+        }
+    }
+
     public float GetCurrentSanity()
     {
+        // Mendapatkan nilai sanity saat ini.
         return currentSanity;
+    }
+
+    public void SetSanity(float sanityValue)
+    {
+        // Mengatur nilai sanity secara langsung.
+        currentSanity = sanityValue;
+        SetMainCharacterBar(currentSanity);
     }
 }
