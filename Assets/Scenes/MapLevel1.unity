@@ -133,6 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 15898041}
   - component: {fileID: 15898042}
+  - component: {fileID: 15898043}
   m_Layer: 0
   m_Name: tree part 2 (3)
   m_TagString: Untagged
@@ -149,7 +150,7 @@ Transform:
   m_GameObject: {fileID: 15898040}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 161.90001, y: -1.8999977, z: 23.900002}
+  m_LocalPosition: {x: 161.90001, y: -5.169998, z: 23.900002}
   m_LocalScale: {x: 3.1, y: 3.1, z: 0}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -207,6 +208,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &15898043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 15898040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1ff2e2142013d042826be78f2935cb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxRotationAngle: 1
+  windSpeed: 0
 --- !u!1 &17093201
 GameObject:
   m_ObjectHideFlags: 0
@@ -217,6 +232,7 @@ GameObject:
   m_Component:
   - component: {fileID: 17093202}
   - component: {fileID: 17093203}
+  - component: {fileID: 17093204}
   m_Layer: 0
   m_Name: tree part 2 (5)
   m_TagString: Untagged
@@ -233,7 +249,7 @@ Transform:
   m_GameObject: {fileID: 17093201}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 150.70001, y: -1.8999977, z: 23.900002}
+  m_LocalPosition: {x: 150.70001, y: -5.169998, z: 23.900002}
   m_LocalScale: {x: 3.1, y: 3.1, z: 0}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -291,6 +307,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &17093204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 17093201}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1ff2e2142013d042826be78f2935cb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxRotationAngle: 1
+  windSpeed: 0
 --- !u!1 &74271758
 GameObject:
   m_ObjectHideFlags: 0
@@ -301,6 +331,7 @@ GameObject:
   m_Component:
   - component: {fileID: 74271759}
   - component: {fileID: 74271760}
+  - component: {fileID: 74271761}
   m_Layer: 0
   m_Name: tree part 1 (8)
   m_TagString: Untagged
@@ -317,7 +348,7 @@ Transform:
   m_GameObject: {fileID: 74271758}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 228, y: -0.81, z: 3.6}
+  m_LocalPosition: {x: 228, y: -14.73, z: 3.6}
   m_LocalScale: {x: 2.04, y: 2.04, z: 0}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -375,6 +406,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &74271761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 74271758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1ff2e2142013d042826be78f2935cb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxRotationAngle: 6
+  windSpeed: 0
 --- !u!1 &76033131
 GameObject:
   m_ObjectHideFlags: 0
@@ -385,6 +430,7 @@ GameObject:
   m_Component:
   - component: {fileID: 76033132}
   - component: {fileID: 76033133}
+  - component: {fileID: 76033134}
   m_Layer: 0
   m_Name: tree pinus (3)
   m_TagString: Untagged
@@ -401,7 +447,7 @@ Transform:
   m_GameObject: {fileID: 76033131}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 211.4, y: 2.4100006, z: 6.32}
+  m_LocalPosition: {x: 211.4, y: -6.2200003, z: 6.32}
   m_LocalScale: {x: 1.68, y: 1.68, z: 0}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -459,6 +505,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &76033134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 76033131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1ff2e2142013d042826be78f2935cb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxRotationAngle: 1
+  windSpeed: 0
 --- !u!1 &81540808
 GameObject:
   m_ObjectHideFlags: 0
@@ -558,6 +618,7 @@ GameObject:
   m_Component:
   - component: {fileID: 87492260}
   - component: {fileID: 87492261}
+  - component: {fileID: 87492262}
   m_Layer: 0
   m_Name: tree part 1 (12)
   m_TagString: Untagged
@@ -574,7 +635,7 @@ Transform:
   m_GameObject: {fileID: 87492259}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 288.7, y: 0.3, z: 3.2}
+  m_LocalPosition: {x: 291.31, y: -16.45, z: 3.2}
   m_LocalScale: {x: 2.04, y: 2.04, z: 0}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -632,6 +693,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &87492262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 87492259}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1ff2e2142013d042826be78f2935cb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxRotationAngle: 6
+  windSpeed: 0
 --- !u!1 &87903913
 GameObject:
   m_ObjectHideFlags: 0
@@ -642,6 +717,7 @@ GameObject:
   m_Component:
   - component: {fileID: 87903914}
   - component: {fileID: 87903915}
+  - component: {fileID: 87903916}
   m_Layer: 0
   m_Name: tree part 1 (3)
   m_TagString: Untagged
@@ -658,7 +734,7 @@ Transform:
   m_GameObject: {fileID: 87903913}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 93.34, y: -5.06, z: 2.5}
+  m_LocalPosition: {x: 90.17, y: -13.24, z: 2.5}
   m_LocalScale: {x: 2.04, y: 2.04, z: 0}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -716,6 +792,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &87903916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 87903913}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1ff2e2142013d042826be78f2935cb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxRotationAngle: 6
+  windSpeed: 0
 --- !u!1 &87934097
 GameObject:
   m_ObjectHideFlags: 0
@@ -726,6 +816,7 @@ GameObject:
   m_Component:
   - component: {fileID: 87934098}
   - component: {fileID: 87934099}
+  - component: {fileID: 87934100}
   m_Layer: 0
   m_Name: tree pinus (2)
   m_TagString: Untagged
@@ -742,7 +833,7 @@ Transform:
   m_GameObject: {fileID: 87934097}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 226.08, y: 0.5, z: 6.06}
+  m_LocalPosition: {x: 226.08, y: -6.6000004, z: 6.06}
   m_LocalScale: {x: 1.68, y: 1.68, z: 0}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -800,6 +891,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &87934100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 87934097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1ff2e2142013d042826be78f2935cb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxRotationAngle: 1
+  windSpeed: 0
 --- !u!1 &89738958
 GameObject:
   m_ObjectHideFlags: 0
@@ -810,6 +915,7 @@ GameObject:
   m_Component:
   - component: {fileID: 89738959}
   - component: {fileID: 89738960}
+  - component: {fileID: 89738961}
   m_Layer: 0
   m_Name: tree part 2 (9)
   m_TagString: Untagged
@@ -826,7 +932,7 @@ Transform:
   m_GameObject: {fileID: 89738958}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 193.4, y: -1.2999992, z: 22.57}
+  m_LocalPosition: {x: 193.4, y: -4.5699997, z: 22.57}
   m_LocalScale: {x: 3.1, y: 3.1, z: 0}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -884,6 +990,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &89738961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 89738958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1ff2e2142013d042826be78f2935cb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxRotationAngle: 1
+  windSpeed: 0
 --- !u!1 &96848943
 GameObject:
   m_ObjectHideFlags: 0
@@ -1229,6 +1349,7 @@ GameObject:
   m_Component:
   - component: {fileID: 111133292}
   - component: {fileID: 111133293}
+  - component: {fileID: 111133294}
   m_Layer: 0
   m_Name: tree part 1 (5)
   m_TagString: Untagged
@@ -1245,7 +1366,7 @@ Transform:
   m_GameObject: {fileID: 111133291}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 160.1, y: 3.3000004, z: 13}
+  m_LocalPosition: {x: 160.1, y: -10.030001, z: 13}
   m_LocalScale: {x: 3.1, y: 3.1, z: 0}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -1303,6 +1424,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &111133294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 111133291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1ff2e2142013d042826be78f2935cb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxRotationAngle: 1
+  windSpeed: 0
 --- !u!1 &113181824
 GameObject:
   m_ObjectHideFlags: 0
@@ -1313,6 +1448,7 @@ GameObject:
   m_Component:
   - component: {fileID: 113181825}
   - component: {fileID: 113181826}
+  - component: {fileID: 113181827}
   m_Layer: 0
   m_Name: tree part 2
   m_TagString: Untagged
@@ -1329,7 +1465,7 @@ Transform:
   m_GameObject: {fileID: 113181824}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.600006, y: -1.8999977, z: 23.900002}
+  m_LocalPosition: {x: 9.600006, y: -5.169998, z: 23.900002}
   m_LocalScale: {x: 3.1, y: 3.1, z: 0}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -1387,6 +1523,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &113181827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 113181824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1ff2e2142013d042826be78f2935cb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxRotationAngle: 1
+  windSpeed: 0
 --- !u!1 &116216291
 GameObject:
   m_ObjectHideFlags: 0
@@ -1743,6 +1893,7 @@ GameObject:
   m_Component:
   - component: {fileID: 125321777}
   - component: {fileID: 125321778}
+  - component: {fileID: 125321779}
   m_Layer: 0
   m_Name: tree part 1
   m_TagString: Untagged
@@ -1759,7 +1910,7 @@ Transform:
   m_GameObject: {fileID: 125321776}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -75, y: 3.9, z: 7.3}
+  m_LocalPosition: {x: -75, y: -5.4000006, z: 7.3}
   m_LocalScale: {x: 3.1, y: 3.1, z: 0}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -1817,6 +1968,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &125321779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 125321776}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1ff2e2142013d042826be78f2935cb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxRotationAngle: 1
+  windSpeed: 0
 --- !u!1 &134401013
 GameObject:
   m_ObjectHideFlags: 0
@@ -1827,6 +1992,7 @@ GameObject:
   m_Component:
   - component: {fileID: 134401014}
   - component: {fileID: 134401015}
+  - component: {fileID: 134401016}
   m_Layer: 0
   m_Name: tree part 1
   m_TagString: Untagged
@@ -1843,7 +2009,7 @@ Transform:
   m_GameObject: {fileID: 134401013}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2, y: 3.3000011, z: 13}
+  m_LocalPosition: {x: 2, y: 0.030000687, z: 13}
   m_LocalScale: {x: 3.1, y: 3.1, z: 0}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -1901,6 +2067,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &134401016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 134401013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1ff2e2142013d042826be78f2935cb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxRotationAngle: 1
+  windSpeed: 0
 --- !u!1 &141081418
 GameObject:
   m_ObjectHideFlags: 0
@@ -2247,6 +2427,7 @@ GameObject:
   m_Component:
   - component: {fileID: 163019538}
   - component: {fileID: 163019539}
+  - component: {fileID: 163019540}
   m_Layer: 0
   m_Name: tree part 2
   m_TagString: Untagged
@@ -2263,7 +2444,7 @@ Transform:
   m_GameObject: {fileID: 163019537}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -78.6, y: -1.3, z: 18.2}
+  m_LocalPosition: {x: -78.6, y: -4.5700006, z: 18.2}
   m_LocalScale: {x: 3.1, y: 3.1, z: 0}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -2321,6 +2502,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &163019540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 163019537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1ff2e2142013d042826be78f2935cb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxRotationAngle: 1
+  windSpeed: 0
 --- !u!1 &171043855
 GameObject:
   m_ObjectHideFlags: 0
@@ -2536,6 +2731,7 @@ GameObject:
   m_Component:
   - component: {fileID: 226168970}
   - component: {fileID: 226168971}
+  - component: {fileID: 226168972}
   m_Layer: 0
   m_Name: tree part 3 (4)
   m_TagString: Untagged
@@ -2552,7 +2748,7 @@ Transform:
   m_GameObject: {fileID: 226168969}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11.67, y: -1.91, z: 9.79}
+  m_LocalPosition: {x: 11.67, y: -10.120001, z: 9.79}
   m_LocalScale: {x: 3.1, y: 3.1, z: 0}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -2610,6 +2806,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &226168972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 226168969}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1ff2e2142013d042826be78f2935cb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxRotationAngle: 1
+  windSpeed: 0
 --- !u!1 &235680036
 GameObject:
   m_ObjectHideFlags: 0
@@ -2620,6 +2830,7 @@ GameObject:
   m_Component:
   - component: {fileID: 235680037}
   - component: {fileID: 235680038}
+  - component: {fileID: 235680039}
   m_Layer: 0
   m_Name: cloud (2)
   m_TagString: Untagged
@@ -2694,6 +2905,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &235680039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 235680036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 510b603b8ffb1fb42bf842c230a3e980, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  windSpeed: 0.5
 --- !u!1 &241736669
 GameObject:
   m_ObjectHideFlags: 0
@@ -2704,6 +2928,7 @@ GameObject:
   m_Component:
   - component: {fileID: 241736670}
   - component: {fileID: 241736671}
+  - component: {fileID: 241736672}
   m_Layer: 0
   m_Name: tree part 1 (17)
   m_TagString: Untagged
@@ -2720,7 +2945,7 @@ Transform:
   m_GameObject: {fileID: 241736669}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 277.04, y: -3.92, z: 3.29}
+  m_LocalPosition: {x: 277.04, y: -10.530001, z: 3.29}
   m_LocalScale: {x: 2.04, y: 2.04, z: 0}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -2778,6 +3003,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &241736672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 241736669}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1ff2e2142013d042826be78f2935cb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxRotationAngle: 6
+  windSpeed: 0
 --- !u!1 &242953162
 GameObject:
   m_ObjectHideFlags: 0
@@ -2788,6 +3027,7 @@ GameObject:
   m_Component:
   - component: {fileID: 242953163}
   - component: {fileID: 242953164}
+  - component: {fileID: 242953165}
   m_Layer: 0
   m_Name: tree part 1 (11)
   m_TagString: Untagged
@@ -2804,7 +3044,7 @@ Transform:
   m_GameObject: {fileID: 242953162}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 297.7, y: 3.9, z: 7.3}
+  m_LocalPosition: {x: 297.7, y: -7.4500003, z: 7.3}
   m_LocalScale: {x: 3.1, y: 3.1, z: 0}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -2862,6 +3102,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &242953165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 242953162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1ff2e2142013d042826be78f2935cb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxRotationAngle: 1
+  windSpeed: 0
 --- !u!1 &249025747
 GameObject:
   m_ObjectHideFlags: 0
@@ -3040,6 +3294,7 @@ GameObject:
   m_Component:
   - component: {fileID: 252112619}
   - component: {fileID: 252112620}
+  - component: {fileID: 252112621}
   m_Layer: 0
   m_Name: tree part 1 (9)
   m_TagString: Untagged
@@ -3056,7 +3311,7 @@ Transform:
   m_GameObject: {fileID: 252112618}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 241.25, y: 2.24, z: 3}
+  m_LocalPosition: {x: 241.25, y: -11.27, z: 3}
   m_LocalScale: {x: 2.04, y: 2.04, z: 0}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -3114,6 +3369,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &252112621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 252112618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1ff2e2142013d042826be78f2935cb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxRotationAngle: 6
+  windSpeed: 0
 --- !u!1 &252314308
 GameObject:
   m_ObjectHideFlags: 0
@@ -3124,6 +3393,7 @@ GameObject:
   m_Component:
   - component: {fileID: 252314309}
   - component: {fileID: 252314310}
+  - component: {fileID: 252314311}
   m_Layer: 0
   m_Name: tree part 1 (17)
   m_TagString: Untagged
@@ -3140,7 +3410,7 @@ Transform:
   m_GameObject: {fileID: 252314308}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 311.2, y: -1.8, z: 11.67}
+  m_LocalPosition: {x: 311.2, y: -7.5500007, z: 11.67}
   m_LocalScale: {x: 3.1, y: 3.1, z: 0}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -3198,6 +3468,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &252314311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 252314308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1ff2e2142013d042826be78f2935cb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxRotationAngle: 1
+  windSpeed: 0
 --- !u!1 &257800394
 GameObject:
   m_ObjectHideFlags: 0
@@ -3415,6 +3699,7 @@ GameObject:
   m_Component:
   - component: {fileID: 293240772}
   - component: {fileID: 293240773}
+  - component: {fileID: 293240774}
   m_Layer: 0
   m_Name: cloud (4)
   m_TagString: Untagged
@@ -3489,6 +3774,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &293240774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 293240771}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 510b603b8ffb1fb42bf842c230a3e980, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  windSpeed: 0.5
 --- !u!1 &302319630
 GameObject:
   m_ObjectHideFlags: 0
@@ -3499,6 +3797,7 @@ GameObject:
   m_Component:
   - component: {fileID: 302319631}
   - component: {fileID: 302319632}
+  - component: {fileID: 302319633}
   m_Layer: 0
   m_Name: tree part 1
   m_TagString: Untagged
@@ -3515,7 +3814,7 @@ Transform:
   m_GameObject: {fileID: 302319630}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 46.5, y: -10.5, z: 2.8}
+  m_LocalPosition: {x: 46.5, y: -15.27, z: 2.8}
   m_LocalScale: {x: 2.04, y: 2.04, z: 0}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -3573,6 +3872,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &302319633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 302319630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1ff2e2142013d042826be78f2935cb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxRotationAngle: 6
+  windSpeed: 0
 --- !u!1 &310295296
 GameObject:
   m_ObjectHideFlags: 0
@@ -3678,6 +3991,7 @@ GameObject:
   m_Component:
   - component: {fileID: 315478102}
   - component: {fileID: 315478103}
+  - component: {fileID: 315478104}
   m_Layer: 0
   m_Name: tree part 1
   m_TagString: Untagged
@@ -3694,7 +4008,7 @@ Transform:
   m_GameObject: {fileID: 315478101}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -41.8, y: 3.3000004, z: 13}
+  m_LocalPosition: {x: -41.8, y: 0.029999971, z: 13}
   m_LocalScale: {x: 2.69, y: 2.69, z: 0}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -3752,6 +4066,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &315478104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 315478101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1ff2e2142013d042826be78f2935cb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxRotationAngle: 1
+  windSpeed: 0
 --- !u!1 &336245340
 GameObject:
   m_ObjectHideFlags: 0
@@ -3793,6 +4121,7 @@ GameObject:
   m_Component:
   - component: {fileID: 340419531}
   - component: {fileID: 340419532}
+  - component: {fileID: 340419533}
   m_Layer: 0
   m_Name: tree part 3 (3)
   m_TagString: Untagged
@@ -3809,7 +4138,7 @@ Transform:
   m_GameObject: {fileID: 340419530}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 110.1, y: 1.7000008, z: 11.1}
+  m_LocalPosition: {x: 110.1, y: -2.79, z: 11.1}
   m_LocalScale: {x: 3.1, y: 3.1, z: 0}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -3867,6 +4196,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &340419533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 340419530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1ff2e2142013d042826be78f2935cb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxRotationAngle: 1
+  windSpeed: 0
 --- !u!1 &343440992
 GameObject:
   m_ObjectHideFlags: 0
@@ -4007,6 +4350,7 @@ GameObject:
   m_Component:
   - component: {fileID: 355622959}
   - component: {fileID: 355622960}
+  - component: {fileID: 355622961}
   m_Layer: 0
   m_Name: tree part 3
   m_TagString: Untagged
@@ -4023,7 +4367,7 @@ Transform:
   m_GameObject: {fileID: 355622958}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 29.13, y: -7.67, z: 8.7}
+  m_LocalPosition: {x: 29.13, y: -10.940001, z: 8.7}
   m_LocalScale: {x: 4.44, y: 4.44, z: 0}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -4081,6 +4425,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &355622961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 355622958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1ff2e2142013d042826be78f2935cb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxRotationAngle: 1
+  windSpeed: 0
 --- !u!1 &371224034
 GameObject:
   m_ObjectHideFlags: 0
@@ -4091,6 +4449,7 @@ GameObject:
   m_Component:
   - component: {fileID: 371224035}
   - component: {fileID: 371224036}
+  - component: {fileID: 371224037}
   m_Layer: 0
   m_Name: cloud (4)
   m_TagString: Untagged
@@ -4165,6 +4524,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &371224037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 371224034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 510b603b8ffb1fb42bf842c230a3e980, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  windSpeed: 0.5
 --- !u!1 &382562975
 GameObject:
   m_ObjectHideFlags: 0
@@ -4175,6 +4547,7 @@ GameObject:
   m_Component:
   - component: {fileID: 382562976}
   - component: {fileID: 382562977}
+  - component: {fileID: 382562978}
   m_Layer: 0
   m_Name: tree part 1 (12)
   m_TagString: Untagged
@@ -4191,7 +4564,7 @@ Transform:
   m_GameObject: {fileID: 382562975}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 262.8, y: 3.9000003, z: 11.67}
+  m_LocalPosition: {x: 262.8, y: 0.6299999, z: 11.67}
   m_LocalScale: {x: 3.1, y: 3.1, z: 0}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -4249,6 +4622,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &382562978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 382562975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1ff2e2142013d042826be78f2935cb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxRotationAngle: 1
+  windSpeed: 0
 --- !u!1 &392135978
 GameObject:
   m_ObjectHideFlags: 0
@@ -4259,6 +4646,7 @@ GameObject:
   m_Component:
   - component: {fileID: 392135979}
   - component: {fileID: 392135980}
+  - component: {fileID: 392135981}
   m_Layer: 0
   m_Name: tree pinus (6)
   m_TagString: Untagged
@@ -4275,7 +4663,7 @@ Transform:
   m_GameObject: {fileID: 392135978}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 264.95, y: 0.5, z: 7.95}
+  m_LocalPosition: {x: 264.95, y: -10.480001, z: 7.95}
   m_LocalScale: {x: 1.68, y: 1.68, z: 0}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -4333,6 +4721,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &392135981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 392135978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1ff2e2142013d042826be78f2935cb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxRotationAngle: 1
+  windSpeed: 0
 --- !u!1 &412131935
 GameObject:
   m_ObjectHideFlags: 0
@@ -4427,6 +4829,7 @@ GameObject:
   m_Component:
   - component: {fileID: 417950799}
   - component: {fileID: 417950800}
+  - component: {fileID: 417950801}
   m_Layer: 0
   m_Name: cloud (1)
   m_TagString: Untagged
@@ -4501,6 +4904,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &417950801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 417950798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 510b603b8ffb1fb42bf842c230a3e980, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  windSpeed: 0.5
 --- !u!1 &421559290
 GameObject:
   m_ObjectHideFlags: 0
@@ -4511,6 +4927,7 @@ GameObject:
   m_Component:
   - component: {fileID: 421559291}
   - component: {fileID: 421559292}
+  - component: {fileID: 421559293}
   m_Layer: 0
   m_Name: tree part 1 (18)
   m_TagString: Untagged
@@ -4527,7 +4944,7 @@ Transform:
   m_GameObject: {fileID: 421559290}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 271.12, y: 3.3000004, z: 13}
+  m_LocalPosition: {x: 271.12, y: 0.029999971, z: 13}
   m_LocalScale: {x: 3.1, y: 3.1, z: 0}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -4585,6 +5002,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &421559293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 421559290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1ff2e2142013d042826be78f2935cb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxRotationAngle: 1
+  windSpeed: 0
 --- !u!1 &422622630
 GameObject:
   m_ObjectHideFlags: 0
@@ -4763,6 +5194,7 @@ GameObject:
   m_Component:
   - component: {fileID: 467383246}
   - component: {fileID: 467383247}
+  - component: {fileID: 467383248}
   m_Layer: 0
   m_Name: tree part 2
   m_TagString: Untagged
@@ -4779,7 +5211,7 @@ Transform:
   m_GameObject: {fileID: 467383245}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -56.6, y: -1.8999977, z: 23.900002}
+  m_LocalPosition: {x: -56.6, y: -10.150001, z: 23.900002}
   m_LocalScale: {x: 3.1, y: 3.1, z: 0}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -4837,6 +5269,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &467383248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 467383245}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1ff2e2142013d042826be78f2935cb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxRotationAngle: 1
+  windSpeed: 0
 --- !u!1 &485349902
 GameObject:
   m_ObjectHideFlags: 0
@@ -4847,6 +5293,7 @@ GameObject:
   m_Component:
   - component: {fileID: 485349903}
   - component: {fileID: 485349904}
+  - component: {fileID: 485349905}
   m_Layer: 0
   m_Name: cloud (8)
   m_TagString: Untagged
@@ -4921,6 +5368,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &485349905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 485349902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 510b603b8ffb1fb42bf842c230a3e980, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  windSpeed: 0.5
 --- !u!1 &492741583
 GameObject:
   m_ObjectHideFlags: 0
@@ -4931,6 +5391,7 @@ GameObject:
   m_Component:
   - component: {fileID: 492741584}
   - component: {fileID: 492741585}
+  - component: {fileID: 492741586}
   m_Layer: 0
   m_Name: tree part 2 (7)
   m_TagString: Untagged
@@ -4947,7 +5408,7 @@ Transform:
   m_GameObject: {fileID: 492741583}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 173.8, y: -1.8999977, z: 23.900002}
+  m_LocalPosition: {x: 173.8, y: -5.169998, z: 23.900002}
   m_LocalScale: {x: 3.1, y: 3.1, z: 0}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -5005,6 +5466,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &492741586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 492741583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1ff2e2142013d042826be78f2935cb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxRotationAngle: 1
+  windSpeed: 0
 --- !u!1 &513587574
 GameObject:
   m_ObjectHideFlags: 0
@@ -5145,6 +5620,7 @@ GameObject:
   m_Component:
   - component: {fileID: 516885843}
   - component: {fileID: 516885844}
+  - component: {fileID: 516885845}
   m_Layer: 0
   m_Name: tree part 1
   m_TagString: Untagged
@@ -5161,7 +5637,7 @@ Transform:
   m_GameObject: {fileID: 516885842}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6, y: -4.299999, z: 4.66}
+  m_LocalPosition: {x: -6, y: -9.07, z: 4.66}
   m_LocalScale: {x: 2.04, y: 2.04, z: 0}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -5219,6 +5695,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &516885845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 516885842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1ff2e2142013d042826be78f2935cb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxRotationAngle: 6
+  windSpeed: 0
 --- !u!1 &522004164
 GameObject:
   m_ObjectHideFlags: 0
@@ -5405,6 +5895,7 @@ GameObject:
   m_Component:
   - component: {fileID: 524586901}
   - component: {fileID: 524586902}
+  - component: {fileID: 524586903}
   m_Layer: 0
   m_Name: cloud (7)
   m_TagString: Untagged
@@ -5479,6 +5970,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &524586903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 524586900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 510b603b8ffb1fb42bf842c230a3e980, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  windSpeed: 0.5
 --- !u!1 &545673427
 GameObject:
   m_ObjectHideFlags: 0
@@ -5489,6 +5993,7 @@ GameObject:
   m_Component:
   - component: {fileID: 545673428}
   - component: {fileID: 545673429}
+  - component: {fileID: 545673430}
   m_Layer: 0
   m_Name: tree part 3
   m_TagString: Untagged
@@ -5505,7 +6010,7 @@ Transform:
   m_GameObject: {fileID: 545673427}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 29.55, y: -1.91, z: 8.7}
+  m_LocalPosition: {x: 27.65, y: -12.69, z: 8.7}
   m_LocalScale: {x: 3.1, y: 3.1, z: 0}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -5563,6 +6068,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &545673430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 545673427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1ff2e2142013d042826be78f2935cb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxRotationAngle: 1
+  windSpeed: 0
 --- !u!1 &587472734
 GameObject:
   m_ObjectHideFlags: 0
@@ -5573,6 +6092,7 @@ GameObject:
   m_Component:
   - component: {fileID: 587472735}
   - component: {fileID: 587472736}
+  - component: {fileID: 587472737}
   m_Layer: 0
   m_Name: tree part 2
   m_TagString: Untagged
@@ -5589,7 +6109,7 @@ Transform:
   m_GameObject: {fileID: 587472734}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -33.5, y: -1.8999977, z: 23.900002}
+  m_LocalPosition: {x: -33.5, y: -5.169998, z: 23.900002}
   m_LocalScale: {x: 3.1, y: 3.1, z: 0}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -5647,6 +6167,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &587472737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 587472734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1ff2e2142013d042826be78f2935cb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxRotationAngle: 1
+  windSpeed: 0
 --- !u!1 &590678715
 GameObject:
   m_ObjectHideFlags: 0
@@ -5741,6 +6275,7 @@ GameObject:
   m_Component:
   - component: {fileID: 605390473}
   - component: {fileID: 605390474}
+  - component: {fileID: 605390475}
   m_Layer: 0
   m_Name: tree part 1 (6)
   m_TagString: Untagged
@@ -5757,7 +6292,7 @@ Transform:
   m_GameObject: {fileID: 605390472}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 193.1, y: 3.8999996, z: 7.3}
+  m_LocalPosition: {x: 193.1, y: -7.4200006, z: 7.3}
   m_LocalScale: {x: 3.1, y: 3.1, z: 0}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -5815,6 +6350,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &605390475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 605390472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1ff2e2142013d042826be78f2935cb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxRotationAngle: 1
+  windSpeed: 0
 --- !u!1 &621151693
 GameObject:
   m_ObjectHideFlags: 0
@@ -5909,6 +6458,7 @@ GameObject:
   m_Component:
   - component: {fileID: 623267493}
   - component: {fileID: 623267494}
+  - component: {fileID: 623267495}
   m_Layer: 0
   m_Name: tree part 1
   m_TagString: Untagged
@@ -5925,7 +6475,7 @@ Transform:
   m_GameObject: {fileID: 623267492}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -84.9, y: 3.3000004, z: 13}
+  m_LocalPosition: {x: -84.9, y: 0.029999971, z: 13}
   m_LocalScale: {x: 3.1, y: 3.1, z: 0}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -5983,6 +6533,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &623267495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 623267492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1ff2e2142013d042826be78f2935cb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxRotationAngle: 1
+  windSpeed: 0
 --- !u!1 &628444320
 GameObject:
   m_ObjectHideFlags: 0
@@ -5993,6 +6557,7 @@ GameObject:
   m_Component:
   - component: {fileID: 628444321}
   - component: {fileID: 628444322}
+  - component: {fileID: 628444323}
   m_Layer: 0
   m_Name: tree part 1 (10)
   m_TagString: Untagged
@@ -6009,7 +6574,7 @@ Transform:
   m_GameObject: {fileID: 628444320}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 249.5, y: -10.5, z: 2.8}
+  m_LocalPosition: {x: 249.5, y: -15.27, z: 2.8}
   m_LocalScale: {x: 2.04, y: 2.04, z: 0}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -6067,6 +6632,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &628444323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 628444320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1ff2e2142013d042826be78f2935cb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxRotationAngle: 6
+  windSpeed: 0
 --- !u!1 &635640465
 GameObject:
   m_ObjectHideFlags: 0
@@ -6077,6 +6656,7 @@ GameObject:
   m_Component:
   - component: {fileID: 635640466}
   - component: {fileID: 635640467}
+  - component: {fileID: 635640468}
   m_Layer: 0
   m_Name: tree part 1
   m_TagString: Untagged
@@ -6093,7 +6673,7 @@ Transform:
   m_GameObject: {fileID: 635640465}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 61.8, y: -5.06, z: 3}
+  m_LocalPosition: {x: 61.8, y: -16.940002, z: 3}
   m_LocalScale: {x: 2.04, y: 2.04, z: 0}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -6151,6 +6731,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &635640468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 635640465}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1ff2e2142013d042826be78f2935cb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxRotationAngle: 6
+  windSpeed: 0
 --- !u!1 &641117698
 GameObject:
   m_ObjectHideFlags: 0
@@ -6245,6 +6839,7 @@ GameObject:
   m_Component:
   - component: {fileID: 650746747}
   - component: {fileID: 650746748}
+  - component: {fileID: 650746749}
   m_Layer: 0
   m_Name: tree part 1
   m_TagString: Untagged
@@ -6261,7 +6856,7 @@ Transform:
   m_GameObject: {fileID: 650746746}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -24, y: 0.7, z: 7.3}
+  m_LocalPosition: {x: -24, y: -2.5700004, z: 7.3}
   m_LocalScale: {x: 3.1, y: 3.1, z: 0}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -6319,6 +6914,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &650746749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 650746746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1ff2e2142013d042826be78f2935cb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxRotationAngle: 1
+  windSpeed: 0
 --- !u!1 &654138935
 GameObject:
   m_ObjectHideFlags: 0
@@ -6602,6 +7211,7 @@ GameObject:
   m_Component:
   - component: {fileID: 674878384}
   - component: {fileID: 674878385}
+  - component: {fileID: 674878386}
   m_Layer: 0
   m_Name: tree part 1 (4)
   m_TagString: Untagged
@@ -6618,7 +7228,7 @@ Transform:
   m_GameObject: {fileID: 674878383}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 74.04, y: -3.92, z: 3.29}
+  m_LocalPosition: {x: 74.04, y: -10.23, z: 3.29}
   m_LocalScale: {x: 2.04, y: 2.04, z: 0}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -6676,6 +7286,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &674878386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 674878383}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1ff2e2142013d042826be78f2935cb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxRotationAngle: 6
+  windSpeed: 0
 --- !u!1 &684888013
 GameObject:
   m_ObjectHideFlags: 0
@@ -6770,6 +7394,7 @@ GameObject:
   m_Component:
   - component: {fileID: 694979995}
   - component: {fileID: 694979996}
+  - component: {fileID: 694979997}
   m_Layer: 0
   m_Name: tree pinus (4)
   m_TagString: Untagged
@@ -6786,7 +7411,7 @@ Transform:
   m_GameObject: {fileID: 694979994}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 216.82, y: 0.5, z: 7.95}
+  m_LocalPosition: {x: 216.82, y: -6.6000004, z: 7.95}
   m_LocalScale: {x: 1.68, y: 1.68, z: 0}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -6844,6 +7469,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &694979997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 694979994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1ff2e2142013d042826be78f2935cb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxRotationAngle: 1
+  windSpeed: 0
 --- !u!1 &696712691
 GameObject:
   m_ObjectHideFlags: 0
@@ -7022,6 +7661,7 @@ GameObject:
   m_Component:
   - component: {fileID: 713001168}
   - component: {fileID: 713001169}
+  - component: {fileID: 713001170}
   m_Layer: 0
   m_Name: tree part 1
   m_TagString: Untagged
@@ -7038,7 +7678,7 @@ Transform:
   m_GameObject: {fileID: 713001167}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 13.200001, y: 3.3000011, z: 13}
+  m_LocalPosition: {x: 13.200001, y: 0.030000687, z: 13}
   m_LocalScale: {x: 3.1, y: 3.1, z: 0}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -7096,6 +7736,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &713001170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 713001167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1ff2e2142013d042826be78f2935cb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxRotationAngle: 1
+  windSpeed: 0
 --- !u!1 &736151694
 GameObject:
   m_ObjectHideFlags: 0
@@ -7347,6 +8001,7 @@ GameObject:
   m_Component:
   - component: {fileID: 748008206}
   - component: {fileID: 748008207}
+  - component: {fileID: 748008208}
   m_Layer: 0
   m_Name: tree part 1 (1)
   m_TagString: Untagged
@@ -7363,7 +8018,7 @@ Transform:
   m_GameObject: {fileID: 748008205}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 138.1, y: 3.9, z: 7.3}
+  m_LocalPosition: {x: 138.1, y: -6.4200006, z: 7.3}
   m_LocalScale: {x: 3.1, y: 3.1, z: 0}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -7421,6 +8076,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &748008208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 748008205}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1ff2e2142013d042826be78f2935cb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxRotationAngle: 1
+  windSpeed: 0
 --- !u!1 &757266144
 GameObject:
   m_ObjectHideFlags: 0
@@ -7431,6 +8100,7 @@ GameObject:
   m_Component:
   - component: {fileID: 757266145}
   - component: {fileID: 757266146}
+  - component: {fileID: 757266147}
   m_Layer: 0
   m_Name: tree part 1 (2)
   m_TagString: Untagged
@@ -7447,7 +8117,7 @@ Transform:
   m_GameObject: {fileID: 757266144}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 68.69, y: -5.06, z: 2.8}
+  m_LocalPosition: {x: 68.69, y: -9.83, z: 2.8}
   m_LocalScale: {x: 2.04, y: 2.04, z: 0}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -7505,6 +8175,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &757266147
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 757266144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1ff2e2142013d042826be78f2935cb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxRotationAngle: 6
+  windSpeed: 0
 --- !u!1 &765687965
 GameObject:
   m_ObjectHideFlags: 0
@@ -7515,6 +8199,7 @@ GameObject:
   m_Component:
   - component: {fileID: 765687966}
   - component: {fileID: 765687967}
+  - component: {fileID: 765687968}
   m_Layer: 0
   m_Name: cloud (3)
   m_TagString: Untagged
@@ -7589,6 +8274,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &765687968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 765687965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 510b603b8ffb1fb42bf842c230a3e980, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  windSpeed: 0.5
 --- !u!1 &767379011
 GameObject:
   m_ObjectHideFlags: 0
@@ -7758,6 +8456,7 @@ GameObject:
   m_Component:
   - component: {fileID: 789561166}
   - component: {fileID: 789561167}
+  - component: {fileID: 789561168}
   m_Layer: 0
   m_Name: tree part 1
   m_TagString: Untagged
@@ -7774,7 +8473,7 @@ Transform:
   m_GameObject: {fileID: 789561165}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 38.25, y: 2.24, z: 3}
+  m_LocalPosition: {x: 38.25, y: -13.97, z: 3}
   m_LocalScale: {x: 2.04, y: 2.04, z: 0}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -7832,6 +8531,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &789561168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 789561165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1ff2e2142013d042826be78f2935cb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxRotationAngle: 6
+  windSpeed: 0
 --- !u!1 &799423722
 GameObject:
   m_ObjectHideFlags: 0
@@ -7926,6 +8639,7 @@ GameObject:
   m_Component:
   - component: {fileID: 807926145}
   - component: {fileID: 807926146}
+  - component: {fileID: 807926147}
   m_Layer: 0
   m_Name: tree part 1 (18)
   m_TagString: Untagged
@@ -7942,7 +8656,7 @@ Transform:
   m_GameObject: {fileID: 807926144}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 272.2, y: -6.79, z: 4.7}
+  m_LocalPosition: {x: 272.2, y: -11.56, z: 4.7}
   m_LocalScale: {x: 2.04, y: 2.04, z: 0}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -8000,6 +8714,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &807926147
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 807926144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1ff2e2142013d042826be78f2935cb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxRotationAngle: 6
+  windSpeed: 0
 --- !u!1 &809677026
 GameObject:
   m_ObjectHideFlags: 0
@@ -8449,6 +9177,7 @@ GameObject:
   m_Component:
   - component: {fileID: 853639683}
   - component: {fileID: 853639684}
+  - component: {fileID: 853639685}
   m_Layer: 0
   m_Name: tree part 1 (14)
   m_TagString: Untagged
@@ -8465,7 +9194,7 @@ Transform:
   m_GameObject: {fileID: 853639682}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 270.2, y: -5.06, z: 2.7}
+  m_LocalPosition: {x: 270.2, y: -9.83, z: 2.7}
   m_LocalScale: {x: 2.04, y: 2.04, z: 0}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -8523,6 +9252,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &853639685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 853639682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1ff2e2142013d042826be78f2935cb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxRotationAngle: 6
+  windSpeed: 0
 --- !u!1 &854346870
 GameObject:
   m_ObjectHideFlags: 0
@@ -8760,6 +9503,7 @@ GameObject:
   m_Component:
   - component: {fileID: 874934242}
   - component: {fileID: 874934243}
+  - component: {fileID: 874934244}
   m_Layer: 0
   m_Name: tree part 3
   m_TagString: Untagged
@@ -8776,7 +9520,7 @@ Transform:
   m_GameObject: {fileID: 874934241}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 20.9, y: 1.7, z: 11.1}
+  m_LocalPosition: {x: 20.9, y: -1.5700004, z: 11.1}
   m_LocalScale: {x: 3.1, y: 3.1, z: 0}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -8834,6 +9578,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &874934244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 874934241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1ff2e2142013d042826be78f2935cb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxRotationAngle: 1
+  windSpeed: 0
 --- !u!1 &910955649
 GameObject:
   m_ObjectHideFlags: 0
@@ -9105,6 +9863,7 @@ GameObject:
   m_Component:
   - component: {fileID: 940221166}
   - component: {fileID: 940221167}
+  - component: {fileID: 940221168}
   m_Layer: 0
   m_Name: tree part 1
   m_TagString: Untagged
@@ -9121,7 +9880,7 @@ Transform:
   m_GameObject: {fileID: 940221165}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -10.300003, y: 3.8999996, z: 11.67}
+  m_LocalPosition: {x: -10.300003, y: -6.220001, z: 11.67}
   m_LocalScale: {x: 3.1, y: 3.1, z: 0}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -9179,6 +9938,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &940221168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 940221165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1ff2e2142013d042826be78f2935cb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxRotationAngle: 1
+  windSpeed: 0
 --- !u!1 &948140766
 GameObject:
   m_ObjectHideFlags: 0
@@ -9189,6 +9962,7 @@ GameObject:
   m_Component:
   - component: {fileID: 948140767}
   - component: {fileID: 948140768}
+  - component: {fileID: 948140769}
   m_Layer: 0
   m_Name: cloud (2)
   m_TagString: Untagged
@@ -9263,6 +10037,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &948140769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 948140766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 510b603b8ffb1fb42bf842c230a3e980, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  windSpeed: 0.5
 --- !u!1 &976981916
 GameObject:
   m_ObjectHideFlags: 0
@@ -9273,6 +10060,7 @@ GameObject:
   m_Component:
   - component: {fileID: 976981917}
   - component: {fileID: 976981918}
+  - component: {fileID: 976981919}
   m_Layer: 0
   m_Name: tree part 2
   m_TagString: Untagged
@@ -9289,7 +10077,7 @@ Transform:
   m_GameObject: {fileID: 976981916}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -13.900002, y: -1.2999992, z: 22.57}
+  m_LocalPosition: {x: -13.900002, y: -4.5699997, z: 22.57}
   m_LocalScale: {x: 3.1, y: 3.1, z: 0}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -9347,6 +10135,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &976981919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 976981916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1ff2e2142013d042826be78f2935cb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxRotationAngle: 1
+  windSpeed: 0
 --- !u!1 &977293470
 GameObject:
   m_ObjectHideFlags: 0
@@ -9635,6 +10437,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1000076084}
   - component: {fileID: 1000076085}
+  - component: {fileID: 1000076086}
   m_Layer: 0
   m_Name: tree part 1
   m_TagString: Untagged
@@ -9651,7 +10454,7 @@ Transform:
   m_GameObject: {fileID: 1000076083}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2, y: -5.7, z: 2.1}
+  m_LocalPosition: {x: -2, y: -10.47, z: 2.1}
   m_LocalScale: {x: 2.04, y: 2.04, z: 0}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -9709,6 +10512,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1000076086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000076083}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1ff2e2142013d042826be78f2935cb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxRotationAngle: 6
+  windSpeed: 0
 --- !u!1 &1004318608
 GameObject:
   m_ObjectHideFlags: 0
@@ -9719,6 +10536,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1004318609}
   - component: {fileID: 1004318610}
+  - component: {fileID: 1004318611}
   m_Layer: 0
   m_Name: tree part 2
   m_TagString: Untagged
@@ -9735,7 +10553,7 @@ Transform:
   m_GameObject: {fileID: 1004318608}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -23.599998, y: -1.2999992, z: 18.2}
+  m_LocalPosition: {x: -23.599998, y: -11.42, z: 18.2}
   m_LocalScale: {x: 3.1, y: 3.1, z: 0}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -9793,6 +10611,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1004318611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1004318608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1ff2e2142013d042826be78f2935cb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxRotationAngle: 1
+  windSpeed: 0
 --- !u!1 &1008348684
 GameObject:
   m_ObjectHideFlags: 0
@@ -9887,6 +10719,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1025407420}
   - component: {fileID: 1025407421}
+  - component: {fileID: 1025407422}
   m_Layer: 0
   m_Name: tree part 3
   m_TagString: Untagged
@@ -9903,7 +10736,7 @@ Transform:
   m_GameObject: {fileID: 1025407419}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 18.4, y: -5.8, z: 8.7}
+  m_LocalPosition: {x: 18.4, y: -7.07, z: 8.7}
   m_LocalScale: {x: 3.1, y: 3.1, z: 0}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -9961,6 +10794,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1025407422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1025407419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1ff2e2142013d042826be78f2935cb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxRotationAngle: 1
+  windSpeed: 0
 --- !u!1 &1030268023
 GameObject:
   m_ObjectHideFlags: 0
@@ -10055,6 +10902,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1040107858}
   - component: {fileID: 1040107859}
+  - component: {fileID: 1040107860}
   m_Layer: 0
   m_Name: tree part 1 (13)
   m_TagString: Untagged
@@ -10071,7 +10919,7 @@ Transform:
   m_GameObject: {fileID: 1040107857}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 264.8, y: -5.06, z: 3}
+  m_LocalPosition: {x: 264.8, y: -9.83, z: 3}
   m_LocalScale: {x: 2.04, y: 2.04, z: 0}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -10129,6 +10977,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1040107860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1040107857}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1ff2e2142013d042826be78f2935cb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxRotationAngle: 6
+  windSpeed: 0
 --- !u!1 &1044831718
 GameObject:
   m_ObjectHideFlags: 0
@@ -10223,6 +11085,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1052525984}
   - component: {fileID: 1052525985}
+  - component: {fileID: 1052525986}
   m_Layer: 0
   m_Name: tree part 1
   m_TagString: Untagged
@@ -10239,7 +11102,7 @@ Transform:
   m_GameObject: {fileID: 1052525983}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 83.3, y: -5.9, z: 3}
+  m_LocalPosition: {x: 83.3, y: -11.41, z: 3}
   m_LocalScale: {x: 2.04, y: 2.04, z: 0}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -10297,6 +11160,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1052525986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1052525983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1ff2e2142013d042826be78f2935cb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxRotationAngle: 6
+  windSpeed: 0
 --- !u!1 &1089192919
 GameObject:
   m_ObjectHideFlags: 0
@@ -10307,6 +11184,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1089192920}
   - component: {fileID: 1089192921}
+  - component: {fileID: 1089192922}
   m_Layer: 0
   m_Name: tree pinus
   m_TagString: Untagged
@@ -10323,7 +11201,7 @@ Transform:
   m_GameObject: {fileID: 1089192919}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 223.41, y: -1.1, z: 5.6}
+  m_LocalPosition: {x: 223.41, y: -8.2, z: 5.6}
   m_LocalScale: {x: 1.68, y: 1.68, z: 0}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -10381,6 +11259,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1089192922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1089192919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1ff2e2142013d042826be78f2935cb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxRotationAngle: 1
+  windSpeed: 0
 --- !u!1 &1093616987
 GameObject:
   m_ObjectHideFlags: 0
@@ -10391,6 +11283,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1093616988}
   - component: {fileID: 1093616989}
+  - component: {fileID: 1093616990}
   m_Layer: 0
   m_Name: cloud (1)
   m_TagString: Untagged
@@ -10465,6 +11358,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1093616990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1093616987}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 510b603b8ffb1fb42bf842c230a3e980, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  windSpeed: 0.5
 --- !u!1 &1110036988
 GameObject:
   m_ObjectHideFlags: 0
@@ -10475,6 +11381,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1110036989}
   - component: {fileID: 1110036990}
+  - component: {fileID: 1110036991}
   m_Layer: 0
   m_Name: cloud (1)
   m_TagString: Untagged
@@ -10549,6 +11456,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1110036991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1110036988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 510b603b8ffb1fb42bf842c230a3e980, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  windSpeed: 0.5
 --- !u!1 &1118745551
 GameObject:
   m_ObjectHideFlags: 0
@@ -10559,6 +11479,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1118745552}
   - component: {fileID: 1118745553}
+  - component: {fileID: 1118745554}
   m_Layer: 0
   m_Name: tree pinus (1)
   m_TagString: Untagged
@@ -10575,7 +11496,7 @@ Transform:
   m_GameObject: {fileID: 1118745551}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 222.87, y: 2.4100006, z: 3.6799998}
+  m_LocalPosition: {x: 222.87, y: -4.6899996, z: 3.6799998}
   m_LocalScale: {x: 1.68, y: 1.68, z: 0}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -10633,6 +11554,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1118745554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1118745551}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1ff2e2142013d042826be78f2935cb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxRotationAngle: 1
+  windSpeed: 0
 --- !u!1 &1136144370
 GameObject:
   m_ObjectHideFlags: 0
@@ -10643,6 +11578,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1136144371}
   - component: {fileID: 1136144372}
+  - component: {fileID: 1136144373}
   m_Layer: 0
   m_Name: tree part 3
   m_TagString: Untagged
@@ -10659,7 +11595,7 @@ Transform:
   m_GameObject: {fileID: 1136144370}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 104.35, y: -5.799999, z: 8.7}
+  m_LocalPosition: {x: 104.35, y: -9.07, z: 8.7}
   m_LocalScale: {x: 3.1, y: 3.1, z: 0}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -10717,6 +11653,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1136144373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1136144370}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1ff2e2142013d042826be78f2935cb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxRotationAngle: 1
+  windSpeed: 0
 --- !u!1 &1149692019
 GameObject:
   m_ObjectHideFlags: 0
@@ -10831,6 +11781,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1159098600}
   - component: {fileID: 1159098601}
+  - component: {fileID: 1159098602}
   m_Layer: 0
   m_Name: tree part 1 (5)
   m_TagString: Untagged
@@ -10847,7 +11798,7 @@ Transform:
   m_GameObject: {fileID: 1159098599}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 70.86, y: -6.79, z: 4.7}
+  m_LocalPosition: {x: 70.86, y: -11.56, z: 4.7}
   m_LocalScale: {x: 2.04, y: 2.04, z: 0}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -10905,6 +11856,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1159098602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1159098599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1ff2e2142013d042826be78f2935cb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxRotationAngle: 6
+  windSpeed: 0
 --- !u!1 &1167550079
 GameObject:
   m_ObjectHideFlags: 0
@@ -10915,6 +11880,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1167550080}
   - component: {fileID: 1167550081}
+  - component: {fileID: 1167550082}
   m_Layer: 0
   m_Name: tree part 1 (16)
   m_TagString: Untagged
@@ -10931,7 +11897,7 @@ Transform:
   m_GameObject: {fileID: 1167550079}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 275.78, y: -5.06, z: 2.5}
+  m_LocalPosition: {x: 275.78, y: -16.46, z: 2.5}
   m_LocalScale: {x: 2.04, y: 2.04, z: 0}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -10989,6 +11955,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1167550082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1167550079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1ff2e2142013d042826be78f2935cb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxRotationAngle: 6
+  windSpeed: 0
 --- !u!1 &1184863731
 GameObject:
   m_ObjectHideFlags: 0
@@ -11244,6 +12224,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1208130191}
   - component: {fileID: 1208130192}
+  - component: {fileID: 1208130193}
   m_Layer: 0
   m_Name: tree part 1 (15)
   m_TagString: Untagged
@@ -11260,7 +12241,7 @@ Transform:
   m_GameObject: {fileID: 1208130190}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 253.6, y: 3.3000004, z: 13}
+  m_LocalPosition: {x: 253.6, y: 0.029999971, z: 13}
   m_LocalScale: {x: 3.1, y: 3.1, z: 0}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -11318,6 +12299,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1208130193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1208130190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1ff2e2142013d042826be78f2935cb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxRotationAngle: 1
+  windSpeed: 0
 --- !u!1 &1215746250
 GameObject:
   m_ObjectHideFlags: 0
@@ -11328,6 +12323,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1215746251}
   - component: {fileID: 1215746252}
+  - component: {fileID: 1215746253}
   m_Layer: 0
   m_Name: tree pinus (8)
   m_TagString: Untagged
@@ -11344,7 +12340,7 @@ Transform:
   m_GameObject: {fileID: 1215746250}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 277, y: 4.0700006, z: 6.06}
+  m_LocalPosition: {x: 277, y: -6.910001, z: 6.06}
   m_LocalScale: {x: 1.68, y: 1.68, z: 0}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -11402,6 +12398,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1215746253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1215746250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1ff2e2142013d042826be78f2935cb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxRotationAngle: 1
+  windSpeed: 0
 --- !u!1 &1217585256
 GameObject:
   m_ObjectHideFlags: 0
@@ -11700,6 +12710,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1225672025}
   - component: {fileID: 1225672026}
+  - component: {fileID: 1225672027}
   m_Layer: 0
   m_Name: tree part 1 (13)
   m_TagString: Untagged
@@ -11716,7 +12727,7 @@ Transform:
   m_GameObject: {fileID: 1225672024}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 272.4, y: 3.3000004, z: 13}
+  m_LocalPosition: {x: 272.4, y: -7.6800003, z: 13}
   m_LocalScale: {x: 3.1, y: 3.1, z: 0}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -11774,6 +12785,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1225672027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1225672024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1ff2e2142013d042826be78f2935cb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxRotationAngle: 1
+  windSpeed: 0
 --- !u!1 &1239573929
 GameObject:
   m_ObjectHideFlags: 0
@@ -12045,6 +13070,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1253615652}
   - component: {fileID: 1253615653}
+  - component: {fileID: 1253615654}
   m_Layer: 0
   m_Name: tree part 1 (7)
   m_TagString: Untagged
@@ -12061,7 +13087,7 @@ Transform:
   m_GameObject: {fileID: 1253615651}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 202.8, y: 3.8999996, z: 11.67}
+  m_LocalPosition: {x: 202.8, y: -3.9500005, z: 11.67}
   m_LocalScale: {x: 3.1, y: 3.1, z: 0}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -12119,6 +13145,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1253615654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1253615651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1ff2e2142013d042826be78f2935cb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxRotationAngle: 1
+  windSpeed: 0
 --- !u!1 &1256557866
 GameObject:
   m_ObjectHideFlags: 0
@@ -12298,6 +13338,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1286930518}
   - component: {fileID: 1286930519}
+  - component: {fileID: 1286930520}
   m_Layer: 0
   m_Name: tree part 1
   m_TagString: Untagged
@@ -12314,7 +13355,7 @@ Transform:
   m_GameObject: {fileID: 1286930517}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -53, y: 3.3000004, z: 13}
+  m_LocalPosition: {x: -53, y: 0.029999971, z: 13}
   m_LocalScale: {x: 3.1, y: 3.1, z: 0}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -12372,6 +13413,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1286930520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1286930517}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1ff2e2142013d042826be78f2935cb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxRotationAngle: 1
+  windSpeed: 0
 --- !u!1 &1296448737
 GameObject:
   m_ObjectHideFlags: 0
@@ -12466,6 +13521,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1303714613}
   - component: {fileID: 1303714614}
+  - component: {fileID: 1303714615}
   m_Layer: 0
   m_Name: cloud (4)
   m_TagString: Untagged
@@ -12540,6 +13596,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1303714615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1303714612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 510b603b8ffb1fb42bf842c230a3e980, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  windSpeed: 0.5
 --- !u!1 &1308646241
 GameObject:
   m_ObjectHideFlags: 0
@@ -12634,6 +13703,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1323620990}
   - component: {fileID: 1323620991}
+  - component: {fileID: 1323620992}
   m_Layer: 0
   m_Name: tree part 2 (6)
   m_TagString: Untagged
@@ -12650,7 +13720,7 @@ Transform:
   m_GameObject: {fileID: 1323620989}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 205.70001, y: -1.8999977, z: 23.900002}
+  m_LocalPosition: {x: 203.29, y: -10.56, z: 23.900002}
   m_LocalScale: {x: 3.1, y: 3.1, z: 0}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -12708,6 +13778,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1323620992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1323620989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1ff2e2142013d042826be78f2935cb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxRotationAngle: 1
+  windSpeed: 0
 --- !u!1 &1328872673
 GameObject:
   m_ObjectHideFlags: 0
@@ -12718,6 +13802,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1328872674}
   - component: {fileID: 1328872675}
+  - component: {fileID: 1328872676}
   m_Layer: 0
   m_Name: tree part 2
   m_TagString: Untagged
@@ -12734,7 +13819,7 @@ Transform:
   m_GameObject: {fileID: 1328872673}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -68.9, y: -1.2999992, z: 22.57}
+  m_LocalPosition: {x: -68.9, y: -9.43, z: 22.57}
   m_LocalScale: {x: 3.1, y: 3.1, z: 0}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -12792,6 +13877,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1328872676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1328872673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1ff2e2142013d042826be78f2935cb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxRotationAngle: 1
+  windSpeed: 0
 --- !u!1 &1335640551
 GameObject:
   m_ObjectHideFlags: 0
@@ -12802,6 +13901,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1335640552}
   - component: {fileID: 1335640553}
+  - component: {fileID: 1335640554}
   m_Layer: 0
   m_Name: tree part 2 (1)
   m_TagString: Untagged
@@ -12818,7 +13918,7 @@ Transform:
   m_GameObject: {fileID: 1335640551}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 128.7, y: -1.3, z: 18.2}
+  m_LocalPosition: {x: 128.7, y: -4.5700006, z: 18.2}
   m_LocalScale: {x: 3.1, y: 3.1, z: 0}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -12876,6 +13976,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1335640554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1335640551}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1ff2e2142013d042826be78f2935cb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxRotationAngle: 1
+  windSpeed: 0
 --- !u!1 &1344363698
 GameObject:
   m_ObjectHideFlags: 0
@@ -12886,6 +14000,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1344363699}
   - component: {fileID: 1344363700}
+  - component: {fileID: 1344363701}
   m_Layer: 0
   m_Name: tree part 1
   m_TagString: Untagged
@@ -12902,7 +14017,7 @@ Transform:
   m_GameObject: {fileID: 1344363698}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 85.7, y: -0.15, z: 1.82}
+  m_LocalPosition: {x: 85.7, y: -4.9200006, z: 1.82}
   m_LocalScale: {x: 2.04, y: 2.04, z: 0}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -12960,6 +14075,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1344363701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1344363698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1ff2e2142013d042826be78f2935cb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxRotationAngle: 6
+  windSpeed: 0
 --- !u!1 &1346316071
 GameObject:
   m_ObjectHideFlags: 0
@@ -13269,6 +14398,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1391531618}
   - component: {fileID: 1391531619}
+  - component: {fileID: 1391531620}
   m_Layer: 0
   m_Name: tree part 3 (1)
   m_TagString: Untagged
@@ -13285,7 +14415,7 @@ Transform:
   m_GameObject: {fileID: 1391531617}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 117.299995, y: 6.1000004, z: 8.7}
+  m_LocalPosition: {x: 117.299995, y: -7.17, z: 8.7}
   m_LocalScale: {x: 3.1, y: 3.1, z: 0}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -13343,6 +14473,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1391531620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1391531617}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1ff2e2142013d042826be78f2935cb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxRotationAngle: 1
+  windSpeed: 0
 --- !u!1 &1403813926
 GameObject:
   m_ObjectHideFlags: 0
@@ -13483,6 +14627,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1404960836}
   - component: {fileID: 1404960837}
+  - component: {fileID: 1404960838}
   m_Layer: 0
   m_Name: tree part 1 (4)
   m_TagString: Untagged
@@ -13499,7 +14644,7 @@ Transform:
   m_GameObject: {fileID: 1404960835}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 128.20001, y: 3.3000004, z: 13}
+  m_LocalPosition: {x: 128.20001, y: -7, z: 13}
   m_LocalScale: {x: 3.1, y: 3.1, z: 0}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -13557,6 +14702,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1404960838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1404960835}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1ff2e2142013d042826be78f2935cb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxRotationAngle: 1
+  windSpeed: 0
 --- !u!1 &1415692144
 GameObject:
   m_ObjectHideFlags: 0
@@ -13567,6 +14726,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1415692145}
   - component: {fileID: 1415692146}
+  - component: {fileID: 1415692147}
   m_Layer: 0
   m_Name: tree part 1 (2)
   m_TagString: Untagged
@@ -13583,7 +14743,7 @@ Transform:
   m_GameObject: {fileID: 1415692144}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 147.8, y: 3.9000003, z: 11.67}
+  m_LocalPosition: {x: 147.8, y: -2.72, z: 11.67}
   m_LocalScale: {x: 3.1, y: 3.1, z: 0}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -13641,6 +14801,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1415692147
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1415692144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1ff2e2142013d042826be78f2935cb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxRotationAngle: 1
+  windSpeed: 0
 --- !u!1 &1416982497
 GameObject:
   m_ObjectHideFlags: 0
@@ -13651,6 +14825,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1416982498}
   - component: {fileID: 1416982499}
+  - component: {fileID: 1416982500}
   m_Layer: 0
   m_Name: cloud (4)
   m_TagString: Untagged
@@ -13725,6 +14900,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1416982500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1416982497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 510b603b8ffb1fb42bf842c230a3e980, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  windSpeed: 0.5
 --- !u!1 &1437703668
 GameObject:
   m_ObjectHideFlags: 0
@@ -13735,6 +14923,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1437703669}
   - component: {fileID: 1437703670}
+  - component: {fileID: 1437703671}
   m_Layer: 0
   m_Name: cloud (2)
   m_TagString: Untagged
@@ -13809,6 +14998,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1437703671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1437703668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 510b603b8ffb1fb42bf842c230a3e980, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  windSpeed: 0.5
 --- !u!1 &1441042256
 GameObject:
   m_ObjectHideFlags: 0
@@ -13819,6 +15021,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1441042257}
   - component: {fileID: 1441042258}
+  - component: {fileID: 1441042259}
   m_Layer: 0
   m_Name: cloud (3)
   m_TagString: Untagged
@@ -13893,6 +15096,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1441042259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1441042256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 510b603b8ffb1fb42bf842c230a3e980, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  windSpeed: 0.5
 --- !u!1 &1448053661
 GameObject:
   m_ObjectHideFlags: 0
@@ -13987,6 +15203,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1466557447}
   - component: {fileID: 1466557448}
+  - component: {fileID: 1466557449}
   m_Layer: 0
   m_Name: cloud (3)
   m_TagString: Untagged
@@ -14061,6 +15278,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1466557449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1466557446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 510b603b8ffb1fb42bf842c230a3e980, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  windSpeed: 0.5
 --- !u!1 &1468745756
 GameObject:
   m_ObjectHideFlags: 0
@@ -14071,6 +15301,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1468745757}
   - component: {fileID: 1468745758}
+  - component: {fileID: 1468745759}
   m_Layer: 0
   m_Name: cloud (3)
   m_TagString: Untagged
@@ -14145,6 +15376,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1468745759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1468745756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 510b603b8ffb1fb42bf842c230a3e980, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  windSpeed: 0.5
 --- !u!1 &1485223454
 GameObject:
   m_ObjectHideFlags: 0
@@ -14373,6 +15617,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1513069816}
   - component: {fileID: 1513069817}
+  - component: {fileID: 1513069818}
   m_Layer: 0
   m_Name: cloud (4)
   m_TagString: Untagged
@@ -14447,6 +15692,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1513069818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1513069815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 510b603b8ffb1fb42bf842c230a3e980, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  windSpeed: 0.5
 --- !u!1 &1517136371
 GameObject:
   m_ObjectHideFlags: 0
@@ -14457,6 +15715,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1517136372}
   - component: {fileID: 1517136373}
+  - component: {fileID: 1517136374}
   m_Layer: 0
   m_Name: cloud (2)
   m_TagString: Untagged
@@ -14531,6 +15790,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1517136374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1517136371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 510b603b8ffb1fb42bf842c230a3e980, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  windSpeed: 0.5
 --- !u!1 &1531259627
 GameObject:
   m_ObjectHideFlags: 0
@@ -14541,6 +15813,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1531259628}
   - component: {fileID: 1531259629}
+  - component: {fileID: 1531259630}
   m_Layer: 0
   m_Name: tree part 1 (1)
   m_TagString: Untagged
@@ -14557,7 +15830,7 @@ Transform:
   m_GameObject: {fileID: 1531259627}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 67.2, y: -5.06, z: 2.7}
+  m_LocalPosition: {x: 67.2, y: -9.83, z: 2.7}
   m_LocalScale: {x: 2.04, y: 2.04, z: 0}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -14615,6 +15888,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1531259630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1531259627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1ff2e2142013d042826be78f2935cb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxRotationAngle: 6
+  windSpeed: 0
 --- !u!1 &1539785852
 GameObject:
   m_ObjectHideFlags: 0
@@ -14777,6 +16064,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1556632488}
   - component: {fileID: 1556632489}
+  - component: {fileID: 1556632490}
   m_Layer: 0
   m_Name: tree part 1 (3)
   m_TagString: Untagged
@@ -14793,7 +16081,7 @@ Transform:
   m_GameObject: {fileID: 1556632487}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 171.3, y: 3.3000004, z: 13}
+  m_LocalPosition: {x: 171.3, y: -6.66, z: 13}
   m_LocalScale: {x: 3.1, y: 3.1, z: 0}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -14851,6 +16139,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1556632490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1556632487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1ff2e2142013d042826be78f2935cb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxRotationAngle: 1
+  windSpeed: 0
 --- !u!1001 &1561075009
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14865,7 +16167,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1002534225007406983, guid: c0302ba0c21b9b64bb3e5e6422e40f21, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 31.8
+      value: 301.9
       objectReference: {fileID: 0}
     - target: {fileID: 1002534225007406983, guid: c0302ba0c21b9b64bb3e5e6422e40f21, type: 3}
       propertyPath: m_LocalPosition.y
@@ -14903,6 +16205,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2200496490721348306, guid: c0302ba0c21b9b64bb3e5e6422e40f21, type: 3}
+      propertyPath: runSpeed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2200496490721348306, guid: c0302ba0c21b9b64bb3e5e6422e40f21, type: 3}
+      propertyPath: walkSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2200496490721348306, guid: c0302ba0c21b9b64bb3e5e6422e40f21, type: 3}
+      propertyPath: backwardSpeed
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14918,6 +16232,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1611249689}
   - component: {fileID: 1611249690}
+  - component: {fileID: 1611249691}
   m_Layer: 0
   m_Name: tree pinus (7)
   m_TagString: Untagged
@@ -14934,7 +16249,7 @@ Transform:
   m_GameObject: {fileID: 1611249688}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 259.53, y: 2.4100006, z: 6.32}
+  m_LocalPosition: {x: 259.53, y: -8.570001, z: 6.32}
   m_LocalScale: {x: 1.68, y: 1.68, z: 0}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -14992,6 +16307,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1611249691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1611249688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1ff2e2142013d042826be78f2935cb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxRotationAngle: 1
+  windSpeed: 0
 --- !u!1 &1621723017
 GameObject:
   m_ObjectHideFlags: 0
@@ -15352,6 +16681,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1654948451}
   - component: {fileID: 1654948452}
+  - component: {fileID: 1654948453}
   m_Layer: 0
   m_Name: cloud (3)
   m_TagString: Untagged
@@ -15426,6 +16756,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1654948453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1654948450}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 510b603b8ffb1fb42bf842c230a3e980, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  windSpeed: 0.5
 --- !u!1 &1663574025
 GameObject:
   m_ObjectHideFlags: 0
@@ -15436,6 +16779,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1663574026}
   - component: {fileID: 1663574027}
+  - component: {fileID: 1663574028}
   m_Layer: 0
   m_Name: tree part 1 (9)
   m_TagString: Untagged
@@ -15452,7 +16796,7 @@ Transform:
   m_GameObject: {fileID: 1663574025}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 183.20001, y: 3.3000011, z: 13}
+  m_LocalPosition: {x: 183.20001, y: -2.79, z: 13}
   m_LocalScale: {x: 3.1, y: 3.1, z: 0}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -15510,6 +16854,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1663574028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1663574025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1ff2e2142013d042826be78f2935cb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxRotationAngle: 1
+  windSpeed: 0
 --- !u!1 &1663783336
 GameObject:
   m_ObjectHideFlags: 0
@@ -15520,6 +16878,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1663783337}
   - component: {fileID: 1663783338}
+  - component: {fileID: 1663783339}
   m_Layer: 0
   m_Name: tree part 1
   m_TagString: Untagged
@@ -15536,7 +16895,7 @@ Transform:
   m_GameObject: {fileID: 1663783336}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -65.3, y: 1.2, z: 11.67}
+  m_LocalPosition: {x: -65.3, y: -5.6800003, z: 11.67}
   m_LocalScale: {x: 3.1, y: 3.1, z: 0}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -15594,6 +16953,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1663783339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1663783336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1ff2e2142013d042826be78f2935cb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxRotationAngle: 1
+  windSpeed: 0
 --- !u!1 &1666622341
 GameObject:
   m_ObjectHideFlags: 0
@@ -15840,6 +17213,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1693443804}
   - component: {fileID: 1693443805}
+  - component: {fileID: 1693443806}
   m_Layer: 0
   m_Name: cloud (5)
   m_TagString: Untagged
@@ -15914,6 +17288,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1693443806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1693443803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 510b603b8ffb1fb42bf842c230a3e980, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  windSpeed: 0.5
 --- !u!1 &1698574130
 GameObject:
   m_ObjectHideFlags: 0
@@ -15924,6 +17311,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1698574131}
   - component: {fileID: 1698574132}
+  - component: {fileID: 1698574133}
   m_Layer: 0
   m_Name: tree part 2
   m_TagString: Untagged
@@ -15940,7 +17328,7 @@ Transform:
   m_GameObject: {fileID: 1698574130}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -88.5, y: -1.8999977, z: 23.900002}
+  m_LocalPosition: {x: -88.5, y: -5.169998, z: 23.900002}
   m_LocalScale: {x: 3.1, y: 3.1, z: 0}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -15998,6 +17386,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1698574133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1698574130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1ff2e2142013d042826be78f2935cb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxRotationAngle: 1
+  windSpeed: 0
 --- !u!1 &1698834812
 GameObject:
   m_ObjectHideFlags: 0
@@ -16008,6 +17410,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1698834813}
   - component: {fileID: 1698834814}
+  - component: {fileID: 1698834815}
   m_Layer: 0
   m_Name: tree part 1
   m_TagString: Untagged
@@ -16024,7 +17427,7 @@ Transform:
   m_GameObject: {fileID: 1698834812}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -29.900002, y: 3.3000011, z: 13}
+  m_LocalPosition: {x: -29.900002, y: -6.8200006, z: 13}
   m_LocalScale: {x: 3.1, y: 3.1, z: 0}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -16082,6 +17485,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1698834815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1698834812}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1ff2e2142013d042826be78f2935cb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxRotationAngle: 1
+  windSpeed: 0
 --- !u!1 &1724068388
 GameObject:
   m_ObjectHideFlags: 0
@@ -16092,6 +17509,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1724068389}
   - component: {fileID: 1724068390}
+  - component: {fileID: 1724068391}
   m_Layer: 0
   m_Name: tree part 2
   m_TagString: Untagged
@@ -16108,7 +17526,7 @@ Transform:
   m_GameObject: {fileID: 1724068388}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -45.399998, y: -1.8999977, z: 23.900002}
+  m_LocalPosition: {x: -45.399998, y: -5.169998, z: 23.900002}
   m_LocalScale: {x: 3.1, y: 3.1, z: 0}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -16166,6 +17584,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1724068391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1724068388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1ff2e2142013d042826be78f2935cb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxRotationAngle: 1
+  windSpeed: 0
 --- !u!1 &1728466525
 GameObject:
   m_ObjectHideFlags: 0
@@ -16176,6 +17608,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1728466526}
   - component: {fileID: 1728466527}
+  - component: {fileID: 1728466528}
   m_Layer: 0
   m_Name: tree part 1 (8)
   m_TagString: Untagged
@@ -16192,7 +17625,7 @@ Transform:
   m_GameObject: {fileID: 1728466525}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 217.08, y: 3.3000011, z: 13}
+  m_LocalPosition: {x: 217.08, y: -5.4800005, z: 13}
   m_LocalScale: {x: 3.1, y: 3.1, z: 0}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -16250,6 +17683,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1728466528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1728466525}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1ff2e2142013d042826be78f2935cb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxRotationAngle: 1
+  windSpeed: 0
 --- !u!1 &1747816681
 GameObject:
   m_ObjectHideFlags: 0
@@ -16260,6 +17707,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1747816682}
   - component: {fileID: 1747816683}
+  - component: {fileID: 1747816684}
   m_Layer: 0
   m_Name: tree part 2 (2)
   m_TagString: Untagged
@@ -16276,7 +17724,7 @@ Transform:
   m_GameObject: {fileID: 1747816681}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 138.4, y: -1.2999992, z: 22.57}
+  m_LocalPosition: {x: 138.4, y: -4.5699997, z: 22.57}
   m_LocalScale: {x: 3.1, y: 3.1, z: 0}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -16334,6 +17782,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1747816684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1747816681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1ff2e2142013d042826be78f2935cb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxRotationAngle: 1
+  windSpeed: 0
 --- !u!1 &1759118263
 GameObject:
   m_ObjectHideFlags: 0
@@ -16344,6 +17806,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1759118264}
   - component: {fileID: 1759118265}
+  - component: {fileID: 1759118266}
   m_Layer: 0
   m_Name: tree part 2 (4)
   m_TagString: Untagged
@@ -16360,7 +17823,7 @@ Transform:
   m_GameObject: {fileID: 1759118263}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 118.8, y: -1.8999977, z: 23.900002}
+  m_LocalPosition: {x: 118.8, y: -5.169998, z: 23.900002}
   m_LocalScale: {x: 3.1, y: 3.1, z: 0}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -16418,6 +17881,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1759118266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1759118263}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1ff2e2142013d042826be78f2935cb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxRotationAngle: 1
+  windSpeed: 0
 --- !u!1 &1777253858
 GameObject:
   m_ObjectHideFlags: 0
@@ -16428,6 +17905,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1777253859}
   - component: {fileID: 1777253860}
+  - component: {fileID: 1777253861}
   m_Layer: 0
   m_Name: tree part 3 (2)
   m_TagString: Untagged
@@ -16444,7 +17922,7 @@ Transform:
   m_GameObject: {fileID: 1777253858}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 118.799995, y: -5.799999, z: 8.7}
+  m_LocalPosition: {x: 118.799995, y: -9.07, z: 8.7}
   m_LocalScale: {x: 3.1, y: 3.1, z: 0}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -16502,6 +17980,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1777253861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1777253858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1ff2e2142013d042826be78f2935cb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxRotationAngle: 1
+  windSpeed: 0
 --- !u!1 &1778783675
 GameObject:
   m_ObjectHideFlags: 0
@@ -16748,6 +18240,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1809066732}
   - component: {fileID: 1809066733}
+  - component: {fileID: 1809066734}
   m_Layer: 0
   m_Name: tree part 1 (11)
   m_TagString: Untagged
@@ -16764,7 +18257,7 @@ Transform:
   m_GameObject: {fileID: 1809066731}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 286.3, y: -5.9, z: 3}
+  m_LocalPosition: {x: 286.3, y: -14.09, z: 3}
   m_LocalScale: {x: 2.04, y: 2.04, z: 0}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -16822,6 +18315,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1809066734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1809066731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1ff2e2142013d042826be78f2935cb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxRotationAngle: 6
+  windSpeed: 0
 --- !u!1 &1809574556
 GameObject:
   m_ObjectHideFlags: 0
@@ -16832,6 +18339,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1809574557}
   - component: {fileID: 1809574558}
+  - component: {fileID: 1809574559}
   m_Layer: 0
   m_Name: cloud (1)
   m_TagString: Untagged
@@ -16906,6 +18414,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1809574559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1809574556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 510b603b8ffb1fb42bf842c230a3e980, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  windSpeed: 0.5
 --- !u!1 &1811409892
 GameObject:
   m_ObjectHideFlags: 0
@@ -17000,6 +18521,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1812225401}
   - component: {fileID: 1812225402}
+  - component: {fileID: 1812225403}
   m_Layer: 0
   m_Name: tree part 1 (7)
   m_TagString: Untagged
@@ -17016,7 +18538,7 @@ Transform:
   m_GameObject: {fileID: 1812225400}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 197, y: -4.299999, z: 4.66}
+  m_LocalPosition: {x: 197, y: -9.07, z: 4.66}
   m_LocalScale: {x: 2.04, y: 2.04, z: 0}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -17074,6 +18596,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1812225403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1812225400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1ff2e2142013d042826be78f2935cb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxRotationAngle: 6
+  windSpeed: 0
 --- !u!1 &1830688327
 GameObject:
   m_ObjectHideFlags: 0
@@ -17159,6 +18695,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1846480773}
   - component: {fileID: 1846480774}
+  - component: {fileID: 1846480775}
   m_Layer: 0
   m_Name: cloud (1)
   m_TagString: Untagged
@@ -17233,6 +18770,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1846480775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1846480772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 510b603b8ffb1fb42bf842c230a3e980, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  windSpeed: 0.5
 --- !u!1 &1861732128
 GameObject:
   m_ObjectHideFlags: 0
@@ -17546,6 +19096,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1896924456}
   - component: {fileID: 1896924457}
+  - component: {fileID: 1896924458}
   m_Layer: 0
   m_Name: cloud (6)
   m_TagString: Untagged
@@ -17620,6 +19171,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1896924458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1896924455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 510b603b8ffb1fb42bf842c230a3e980, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  windSpeed: 0.5
 --- !u!1 &1939110625
 GameObject:
   m_ObjectHideFlags: 0
@@ -17672,6 +19236,79 @@ Transform:
   - {fileID: 259606754}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1954311815
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 445938196729694348, guid: 1f8c13fce8b919540bb6e7ebff2a4c71, type: 3}
+      propertyPath: m_Size.x
+      value: 5.4689026
+      objectReference: {fileID: 0}
+    - target: {fileID: 445938196729694348, guid: 1f8c13fce8b919540bb6e7ebff2a4c71, type: 3}
+      propertyPath: m_Offset.x
+      value: -8.371811
+      objectReference: {fileID: 0}
+    - target: {fileID: 489619306695258749, guid: 1f8c13fce8b919540bb6e7ebff2a4c71, type: 3}
+      propertyPath: ghostPrefab
+      value: 
+      objectReference: {fileID: 8739756506583654513, guid: ef09b63a9ecac38438a11dbd1f505e6b, type: 3}
+    - target: {fileID: 489619306695258749, guid: 1f8c13fce8b919540bb6e7ebff2a4c71, type: 3}
+      propertyPath: respawnTimer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2984936733470417694, guid: 1f8c13fce8b919540bb6e7ebff2a4c71, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 343.90393
+      objectReference: {fileID: 0}
+    - target: {fileID: 2984936733470417694, guid: 1f8c13fce8b919540bb6e7ebff2a4c71, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -13.269541
+      objectReference: {fileID: 0}
+    - target: {fileID: 2984936733470417694, guid: 1f8c13fce8b919540bb6e7ebff2a4c71, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.16823155
+      objectReference: {fileID: 0}
+    - target: {fileID: 2984936733470417694, guid: 1f8c13fce8b919540bb6e7ebff2a4c71, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2984936733470417694, guid: 1f8c13fce8b919540bb6e7ebff2a4c71, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2984936733470417694, guid: 1f8c13fce8b919540bb6e7ebff2a4c71, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2984936733470417694, guid: 1f8c13fce8b919540bb6e7ebff2a4c71, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2984936733470417694, guid: 1f8c13fce8b919540bb6e7ebff2a4c71, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2984936733470417694, guid: 1f8c13fce8b919540bb6e7ebff2a4c71, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2984936733470417694, guid: 1f8c13fce8b919540bb6e7ebff2a4c71, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8391535466380893502, guid: 1f8c13fce8b919540bb6e7ebff2a4c71, type: 3}
+      propertyPath: m_Name
+      value: GhostSpawner (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1f8c13fce8b919540bb6e7ebff2a4c71, type: 3}
 --- !u!1 &1963715136
 GameObject:
   m_ObjectHideFlags: 0
@@ -17682,6 +19319,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1963715137}
   - component: {fileID: 1963715138}
+  - component: {fileID: 1963715139}
   m_Layer: 0
   m_Name: tree part 1 (6)
   m_TagString: Untagged
@@ -17698,7 +19336,7 @@ Transform:
   m_GameObject: {fileID: 1963715136}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 201, y: -9.6, z: 4.9}
+  m_LocalPosition: {x: 201, y: -14.370001, z: 4.9}
   m_LocalScale: {x: 2.04, y: 2.04, z: 0}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -17756,6 +19394,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1963715139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1963715136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1ff2e2142013d042826be78f2935cb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxRotationAngle: 6
+  windSpeed: 0
 --- !u!1 &1964090066
 GameObject:
   m_ObjectHideFlags: 0
@@ -17766,6 +19418,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1964090067}
   - component: {fileID: 1964090068}
+  - component: {fileID: 1964090069}
   m_Layer: 0
   m_Name: tree part 1
   m_TagString: Untagged
@@ -17782,7 +19435,7 @@ Transform:
   m_GameObject: {fileID: 1964090066}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 23.22, y: 1.65, z: 3.6}
+  m_LocalPosition: {x: 23.22, y: -13.910001, z: 3.6}
   m_LocalScale: {x: 3.17, y: 3.17, z: 0}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -17840,6 +19493,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1964090069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1964090066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1ff2e2142013d042826be78f2935cb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxRotationAngle: 6
+  windSpeed: 0
 --- !u!1 &1989302968
 GameObject:
   m_ObjectHideFlags: 0
@@ -17850,6 +19517,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1989302969}
   - component: {fileID: 1989302970}
+  - component: {fileID: 1989302971}
   m_Layer: 0
   m_Name: cloud (2)
   m_TagString: Untagged
@@ -17924,6 +19592,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1989302971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1989302968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 510b603b8ffb1fb42bf842c230a3e980, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  windSpeed: 0.5
 --- !u!1 &1997174775
 GameObject:
   m_ObjectHideFlags: 0
@@ -18289,6 +19970,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2011374617}
   - component: {fileID: 2011374618}
+  - component: {fileID: 2011374619}
   m_Layer: 0
   m_Name: tree part 1 (10)
   m_TagString: Untagged
@@ -18305,7 +19987,7 @@ Transform:
   m_GameObject: {fileID: 2011374616}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 215.1, y: 3.3000011, z: 13}
+  m_LocalPosition: {x: 215.1, y: 0.030000687, z: 13}
   m_LocalScale: {x: 3.1, y: 3.1, z: 0}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -18363,6 +20045,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2011374619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2011374616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1ff2e2142013d042826be78f2935cb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxRotationAngle: 1
+  windSpeed: 0
 --- !u!1 &2015913415
 GameObject:
   m_ObjectHideFlags: 0
@@ -18373,6 +20069,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2015913416}
   - component: {fileID: 2015913417}
+  - component: {fileID: 2015913418}
   m_Layer: 0
   m_Name: tree part 1 (15)
   m_TagString: Untagged
@@ -18389,7 +20086,7 @@ Transform:
   m_GameObject: {fileID: 2015913415}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 271.47, y: -5.06, z: 2.8}
+  m_LocalPosition: {x: 271.47, y: -9.83, z: 2.8}
   m_LocalScale: {x: 2.04, y: 2.04, z: 0}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -18447,6 +20144,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2015913418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2015913415}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1ff2e2142013d042826be78f2935cb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxRotationAngle: 6
+  windSpeed: 0
 --- !u!1 &2017259034
 GameObject:
   m_ObjectHideFlags: 0
@@ -18625,6 +20336,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2037732251}
   - component: {fileID: 2037732252}
+  - component: {fileID: 2037732253}
   m_Layer: 0
   m_Name: tree part 2 (10)
   m_TagString: Untagged
@@ -18641,7 +20353,7 @@ Transform:
   m_GameObject: {fileID: 2037732250}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 183.70001, y: -1.2999992, z: 18.2}
+  m_LocalPosition: {x: 183.70001, y: -5.73, z: 18.2}
   m_LocalScale: {x: 3.1, y: 3.1, z: 0}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -18699,6 +20411,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2037732253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2037732250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1ff2e2142013d042826be78f2935cb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxRotationAngle: 1
+  windSpeed: 0
 --- !u!1 &2043519196
 GameObject:
   m_ObjectHideFlags: 0
@@ -18920,7 +20646,7 @@ Transform:
   m_GameObject: {fileID: 2045299706}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -8.31}
+  m_LocalPosition: {x: 40.2, y: -16.1, z: -8.31}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -18953,6 +20679,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2047230818}
   - component: {fileID: 2047230819}
+  - component: {fileID: 2047230820}
   m_Layer: 0
   m_Name: tree pinus (5)
   m_TagString: Untagged
@@ -18969,7 +20696,7 @@ Transform:
   m_GameObject: {fileID: 2047230817}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 271, y: 2.4100006, z: 3.6799998}
+  m_LocalPosition: {x: 271, y: -8.570001, z: 3.6799998}
   m_LocalScale: {x: 1.68, y: 1.68, z: 0}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -19027,6 +20754,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2047230820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2047230817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1ff2e2142013d042826be78f2935cb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxRotationAngle: 1
+  windSpeed: 0
 --- !u!1 &2054210988
 GameObject:
   m_ObjectHideFlags: 0
@@ -19121,6 +20862,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2055366305}
   - component: {fileID: 2055366306}
+  - component: {fileID: 2055366307}
   m_Layer: 0
   m_Name: tree part 2 (8)
   m_TagString: Untagged
@@ -19137,7 +20879,7 @@ Transform:
   m_GameObject: {fileID: 2055366304}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 216.90001, y: -1.8999977, z: 23.900002}
+  m_LocalPosition: {x: 216.90001, y: -5.169998, z: 23.900002}
   m_LocalScale: {x: 3.1, y: 3.1, z: 0}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -19195,6 +20937,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2055366307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2055366304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1ff2e2142013d042826be78f2935cb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxRotationAngle: 1
+  windSpeed: 0
 --- !u!1 &2059942748
 GameObject:
   m_ObjectHideFlags: 0
@@ -19452,6 +21208,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2113574018}
   - component: {fileID: 2113574019}
+  - component: {fileID: 2113574020}
   m_Layer: 0
   m_Name: tree part 2
   m_TagString: Untagged
@@ -19468,7 +21225,7 @@ Transform:
   m_GameObject: {fileID: 2113574017}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.5999985, y: -1.8999977, z: 23.900002}
+  m_LocalPosition: {x: -1.5999985, y: -5.169998, z: 23.900002}
   m_LocalScale: {x: 3.1, y: 3.1, z: 0}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -19526,6 +21283,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2113574020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2113574017}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1ff2e2142013d042826be78f2935cb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxRotationAngle: 1
+  windSpeed: 0
 --- !u!1 &2125422116
 GameObject:
   m_ObjectHideFlags: 0
@@ -19622,6 +21393,10 @@ PrefabInstance:
       propertyPath: ghostPrefab
       value: 
       objectReference: {fileID: 8739756506583654513, guid: ef09b63a9ecac38438a11dbd1f505e6b, type: 3}
+    - target: {fileID: 489619306695258749, guid: 1f8c13fce8b919540bb6e7ebff2a4c71, type: 3}
+      propertyPath: respawnTimer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2984936733470417694, guid: 1f8c13fce8b919540bb6e7ebff2a4c71, type: 3}
       propertyPath: m_LocalPosition.x
       value: 48.94
@@ -19790,3 +21565,4 @@ SceneRoots:
   - {fileID: 1892943186}
   - {fileID: 249735276}
   - {fileID: 6737633865883778523}
+  - {fileID: 1954311815}
