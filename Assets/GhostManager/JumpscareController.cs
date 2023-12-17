@@ -1,5 +1,5 @@
-
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -14,6 +14,8 @@ public class JumpscareController : MonoBehaviour
     public MainCharacterHealth mainCharacterHealth;
     private Animator baseCharacterAnimator;
     public Slider speedSlider;
+    private List<Vector3> originalPositions = new List<Vector3>();
+
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
@@ -30,9 +32,11 @@ public class JumpscareController : MonoBehaviour
         UIController[5] = GameObject.Find("Canvas/HealthBar");
         UIController[6] = GameObject.Find("Canvas/SanityBar");
         speedSlider = UIController[1].GetComponent<Slider>();
+
+        // Simpan posisi awal UI
         foreach (GameObject canvas in UIController)
         {
-            canvas.gameObject.SetActive(true);
+            originalPositions.Add(canvas.transform.position);
         }
 
         UIPocongJumscare = GameObject.Find("Canvas/pocongJumpscare");
@@ -45,18 +49,20 @@ public class JumpscareController : MonoBehaviour
         StartCoroutine(JumpscarePocong());
     }
 
-
     private IEnumerator JumpscarePocong()
     {
 
+        // Geser UI keluar dari layar
         foreach (GameObject canvas in UIController)
         {
-            canvas.gameObject.SetActive(false);
+            // Geser UI ke luar layar
+            canvas.transform.Translate(Vector3.right * Screen.width);
         }
 
         // Tampilkan gambar jumpscare
         UIPocongJumscare.SetActive(true);
         baseCharacterAnimator.SetTrigger("getJumpsace");
+
         // Tunggu beberapa detik
         yield return new WaitForSeconds(jumpscareDuration);
 
@@ -65,10 +71,9 @@ public class JumpscareController : MonoBehaviour
 
         if (mainCharacterHealth.currentHealth > 0f)
         {
-            // Munculkan kembali UI
-            foreach (GameObject canvas in UIController)
+            for (int i = 0; i < UIController.Length; i++)
             {
-                canvas.gameObject.SetActive(true);
+                UIController[i].transform.position = originalPositions[i];
             }
         }
     }

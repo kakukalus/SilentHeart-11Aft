@@ -4,12 +4,14 @@ public class GhostSpawner : MonoBehaviour
 {
     public GameObject ghostPrefab;
     private GameObject currentGhost;
-    public float respawnTimer = 12f;
+    public float currentRespawnTimer;
+    public float respawnTimer;
     private BoxCollider2D spawnArea; // Tambahkan Collider2D untuk menentukan area spawn
 
     void Start()
     {
         spawnArea = gameObject.GetComponent<BoxCollider2D>();
+        currentRespawnTimer = respawnTimer;
         // Memanggil metode SpawnGhost pada awal permainan
         SpawnGhost();
     }
@@ -20,12 +22,12 @@ public class GhostSpawner : MonoBehaviour
         if (currentGhost == null)
         {
             // Jika ghost di-destroy, atur timer untuk spawn ghost berikutnya
-            respawnTimer -= Time.deltaTime;
+            currentRespawnTimer -= Time.deltaTime;
 
-            if (respawnTimer <= 0)
+            if (currentRespawnTimer <= 0)
             {
                 // Reset timer dan spawn ghost baru
-                respawnTimer = 12f;
+                currentRespawnTimer = respawnTimer;
                 SpawnGhost();
             }
         }

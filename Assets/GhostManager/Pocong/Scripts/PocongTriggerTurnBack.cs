@@ -36,6 +36,7 @@ public class PocongTriggerTurnBack : MonoBehaviour
         {
             startChase = true;
             pocongChase.isChase = true;
+            TurnBackButton.onClick.RemoveListener(HandleButtonTurnBackTrigger);
         }
     }
 }
