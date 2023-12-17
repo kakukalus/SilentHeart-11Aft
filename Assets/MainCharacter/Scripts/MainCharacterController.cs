@@ -34,22 +34,23 @@ public class MainCharacterController : MonoBehaviour
         sliderValue = speedSlider.value;
         if (isSliderPressed && isFlip == false)
         {
-            // Pemrosesan pergerakan sesuai nilai slider jika slider ditekan
-            if (sliderValue > 0.5f)
-            {
-                baseCharacterAnimator.SetFloat("isMovingForward", sliderValue);
-                MovePlayer(walkSpeed);
-            }
-            else if (sliderValue > 1f)
+            if (sliderValue > 1f) // Pengecekan untuk lari, harus dilakukan pertama
             {
                 baseCharacterAnimator.SetFloat("isMovingForward", sliderValue);
                 MovePlayer(runSpeed);
             }
+            else if (sliderValue > 0.5f) // Pengecekan untuk jalan, setelah pengecekan untuk lari
+            {
+                baseCharacterAnimator.SetFloat("isMovingForward", sliderValue);
+                MovePlayer(walkSpeed);
+            }
+
             else if (sliderValue < -0.25f)
             {
-                baseCharacterAnimator.SetFloat("isMovingBackward", sliderValue);
+                baseCharacterAnimator.SetFloat("isMovingBackward", Mathf.Abs(sliderValue));
                 MovePlayer(-backwardSpeed);
             }
+
             else
             {
                 StopPlayer();
