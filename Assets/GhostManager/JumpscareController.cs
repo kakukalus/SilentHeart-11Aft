@@ -12,11 +12,13 @@ public class JumpscareController : MonoBehaviour
     public GameObject sanityFrame;
     private Transform player;
     public MainCharacterHealth mainCharacterHealth;
+    private Animator baseCharacterAnimator;
     public Slider speedSlider;
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
         mainCharacterHealth = player.GetComponent<MainCharacterHealth>();
+        baseCharacterAnimator = player.GetComponentInChildren<Animator>();
 
         UIController = new GameObject[7];
 
@@ -54,7 +56,7 @@ public class JumpscareController : MonoBehaviour
 
         // Tampilkan gambar jumpscare
         UIPocongJumscare.SetActive(true);
-
+        baseCharacterAnimator.SetTrigger("getJumpsace");
         // Tunggu beberapa detik
         yield return new WaitForSeconds(jumpscareDuration);
 

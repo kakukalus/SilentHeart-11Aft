@@ -4,8 +4,7 @@ public class GhostSpawner : MonoBehaviour
 {
     public GameObject ghostPrefab;
     private GameObject currentGhost;
-    private bool isGhostSpawned = false;
-    private float respawnTimer = 12f;
+    public float respawnTimer = 12f;
     private BoxCollider2D spawnArea; // Tambahkan Collider2D untuk menentukan area spawn
 
     void Start()
@@ -52,6 +51,5 @@ public class GhostSpawner : MonoBehaviour
 
         // Membuat instance baru dari ghostPrefab pada posisi acak yang dihasilkan
         currentGhost = Instantiate(ghostPrefab, randomSpawnPoint, Quaternion.identity);
-        isGhostSpawned = true;
     }
 }
