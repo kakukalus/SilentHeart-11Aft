@@ -2,95 +2,80 @@ using UnityEngine;
 
 public class Item : MonoBehaviour
 {
-    // Nama item
-    public string itemName;
+    public string itemName; // Nama dari item, digunakan untuk identifikasi.
+    public PickButton pickButton; // Referensi ke tombol ambil yang terkait dengan item ini.
+    public Transform player; // Referensi ke transform pemain, digunakan untuk interaksi.
 
-    // Tombol ambil terkait
-    public PickButton pickButton;
+    private bool isPickedUp = false; // Status yang menandakan apakah item telah diambil.
 
-    // Transform pemain
-    public Transform player;
-
-    // Flag untuk menandakan apakah item telah diambil
-    private bool isPickedUp = false;
-
-    // Metode yang dapat dioverride untuk penggunaan item
+    // Metode virtual ini bisa dioverride oleh subclass untuk menentukan aksi ketika item digunakan.
     public virtual void Use()
     {
         Debug.Log("Base Item Used");
     }
 
-    // Dipanggil ketika objek bersentuhan dengan pemain
+    // Trigger ketika pemain mendekati item.
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player")) // Cek apakah collider yang bersentuhan adalah pemain.
         {
             Inventory playerInventory = other.GetComponent<Inventory>();
-
-            // Mengaktifkan tombol ambil jika tersedia
             if (pickButton != null && playerInventory != null)
             {
-                pickButton.EnableButton();
-                pickButton.Initialize(this, playerInventory);
+                pickButton.EnableButton(); // Aktifkan tombol ambil jika kondisi terpenuhi.
+                pickButton.Initialize(this, playerInventory); // Inisialisasi tombol dengan item ini.
             }
-
-            // Menetapkan item sebagai target di inventori pemain
-            other.GetComponent<Inventory>().TargetItem(this);
+            other.GetComponent<Inventory>().TargetItem(this); // Tetapkan item ini sebagai target di inventori pemain.
         }
     }
 
-    // Dipanggil ketika objek keluar dari area pemain
+    // Trigger ketika pemain menjauh dari item.
     private void OnTriggerExit2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
-            // Menonaktifkan tombol ambil jika tersedia
             if (pickButton != null)
             {
-                pickButton.DisableButton();
+                pickButton.DisableButton(); // Nonaktifkan tombol ambil.
             }
-
-            // Membatalkan item sebagai target di inventori pemain
-            other.GetComponent<Inventory>().UntargetItem(this);
+            other.GetComponent<Inventory>().UntargetItem(this); // Hapus item ini dari target di inventori pemain.
         }
     }
 
-    // Mengambil item
+    // Fungsi untuk mengambil item.
     public void PickUp()
     {
         if (!isPickedUp)
         {
             isPickedUp = true;
-            gameObject.SetActive(false);
-
-            // Menonaktifkan tombol ambil jika tersedia
+            gameObject.SetActive(false); // Nonaktifkan game object item ini (menghilangkan dari scene).
             if (pickButton != null)
             {
-                pickButton.DisableButton();
+                pickButton.DisableButton(); // Nonaktifkan tombol ambil setelah item diambil.
             }
-
-            Debug.Log($"Picked up {itemName}.");
+            Debug.Log($"Picked up {itemName}."); // Log pesan pengambilan.
         }
     }
 
-    // Melepaskan item
+    // Fungsi untuk melepaskan item.
     public void Drop()
     {
-        gameObject.SetActive(true);
-        transform.position = CalculateDropPosition();
+        gameObject.SetActive(true); // Aktifkan kembali game object item ini di scene.
+        transform.position = CalculateDropPosition(); // Posisikan item dekat pemain.
     }
 
-    // Menghitung posisi drop
+    // Fungsi untuk menghitung posisi item ketika dijatuhkan.
     private Vector3 CalculateDropPosition()
     {
         if (player != null)
         {
+            // Tempatkan item sedikit di atas posisi pemain.
             return new Vector3(player.position.x, player.position.y + 0.3f, player.position.z);
         }
         else
         {
             Debug.LogError("Player transform is null. Make sure to assign it in the inspector.");
-            return Vector3.zero;
+            return Vector3.zero; // Kembalikan posisi default jika transform pemain tidak ada.
         }
     }
 }

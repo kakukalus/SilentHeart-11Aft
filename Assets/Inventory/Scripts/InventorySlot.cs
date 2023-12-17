@@ -5,11 +5,8 @@ using System.Collections;
 
 public class InventorySlot : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
-    // Tombol yang terkait dengan slot
-    public Button button;
-
-    // Item yang ditugaskan ke slot
-    private Item assignedItem;
+    public Button button; // Tombol yang terkait dengan slot
+    private Item assignedItem; // Item yang ditugaskan ke slot
 
     public Item AssignedItem
     {
@@ -17,99 +14,60 @@ public class InventorySlot : MonoBehaviour, IPointerDownHandler, IPointerUpHandl
         set { assignedItem = value; }
     }
 
-    // Properti boolean untuk mengecek apakah slot kosong
-    public bool IsEmpty => assignedItem == null;
+    public bool IsEmpty => assignedItem == null; // Cek apakah slot kosong
 
-    // Referensi ke komponen MainCharacterHealth
-    private MainCharacterHealth mainCharacterHealth;
+    private MainCharacterHealth mainCharacterHealth; // Referensi ke kesehatan karakter utama
+    private float holdTime = 1.0f; // Waktu penahanan untuk menjatuhkan item
+    private bool held = false; // Apakah tombol sedang ditekan
 
-    // Waktu yang harus ditahan untuk menjatuhkan item
-    private float holdTime = 1.0f;
+    private int clickCount = 0; // Jumlah klik
+    private float clickDelay = 0.5f; // Waktu maksimum antara dua klik untuk deteksi klik ganda
+    private float lastClickTime = 0f; // Waktu dari klik terakhir
 
-    // Variabel untuk mendeteksi apakah tombol ditekan
-    private bool held = false;
-
-    // Variabel untuk menghitung jumlah klik
-    private int clickCount = 0;
-
-    // Waktu maksimum antara dua klik untuk mengenali klik ganda
-    private float clickDelay = 0.5f;
-
-    // Waktu dari klik terakhir
-    private float lastClickTime = 0f;
-
-    // Dipanggil saat awal permainan
     void Start()
     {
-        // Menambahkan listener ke tombol
+        // Menambahkan listener ke event onClick dari tombol.
         button.onClick.AddListener(() => {
-            // Mengecek apakah ada item yang diassign dan bukan null
+            // Periksa jika ada item yang ditugaskan ke slot ini.
             if (assignedItem != null)
             {
+                // Menambahkan jumlah klik.
                 clickCount++;
 
+                // Jika ini adalah klik pertama, catat waktu klik tersebut.
                 if (clickCount == 1)
                 {
                     lastClickTime = Time.time;
                 }
 
+                // Jika ini adalah klik kedua atau lebih, dan terjadi dalam waktu yang singkat setelah klik pertama,
+                // maka anggap ini sebagai double-click.
                 if (clickCount > 1 && Time.time - lastClickTime < clickDelay)
                 {
-                    // Logika penggunaan item sesajen
-                    if (assignedItem != null && assignedItem is ItemSesajen)
-                    {
-                        // Simpan referensi ke item sebelum memanggil Use()
-                        ItemSesajen sesajenItem = (ItemSesajen)assignedItem;
-                        
-                        // Coba gunakan item
-                        sesajenItem.Use();
-                        
-                        // Periksa jika item berhasil digunakan dan pocong diusir
-                        if (sesajenItem.HasBeenUsedSuccessfully)
-                        {
-                            // Hanya clear slot jika item berhasil digunakan
-                            ClearSlot();
-                        }
-                    }
-                    // Logika penggunaan item HP
-                    else if (assignedItem is ItemHP)
-                    {
-                        MainCharacterHealth health = FindObjectOfType<MainCharacterHealth>();
-                        // Mengecek apakah kesehatan tidak penuh
-                        if (health.GetCurrentHealth() < health.maxHealth)
-                        {
-                            // Pemanggilan metode Use() spesifik untuk item HP
-                            assignedItem.Use();
-                            ClearSlot();
-                        }
-                        else
-                        {
-                            Debug.Log("Health is full, cannot use HP item.");
-                        }
-                    }
-
-                    // Reset jumlah klik
+                    // Jalankan logika penggunaan item.
+                    UseItem();
+                    // Reset jumlah klik setelah penggunaan item.
                     clickCount = 0;
                 }
                 else if (Time.time - lastClickTime > clickDelay)
                 {
-                    // Reset jika waktu antara klik terlalu lama
+                    // Jika waktu antara klik terlalu lama, reset klik menjadi satu dan catat waktu klik ini.
                     clickCount = 1;
                     lastClickTime = Time.time;
                 }
             }
             else
             {
-                Debug.Log("No item assigned to this slot, cannot use.");
+                // Jika tidak ada item di slot ini, tampilkan log.
+                Debug.Log("Tidak ada item di slot ini.");
             }
         });
     }
 
 
-    // Dipanggil setiap frame
+    // Metode yang dipanggil per frame untuk menangani penahanan tombol
     public void Update()
     {
-        // Menangani penahanan tombol
         if (held && !IsEmpty)
         {
             button.interactable = false;
@@ -118,7 +76,7 @@ public class InventorySlot : MonoBehaviour, IPointerDownHandler, IPointerUpHandl
         }
     }
 
-    // Dipanggil saat tombol ditekan
+    // Menangani klik tombol
     public void OnPointerDown(PointerEventData eventData)
     {
         if (eventData.button == PointerEventData.InputButton.Left)
@@ -127,7 +85,7 @@ public class InventorySlot : MonoBehaviour, IPointerDownHandler, IPointerUpHandl
         }
     }
 
-    // Dipanggil saat tombol dilepas
+    // Menangani pelepasan tombol
     public void OnPointerUp(PointerEventData eventData)
     {
         StopAllCoroutines();
@@ -151,48 +109,39 @@ public class InventorySlot : MonoBehaviour, IPointerDownHandler, IPointerUpHandl
     // Menugaskan item ke slot
     public void AssignItem(Item item)
     {
-        AssignedItem = item;
+        // AssignedItem = item;
         assignedItem = item;
         button.GetComponent<Image>().sprite = item.GetComponent<SpriteRenderer>().sprite;
         button.interactable = true;
     }
 
-    // Dipanggil saat tombol slot di klik
-    public void OnSlotButtonClicked()
-    {
-        if (assignedItem != null)
-        {
-            Debug.Log("Trying to use item: " + assignedItem.itemName);
-
-            // Mengecek apakah item adalah ItemHP
-            if (assignedItem is ItemHP)
-            {
-                assignedItem.Use();
-                Debug.Log("Used HP item.");
-            }
-            else
-            {
-                Debug.Log("The assigned item is not an HP item, will not use.");
-            }
-            ClearSlot();
-        }
-        else
-        {
-            Debug.Log("No item assigned to this slot, cannot use.");
-        }
-    }
-
-    // Membersihkan slot
+    // Metode untuk membersihkan slot
     public void ClearSlot()
     {
-        // Memastikan bahwa listener dihapus saat slot dibersihkan
-        if (assignedItem != null && assignedItem is ItemHP)
-        {
-            button.onClick.RemoveListener(assignedItem.Use);
-        }
-
         assignedItem = null;
         button.interactable = false;
         button.GetComponent<Image>().sprite = null;
+    }
+
+    // Logika penggunaan item
+    private void UseItem()
+    {
+        if (assignedItem is ItemHP)
+        {
+            assignedItem.Use();
+            ClearSlot();
+        }
+        else if (assignedItem is ItemSesajen)
+        {
+            assignedItem.Use();
+            if (((ItemSesajen)assignedItem).HasBeenUsedSuccessfully)
+            {
+                ClearSlot();
+            }
+        }
+        else
+        {
+            Debug.Log("Tipe item tidak dikenali.");
+        }
     }
 }

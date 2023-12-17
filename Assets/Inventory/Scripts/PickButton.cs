@@ -3,55 +3,49 @@ using UnityEngine.UI;
 
 public class PickButton : MonoBehaviour
 {
-    private Item associatedItem;
+    private Item associatedItem; // Item yang terkait dengan tombol ini.
 
-    // Metode untuk menginisialisasi tombol ambil
+    // Inisialisasi tombol ambil dengan item dan inventori pemain.
     public void Initialize(Item item, Inventory playerInventory)
     {
-        associatedItem = item;
+        associatedItem = item; // Tetapkan item terkait.
+        GetComponent<Button>().onClick.RemoveAllListeners(); // Hapus semua listener sebelumnya.
 
-        // Hapus semua listener yang ada sebelum menambahkan yang baru
-        GetComponent<Button>().onClick.RemoveAllListeners();
-
-        // Menambahkan listener untuk mengambil item saat tombol diklik
+        // Menambahkan listener baru pada tombol.
         GetComponent<Button>().onClick.AddListener(() => {
             if (playerInventory == null || !playerInventory.IsInventoryFull())
             {
-                associatedItem.PickUp();
+                associatedItem.PickUp(); // Jalankan fungsi PickUp pada item jika inventori belum penuh.
             }
             else
             {
-                // Menampilkan pesan bahwa inventori penuh
-                Debug.Log("Inventory is full. Can't pick up the item.");
+                Debug.Log("Inventori penuh. Tidak bisa mengambil item."); // Log jika inventori penuh.
             }
         });
     }
 
-
-        public void InitializeForMemoryItem(System.Action pickUpAction)
+    // Inisialisasi tombol untuk item tertentu dengan aksi kustom.
+    public void InitializeForMemoryItem(System.Action pickUpAction)
     {
-        // Hapus semua listener yang ada
-        GetComponent<Button>().onClick.RemoveAllListeners();
-        // Menambahkan listener untuk mengambil item saat tombol diklik
-        GetComponent<Button>().onClick.AddListener(() => pickUpAction());
+        GetComponent<Button>().onClick.RemoveAllListeners(); // Hapus semua listener sebelumnya.
+        GetComponent<Button>().onClick.AddListener(() => pickUpAction()); // Tetapkan aksi kustom saat tombol diklik.
     }
 
-
-    // Menonaktifkan tombol
+    // Menonaktifkan tombol.
     public void DisableButton()
     {
         if (gameObject != null)
         {
-            gameObject.SetActive(false);
+            gameObject.SetActive(false); // Nonaktifkan objek tombol.
         }
     }
 
-    // Mengaktifkan tombol
+    // Mengaktifkan tombol.
     public void EnableButton()
     {
         if (gameObject != null)
         {
-            gameObject.SetActive(true);
+            gameObject.SetActive(true); // Aktifkan objek tombol.
         }
     }
 }

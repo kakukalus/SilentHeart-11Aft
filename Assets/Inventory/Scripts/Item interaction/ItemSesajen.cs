@@ -2,48 +2,42 @@ using UnityEngine;
 
 public class ItemSesajen : Item
 {
-    public GameObject pocong; // Assign objek pocong di inspector
-    public bool HasBeenUsedSuccessfully { get; private set; }
-    public float jarakPenggunaan = 1.5f; // Jarak dimana pemain harus berada dekat dengan pohon untuk menggunakan item
+    public GameObject pocong; // Objek pocong yang harus diusir dengan item ini.
+    public bool HasBeenUsedSuccessfully { get; private set; } // Status apakah item telah berhasil digunakan.
+    public float jarakPenggunaan = 1.5f; // Jarak maksimum dari pemain ke pohon untuk menggunakan item.
 
-    // Kita asumsikan hanya ada satu objek pohon di scene untuk kesederhanaan
-    private GameObject pohon;
+    private GameObject pohon; // Referensi ke objek pohon dalam game.
 
     void Awake()
     {
+        // Inisialisasi referensi transform pemain dan pohon saat objek dibuat.
         player = GameObject.FindGameObjectWithTag("Player").transform;
         pohon = GameObject.FindGameObjectWithTag("Tree");
     }
 
+    // Override metode Use dari kelas Item.
     public override void Use()
     {
-        // Periksa jika pemain cukup dekat dengan pohon untuk menggunakan item
+        // Cek apakah pemain cukup dekat dengan pohon untuk menggunakan item.
         if(Vector3.Distance(player.position, pohon.transform.position) <= jarakPenggunaan)
         {
-            // Periksa jika pocong aktif di scene
+            // Cek apakah objek pocong aktif dalam scene.
             if(pocong != null && pocong.activeInHierarchy)
             {
-                Debug.Log("ItemSesajen Digunakan");
-                // Panggil base Use() jika diperlukan
-                base.Use();
-                // Hancurkan objek pocong
-                Destroy(pocong);
-
-                HasBeenUsedSuccessfully = true;
-
-                // Berikan feedback ke pemain
-                Debug.Log("Pocong telah diusir!");
+                base.Use(); // Panggil implementasi dasar 'Use', jika ada.
+                Destroy(pocong); // Hancurkan objek pocong.
+                HasBeenUsedSuccessfully = true; // Tandai item sebagai berhasil digunakan.
+                Debug.Log("Pocong telah diusir!"); // Log pesan berhasil.
             }
             else
             {
-                Debug.Log("Tidak ada Pocong yang bisa diusir.");
+                Debug.Log("Tidak ada Pocong yang bisa diusir."); // Log jika tidak ada pocong di scene.
             }
         }
         else
         {
-            // Jangan hancurkan item dan berikan feedback ke pemain
+            // Log jika pemain tidak cukup dekat dengan pohon.
             Debug.Log("Anda harus lebih dekat ke pohon untuk menggunakan Sesajen.");
         }
     }
-
 }

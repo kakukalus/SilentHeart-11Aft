@@ -1080,6 +1080,7 @@ GameObject:
   - component: {fileID: 114877423}
   - component: {fileID: 114877422}
   - component: {fileID: 114877421}
+  - component: {fileID: 114877426}
   m_Layer: 5
   m_Name: Item Hp
   m_TagString: Untagged
@@ -1099,7 +1100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcd03677bf5e1fe4e95da0c241ba43e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: Item Hp
+  itemName: 0
   pickButton: {fileID: 21886095}
   player: {fileID: 1695107542}
   hpIncrease: 10
@@ -1242,6 +1243,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 964761746}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114877426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 114877420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 509a75e785cbb164fae914a5e747d9b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: 'Item HP '
+  pickButton: {fileID: 0}
+  player: {fileID: 0}
 --- !u!1 &116216291
 GameObject:
   m_ObjectHideFlags: 0
@@ -7670,7 +7686,6 @@ GameObject:
   - component: {fileID: 1023893300}
   - component: {fileID: 1023893299}
   - component: {fileID: 1023893298}
-  - component: {fileID: 1023893297}
   - component: {fileID: 1023893302}
   m_Layer: 5
   m_Name: Sesajen
@@ -7679,21 +7694,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1023893297
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1023893296}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 509a75e785cbb164fae914a5e747d9b6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemName: Item 2
-  pickButton: {fileID: 21886095}
-  player: {fileID: 1695107542}
 --- !u!61 &1023893298
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16303,7 +16303,9 @@ MonoBehaviour:
   - {fileID: 736151699}
   allAvailableItems:
   - {fileID: 1617928569}
-  - {fileID: 1023893297}
+  - {fileID: 114877421}
+  - {fileID: 2109072439}
+  - {fileID: 1023893302}
 --- !u!4 &1695107542 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1002534225007406983, guid: 78a15ca96bcd60e4f93fe23acbbda0c4, type: 3}
@@ -18511,6 +18513,7 @@ GameObject:
   - component: {fileID: 2109072441}
   - component: {fileID: 2109072440}
   - component: {fileID: 2109072439}
+  - component: {fileID: 2109072444}
   m_Layer: 5
   m_Name: Item Hp 2
   m_TagString: Untagged
@@ -18530,7 +18533,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcd03677bf5e1fe4e95da0c241ba43e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: Item Hp
+  itemName: 0
   pickButton: {fileID: 21886095}
   player: {fileID: 1695107542}
   hpIncrease: 10
@@ -18673,6 +18676,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 964761746}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2109072444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2109072438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 509a75e785cbb164fae914a5e747d9b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: Item HP 2
+  pickButton: {fileID: 0}
+  player: {fileID: 0}
 --- !u!1 &2113574017
 GameObject:
   m_ObjectHideFlags: 0

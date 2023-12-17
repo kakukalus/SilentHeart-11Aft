@@ -108,14 +108,10 @@ public class Inventory : MonoBehaviour
         {
             if (item.itemName == itemName)
             {
-                // Instantiate item jika Anda menyimpan prefab, atau cukup kembalikan item jika tidak.
-                // Item instantiatedItem = Instantiate(item);
-                // return instantiatedItem;
                 return item;
             }
         }
-
-        // Jika tidak ada item yang cocok, kembalikan null
         return null;
     }
+
 }

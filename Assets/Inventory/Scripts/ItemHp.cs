@@ -2,41 +2,33 @@ using UnityEngine;
 
 public class ItemHP : Item
 {
-    // Jumlah peningkatan HP
-    public float hpIncrease = 10f;
+    public float hpIncrease = 10f; // Jumlah HP yang akan ditambahkan ketika item digunakan.
 
-    // Dipanggil saat objek dibuat
     void Awake()
     {
-        // Cari GameObject dengan tag "Player" dan tetapkan ke variabel player
+        // Saat objek dibuat, cari transform pemain dan tetapkan ke variabel player.
         player = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
-    // Dipanggil saat objek diaktifkan
     void Start() 
     {
-        // Dengan asumsi GameObject pemain Anda ditandai dengan "Player"
+        // Saat objek diaktifkan, lakukan pencarian transform pemain sekali lagi.
         player = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
-    // Metode penggunaan item HP
+    // Override metode penggunaan dari kelas Item.
     public override void Use()
     {
-        // Dapatkan referensi ke kesehatan pemain
         MainCharacterHealth health = player.GetComponent<MainCharacterHealth>();
-
-        // Periksa jika HP saat ini kurang dari maksimum sebelum menggunakan item
-        if (health.GetCurrentHealth() < health.maxHealth)
+        if (health.GetCurrentHealth() < health.maxHealth) // Cek jika HP pemain belum penuh.
         {
-            Debug.Log("ItemHP Used");
-            base.Use(); // Panggil base Use() jika diperlukan
-            health.Heal(hpIncrease); // Panggil fungsi Heal untuk meningkatkan HP
-
+            base.Use(); // Panggil implementasi dasar 'Use', jika ada.
+            health.Heal(hpIncrease); // Tambahkan HP ke pemain.
+            Debug.Log("ItemHP Used"); // Log penggunaan item HP.
         }
         else
         {
-            Debug.Log("Health is full. ItemHP will not be used.");
-            // Anda juga mungkin ingin memberikan umpan balik kepada pemain bahwa HP sudah penuh
+            Debug.Log("Health is full. ItemHP will not be used."); // Log jika HP pemain sudah penuh.
         }
     }
 }

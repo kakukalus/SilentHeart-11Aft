@@ -49,13 +49,7 @@ public class PanelController : MonoBehaviour
             PlayerPrefs.DeleteKey($"InventorySlot{i}");
         }
 
-        // Reset semua koleksi dan item yang telah dikumpulkan
-        // Ini akan tergantung pada bagaimana Anda menyimpan data koleksi
-        // Contoh: PlayerPrefs.DeleteKey("CollectedItems");
-
-        // Jika Anda menggunakan sistem save yang berbeda, tambahkan logika untuk mengatur ulang atau menghapus save data di sini
-
-        PlayerPrefs.Save(); // Jangan lupa untuk menyimpan perubahan setelah menghapus keys
+        PlayerPrefs.Save(); // Jangan lupa untuk menyimpan perubahan setelah menghapus
     }
 
 

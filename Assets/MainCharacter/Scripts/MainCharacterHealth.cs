@@ -2,39 +2,41 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-
 public class MainCharacterHealth : MonoBehaviour
 {
-    public float maxHealth = 100;
-    private Animator baseCharacterAnimator;
-    public Image MainCharacterHpBar; // Referensi ke UI Image untuk health bar
-    private float currentHealth = 100f;  // Nilai hp saat ini
+    public float maxHealth = 100; // Nilai maksimum kesehatan yang bisa dimiliki karakter.
+    private Animator baseCharacterAnimator; // Animator untuk karakter utama.
+    public Image MainCharacterHpBar; // UI Image untuk menampilkan health bar.
+    private float currentHealth = 100f;  // Nilai kesehatan saat ini dari karakter.
+
     private void Start()
     {
         baseCharacterAnimator = GetComponentInChildren<Animator>();
         if (SceneManager.GetActiveScene().buildIndex == SaveSystem.LoadCurrentLevel())
         {
-            // Posisi dan kesehatan pemain diatur ke nilai yang disimpan
+            // Jika scene saat ini sama dengan level yang disimpan, muat posisi dan kesehatan dari save data.
             transform.position = SaveSystem.LoadCheckpointPosition();
             currentHealth = SaveSystem.LoadPlayerHealth();
         }
         else
         {
+            // Jika bukan, gunakan nilai kesehatan maksimum.
             currentHealth = maxHealth;
         }
-        SetMainCharacterBar(currentHealth);
+        SetMainCharacterBar(currentHealth); // Atur UI health bar.
         baseCharacterAnimator.SetBool("isAlive", true);
     }
 
-
     public void RespawnAtLastCheckpoint()
     {
+        // Logika respawn karakter di checkpoint terakhir.
         if (Checkpoint.LastCheckpointPosition != null)
         {
-            transform.position = Checkpoint.LastCheckpointPosition;
-            currentHealth = Checkpoint.LastCheckpointHealth; // Set HP ke nilai saat checkpoint terakhir
+            transform.position = Checkpoint.LastCheckpointPosition; // Pindahkan karakter ke posisi checkpoint terakhir.
+            currentHealth = Checkpoint.LastCheckpointHealth; // Setel kesehatan ke nilai saat checkpoint terakhir.
             SetMainCharacterBar(currentHealth);
 
+            // Juga setel sanity karakter jika perlu.
             MainCharacterSanity playerSanity = GetComponent<MainCharacterSanity>();
             if (playerSanity != null)
             {
@@ -42,54 +44,53 @@ public class MainCharacterHealth : MonoBehaviour
                 playerSanity.SetSanity(lastSanity);
             }
 
-            // Anda bisa menambahkan animasi atau efek khusus saat respawn
+            // Opsional: Tambahkan efek atau animasi saat respawn.
         }
     }
 
     private void Die()
     {
+        // Logika kematian karakter.
         Debug.Log("MainCharacter has died!");
 
-        // Temukan RespawnManager dan tampilkan panel respawn
+        // Temukan RespawnManager dan tampilkan panel respawn.
         FindObjectOfType<RespawnManager>().ShowRespawnPanel();
 
-        // Optional: Pause the game if needed
+        // Opsional: Pause permainan jika diperlukan.
         Time.timeScale = 0f;
     }
 
-    // Mengatur fillAmount berdasarkan nilai hp dalam rentang 0-100
     public void SetMainCharacterBar(float hp)
     {
-        // Memastikan nilai hp berada dalam rentang yang valid (0-100)
+        // Mengatur UI health bar sesuai dengan nilai kesehatan saat ini.
         hp = Mathf.Clamp(hp, 0f, 100f);
-        // Menetapkan fillAmount pada health bar berdasarkan nilai hp yang valid
         MainCharacterHpBar.fillAmount = hp / 100f;
     }
 
-    // Metode TakeDamage diupdate untuk memanggil Die() jika HP habis
     public void TakeDamage(float damage)
     {
+        // Mengurangi nilai kesehatan karakter ketika menerima damage.
         currentHealth -= damage;
         currentHealth = Mathf.Max(0f, currentHealth);
         SetMainCharacterBar(currentHealth);
 
         if (currentHealth <= 0)
         {
-            Die(); // Pemanggilan metode Die ketika HP habis
+            Die(); // Memanggil metode Die ketika kesehatan habis.
         }
     }
 
-    // Metode untuk mendapatkan nilai hp saat ini
     public float GetCurrentHealth()
     {
+        // Mendapatkan nilai kesehatan saat ini.
         return currentHealth;
     }
 
-        public void Heal(float healAmount)
+    public void Heal(float healAmount)
     {
+        // Menambah nilai kesehatan.
         currentHealth += healAmount;
-        currentHealth = Mathf.Min(currentHealth, maxHealth); // Ensure HP does not exceed maxHealth
-        SetMainCharacterBar(currentHealth); // Update the UI
+        currentHealth = Mathf.Min(currentHealth, maxHealth); // Pastikan kesehatan tidak melebihi batas maksimum.
+        SetMainCharacterBar(currentHealth); // Atur UI health bar.
     }
-
 }
