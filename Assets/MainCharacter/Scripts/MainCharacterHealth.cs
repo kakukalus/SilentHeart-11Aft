@@ -3,31 +3,19 @@ using UnityEngine.UI;
 
 public class MainCharacterHealth : MonoBehaviour
 {
-    public float maxHealth = 100;
+    public float maxHealth = 100f;
     private Animator baseCharacterAnimator;
     public Image MainCharacterHpBar; // Referensi ke UI Image untuk health bar
     private float currentHealth = 100f;  // Nilai hp saat ini
+
+    private GameManager gameManager;
     private void Start()
     {
+        MainCharacterHpBar = GameObject.Find("Canvas/HealthBar/HealthBar Fill").GetComponent<Image>();
+        gameManager = GameObject.FindGameObjectWithTag("Player").GetComponent<GameManager>();
         baseCharacterAnimator = GetComponentInChildren<Animator>();
         currentHealth = maxHealth;
         baseCharacterAnimator.SetBool("isAlive", true);
-    }
-
-    public void TakeDamage(int damageAmount)
-    {
-        currentHealth -= damageAmount;
-
-        if (currentHealth <= 0)
-        {
-            Die();
-        }
-    }
-
-    private void Die()
-    {
-        // Logika kematian karakter, seperti memunculkan layar kekalahan atau mereset level
-        Debug.Log("MainCharacter has died!");
     }
 
     // Mengatur fillAmount berdasarkan nilai hp dalam rentang 0-100
@@ -50,9 +38,5 @@ public class MainCharacterHealth : MonoBehaviour
         SetMainCharacterBar(currentHealth);
     }
 
-    // Metode untuk mendapatkan nilai hp saat ini
-    public float GetCurrentHealth()
-    {
-        return currentHealth;
-    }
+
 }
