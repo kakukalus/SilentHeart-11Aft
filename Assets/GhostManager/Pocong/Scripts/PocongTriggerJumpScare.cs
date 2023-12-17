@@ -7,13 +7,15 @@ public class PocongTriggerJumpScare : MonoBehaviour
 
     void Start()
     {
+        GameObject gameManager = GameObject.Find("GameManager");
+        jumpscareController = gameManager.GetComponent<JumpscareController>();
         pocongChase = GetComponentInParent<PocongChase>();
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
-            jumpscareController.TriggerJumpScare();
+            jumpscareController.TriggerJumpscarePocong();
             pocongChase.DestroyThis();
         }
     }

@@ -24,9 +24,10 @@ public class PocongTriggerChase : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") && pocongChase.isChase == true)
         {
             pocongChase.isChase = false;
+            pocongChase.DestroyThis();
         }
     }
 }

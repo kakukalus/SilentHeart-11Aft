@@ -13,6 +13,16 @@ public class SliderMovement : MonoBehaviour, IPointerUpHandler// required interf
     {
         GetComponent<Slider>().value = 0.0f;
     }
+    public void OnPointerDown(PointerEventData eventData)
+    {
+        // Implementasi fungsi jika diperlukan saat mouse/touch ditekan
+    }
 
+    void OnDisable()
+    {
+        // Ketika objek dinonaktifkan, set nilai Slider menjadi 0.0f
+
+        GetComponent<Slider>().value = 0.0f;
+    }
 
 }

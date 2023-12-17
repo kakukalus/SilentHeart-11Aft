@@ -1,43 +1,64 @@
 
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class JumpscareController : MonoBehaviour
 {
-    public GameObject jumpscareImage;
     public float jumpscareDuration = 3f;
-    public GameObject[] uiCanvases;
+    public GameObject[] UIController;
+    public GameObject UIPocongJumscare;
+    public GameObject UIKuntilanakJumpscare;
+    public GameObject sanityFrame;
+
+    public Slider speedSlider;
     void Start()
     {
-        jumpscareImage.SetActive(false);
+        UIController = new GameObject[7];
+
+        UIController[0] = GameObject.Find("Canvas/SliderMovement");
+        UIController[1] = GameObject.Find("Canvas/ButtonTurnBack");
+        UIController[2] = GameObject.Find("Canvas/ButtonItemPickItem");
+        UIController[3] = GameObject.Find("Canvas/ButtonItemSlot1");
+        UIController[4] = GameObject.Find("Canvas/ButtonItemSlot2");
+        UIController[5] = GameObject.Find("Canvas/HealthBar");
+        UIController[6] = GameObject.Find("Canvas/SanityBar");
+        speedSlider = UIController[1].GetComponent<Slider>();
+        foreach (GameObject canvas in UIController)
+        {
+            canvas.gameObject.SetActive(true);
+        }
+
+        UIPocongJumscare = GameObject.Find("Canvas/pocongJumpscare");
+        UIPocongJumscare.SetActive(false);
+
     }
 
-    public void TriggerJumpScare()
+    public void TriggerJumpscarePocong()
     {
-        StartCoroutine(TriggerJumpscare());
+        StartCoroutine(JumpscarePocong());
     }
 
 
-    private IEnumerator TriggerJumpscare()
+    private IEnumerator JumpscarePocong()
     {
-        // Sembunyikan semua UI
 
-        foreach (GameObject canvas in uiCanvases)
+        foreach (GameObject canvas in UIController)
         {
             canvas.gameObject.SetActive(false);
         }
 
         // Tampilkan gambar jumpscare
-        jumpscareImage.SetActive(true);
+        UIPocongJumscare.SetActive(true);
 
         // Tunggu beberapa detik
         yield return new WaitForSeconds(jumpscareDuration);
 
         // Sembunyikan gambar jumpscare
-        jumpscareImage.SetActive(false);
+        UIPocongJumscare.SetActive(false);
 
         // Munculkan kembali UI
-        foreach (GameObject canvas in uiCanvases)
+        foreach (GameObject canvas in UIController)
         {
             canvas.gameObject.SetActive(true);
         }
