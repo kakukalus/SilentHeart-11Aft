@@ -19,7 +19,7 @@ public class PocongTriggerJumpScare : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            mainCharacterHealth.TakeDamage(30f);
+            mainCharacterHealth.TakeDamage(50f);
             jumpscareController.TriggerJumpscarePocong();
             pocongChase.DestroyThis();
         }

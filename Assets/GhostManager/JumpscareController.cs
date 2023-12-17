@@ -10,10 +10,14 @@ public class JumpscareController : MonoBehaviour
     public GameObject UIPocongJumscare;
     public GameObject UIKuntilanakJumpscare;
     public GameObject sanityFrame;
-
+    private Transform player;
+    public MainCharacterHealth mainCharacterHealth;
     public Slider speedSlider;
     void Start()
     {
+        player = GameObject.FindGameObjectWithTag("Player").transform;
+        mainCharacterHealth = player.GetComponent<MainCharacterHealth>();
+
         UIController = new GameObject[7];
 
         UIController[0] = GameObject.Find("Canvas/SliderMovement");
@@ -57,10 +61,13 @@ public class JumpscareController : MonoBehaviour
         // Sembunyikan gambar jumpscare
         UIPocongJumscare.SetActive(false);
 
-        // Munculkan kembali UI
-        foreach (GameObject canvas in UIController)
+        if (mainCharacterHealth.currentHealth > 0f)
         {
-            canvas.gameObject.SetActive(true);
+            // Munculkan kembali UI
+            foreach (GameObject canvas in UIController)
+            {
+                canvas.gameObject.SetActive(true);
+            }
         }
     }
 }

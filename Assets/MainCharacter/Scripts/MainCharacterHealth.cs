@@ -6,7 +6,7 @@ public class MainCharacterHealth : MonoBehaviour
     public float maxHealth = 100f;
     private Animator baseCharacterAnimator;
     public Image MainCharacterHpBar; // Referensi ke UI Image untuk health bar
-    private float currentHealth = 100f;  // Nilai hp saat ini
+    public float currentHealth = 100f;  // Nilai hp saat ini
 
     private GameManager gameManager;
     private void Start()
