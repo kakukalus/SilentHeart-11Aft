@@ -122,9 +122,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speedSlider: {fileID: 0}
   TurnBackButton: {fileID: 0}
-  walkSpeed: 11
-  runSpeed: 16
-  backwardSpeed: 11
+  walkSpeed: 6
+  runSpeed: 11
+  backwardSpeed: 6
   isFlip: 0
 --- !u!114 &3616643822844290939
 MonoBehaviour:
