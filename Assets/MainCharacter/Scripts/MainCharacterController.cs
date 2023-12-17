@@ -17,9 +17,23 @@ public class MainCharacterController : MonoBehaviour
 
     private void Start()
     {
+        //get component canvas
+        GameObject sliderGameObject = GameObject.Find("Canvas/SliderMovement");
+        speedSlider = sliderGameObject.GetComponent<Slider>();
+
+        GameObject TurnBackButtonGameObject = GameObject.Find("Canvas/ButtonTurnBack");
+        TurnBackButton = TurnBackButtonGameObject.GetComponent<Button>();
+
+        // get component from children
         baseCharacterAnimator = GetComponentInChildren<Animator>();
         mainCharacterAnimation = GetComponentInChildren<MainCharacterAnimation>();
+
+
+        // add listerner to ui
         speedSlider.onValueChanged.AddListener(HandleSliderValueChanged);
+        TurnBackButton.onClick.AddListener(HandleButtonTurnBackValueChanged);
+
+        //flip direction
         isFlip = false;
 
     }

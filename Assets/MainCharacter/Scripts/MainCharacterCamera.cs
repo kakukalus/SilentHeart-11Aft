@@ -5,14 +5,29 @@ public class MainCharacterCamera : MonoBehaviour
     public float interpVelocity;
     public float minDistance;
     public float followDistance;
-    public GameObject target;
+    public GameObject target; // Referensi ke Transform karakter yang akan diikuti
     public Vector3 offset;
     Vector3 targetPos;
     private MainCharacterController mainCharacterController;
     void Start()
     {
-        targetPos = transform.position;
-        mainCharacterController = target.GetComponent<MainCharacterController>();
+
+        // Jika target tidak diset, cari GameObject dengan tag "Player"
+        if (target == null)
+        {
+            GameObject player = GameObject.FindGameObjectWithTag("Player");
+            if (player != null)
+            {
+                target = player.gameObject;
+                targetPos = transform.position;
+                mainCharacterController = target.GetComponent<MainCharacterController>();
+            }
+            else
+            {
+                Debug.LogError("Target not set and no GameObject with tag 'Player' found.");
+            }
+        }
+   
     }
 
     void FixedUpdate()
