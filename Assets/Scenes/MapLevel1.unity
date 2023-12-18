@@ -984,6 +984,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PocongEnemy
       objectReference: {fileID: 0}
+    - target: {fileID: 8739756506583654513, guid: ef09b63a9ecac38438a11dbd1f505e6b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -17782,11 +17786,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1002534225007406983, guid: c0302ba0c21b9b64bb3e5e6422e40f21, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 309.7
+      value: 15.68
       objectReference: {fileID: 0}
     - target: {fileID: 1002534225007406983, guid: c0302ba0c21b9b64bb3e5e6422e40f21, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.5
+      value: -0.07
       objectReference: {fileID: 0}
     - target: {fileID: 1002534225007406983, guid: c0302ba0c21b9b64bb3e5e6422e40f21, type: 3}
       propertyPath: m_LocalPosition.z
@@ -24293,6 +24297,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WormineEnemy
       objectReference: {fileID: 0}
+    - target: {fileID: 401827048452932048, guid: 6e556bf2570dc6f4bbde5eb0bfec0431, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7899057780037556609, guid: 6e556bf2570dc6f4bbde5eb0bfec0431, type: 3}
       propertyPath: pocongTriggerTurnBack
       value: 
@@ -24479,13 +24487,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: KuntilanakEnemy
       objectReference: {fileID: 0}
-    - target: {fileID: 8988334042592278044, guid: a689162847e04bd45b9dd41bc4b61f95, type: 3}
-      propertyPath: m_LocalPosition.x
+    - target: {fileID: 5357429421275803080, guid: a689162847e04bd45b9dd41bc4b61f95, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8988334042592278044, guid: a689162847e04bd45b9dd41bc4b61f95, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 7.84
+      objectReference: {fileID: 0}
+    - target: {fileID: 8988334042592278044, guid: a689162847e04bd45b9dd41bc4b61f95, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -2.68
       objectReference: {fileID: 0}
     - target: {fileID: 8988334042592278044, guid: a689162847e04bd45b9dd41bc4b61f95, type: 3}
       propertyPath: m_LocalPosition.z
