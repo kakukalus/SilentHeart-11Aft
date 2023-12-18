@@ -3209,6 +3209,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3082fe107a1f2f64293323bb8d88968f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageOnHit: 50
+  sanityDamagePerSecond: 2
+  increasedSanityDamagePerSecond: 5
+  damageRadius: 4
 --- !u!50 &460433586
 Rigidbody2D:
   serializedVersion: 4
@@ -6037,6 +6041,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3082fe107a1f2f64293323bb8d88968f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageOnHit: 50
+  sanityDamagePerSecond: 2
+  increasedSanityDamagePerSecond: 5
+  damageRadius: 4
 --- !u!61 &777346615
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6780,7 +6788,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &857918869
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7021,6 +7029,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3082fe107a1f2f64293323bb8d88968f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageOnHit: 50
+  sanityDamagePerSecond: 2
+  increasedSanityDamagePerSecond: 5
+  damageRadius: 4
 --- !u!50 &925620144
 Rigidbody2D:
   serializedVersion: 4
@@ -7407,7 +7419,7 @@ RectTransform:
   m_Father: {fileID: 147075624}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -9451,8 +9463,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 740488547}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -18321,6 +18333,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3082fe107a1f2f64293323bb8d88968f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageOnHit: 50
+  sanityDamagePerSecond: 2
+  increasedSanityDamagePerSecond: 5
+  damageRadius: 4
 --- !u!50 &1898961076
 Rigidbody2D:
   serializedVersion: 4
@@ -19192,8 +19208,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1598393874}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -20096,7 +20112,7 @@ RectTransform:
   m_Father: {fileID: 1318092748}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
