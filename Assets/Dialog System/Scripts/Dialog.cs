@@ -12,8 +12,9 @@ public class DialogManager : MonoBehaviour
     private int index;
     public float typingSpeed;
     public GameObject panelDialog;
-
     public GameObject continueButton;
+    public Button settingsButton; // Tambahkan ini untuk referensi button settings
+
 
 
     // Start is called before the first frame update
@@ -37,37 +38,26 @@ public class DialogManager : MonoBehaviour
 
     public void StartDialog()
     {
-        index = 0; // Reset ke kalimat pertama
-        textDisplay.text = ""; // Kosongkan text display
-        panelDialog.SetActive(true); // Aktifkan panel dialog
-        continueButton.SetActive(false); // Sembunyikan tombol continue
-
-        if (index == 0) // Jika ini adalah kalimat pertama
-        {
-            StartCoroutine(StartTypingWithDelay()); // Mulai mengetik dengan delay
-        }
-        else
-        {
-            StartCoroutine(Type()); // Mulai mengetik tanpa delay
-        }
+        Time.timeScale = 0; // Pause the game
+        settingsButton.interactable = false; // Nonaktifkan button settings
+        index = 0;
+        textDisplay.text = "";
+        panelDialog.SetActive(true);
+        continueButton.SetActive(false);
+        StartCoroutine(Type()); // Langsung memanggil Type tanpa delay
     }
 
 
-    IEnumerator StartTypingWithDelay()
-    {
-        yield return new WaitForSeconds(0.3f); // Menunggu selama 1 detik sebelum memulai mengetik untuk kalimat pertama
-        StartCoroutine(Type()); // Lalu mulai mengetik
-    }
 
     IEnumerator Type()
     {
         foreach (char letter in sentences[index].ToCharArray())
         {
             textDisplay.text += letter;
-            yield return new WaitForSeconds(typingSpeed);
+            yield return new WaitForSecondsRealtime(typingSpeed); // Gunakan WaitForSecondsRealtime agar berfungsi saat pause
         }
 
-        continueButton.SetActive(true); // Aktifkan tombol continue setelah selesai mengetik
+        continueButton.SetActive(true);
     }
 
 
@@ -84,7 +74,9 @@ public class DialogManager : MonoBehaviour
         {
             textDisplay.text = "";
             continueButton.SetActive(false);
-            panelDialog.SetActive(false); // Menonaktifkan panel dialog setelah kalimat terakhir
+            panelDialog.SetActive(false);
+            settingsButton.interactable = true; // Aktifkan button settings
+            Time.timeScale = 1; // Resume the game
         }
     }
 

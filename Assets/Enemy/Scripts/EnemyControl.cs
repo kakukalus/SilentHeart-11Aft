@@ -1,9 +1,11 @@
-using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
-public class EnemyController : MonoBehaviour
+public class EnemyControl : MonoBehaviour
 {
     private MainCharacterHealth mainCharacterHealth;
+    // Start is called before the first frame update  private MainCharacterHealth mainCharacterHealth;
     private MainCharacterSanity mainCharacterSanity;
 
     // Kerusakan saat musuh menyentuh pemain
