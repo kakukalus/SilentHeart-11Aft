@@ -6,12 +6,10 @@ using UnityEngine.SceneManagement;
 
 public class PanelController : MonoBehaviour
 {
+    public GameObject settingsCanvas; // Referensi ke panel pengaturan Anda
+    public GameObject canvasMenu; // Referensi ke panel pengaturan Anda
     public GameObject menuPanel; // Seret panel menu Anda ke dalam slot ini di inspector Unity
-    public GameObject memoryPanelLevel1; // Seret panel level 1 ke dalam slot ini di inspector Unity
-    public GameObject memoryPanelLevel2; // Seret panel level 2 ke dalam slot ini di inspector Unity
-    public GameObject settingControls; // Seret panel setting ke dalam slot ini di inspector Unity
-    public GameObject settingSoundBtn; // Seret panel setting ke dalam slot ini di inspector Unity
-    public GameObject settingTextBtn; // Seret panel setting ke dalam slot ini di inspector Unity
+
     public GameObject popUpQuit; // Seret panel setting ke dalam slot ini di inspector Unity
 
     void Start()
@@ -53,91 +51,19 @@ public class PanelController : MonoBehaviour
     }
 
 
-    // Fungsi untuk menampilkan panel memori
-    public void ShowMemoryPanel()
+    public void OpenSettings()
     {
+        settingsCanvas.SetActive(true); // Menampilkan panel pengaturan
         menuPanel.SetActive(false); // Sembunyikan panel menu
-        memoryPanelLevel1.SetActive(true); // Menampilkan panel memori
     }
 
-    public void BackToMenuForMemory()
+    public void CloseSettings()
     {
-        menuPanel.SetActive(true); // Tampilkan panel menu
-        memoryPanelLevel1.SetActive(false); // Sembunyikan panel memori
-        memoryPanelLevel2.SetActive(false); // Sembunyikan panel memori
+        canvasMenu.SetActive(true); // Menampilkan panel pengaturan
+        settingsCanvas.SetActive(false); // Sembunyikan panel menu
+        menuPanel.SetActive(true); // Sembunyikan panel menu
     }
 
-    public void NextMemory2()
-    {
-        memoryPanelLevel1.SetActive(false); // Sembunyikan panel memori
-        memoryPanelLevel2.SetActive(true); // Menampilkan panel memori
-    }
-
-    public void PreviousMemory1()
-    {
-        memoryPanelLevel1.SetActive(true); // Menampilkan panel memori
-        memoryPanelLevel2.SetActive(false); // Sembunyikan panel memori
-    }
-
-    public void ShowSettingControls()
-    {
-        menuPanel.SetActive(false); // Sembunyikan panel menu
-        settingControls.SetActive(true); // Menampilkan panel setting
-    }
-
-    public void ShowSettingSound()
-    {
-        settingControls.SetActive(false); // Sembunyikan panel setting
-        settingSoundBtn.SetActive(true); // Menampilkan panel setting
-    }
-
-    public void ShowSettingText()
-    {
-        settingControls.SetActive(false); // Sembunyikan panel setting
-        settingTextBtn.SetActive(true); // Menampilkan panel setting
-    }
-
-    public void BackToControllForSound()
-    {
-        settingSoundBtn.SetActive(false); // Sembunyikan panel setting
-        settingControls.SetActive(true); // Menampilkan panel setting
-    }
-
-    public void BackToTextForSound()
-    {
-        settingSoundBtn.SetActive(false); // Sembunyikan panel setting
-        settingTextBtn.SetActive(true); // Menampilkan panel setting
-    }
-
-    public void BackToControllForText()
-    {
-        settingTextBtn.SetActive(false); // Sembunyikan panel setting
-        settingControls.SetActive(true); // Menampilkan panel setting
-    }
-
-    public void BackToSoundForText()
-    {
-        settingTextBtn.SetActive(false); // Sembunyikan panel setting
-        settingSoundBtn.SetActive(true); // Menampilkan panel setting
-    }
-
-    public void BackToMenuForControls()
-    {
-        menuPanel.SetActive(true); // Tampilkan panel menu
-        settingControls.SetActive(false); // Sembunyikan panel setting
-    }
-
-    public void BackToMenuForSound()
-    {
-        menuPanel.SetActive(true); // Tampilkan panel menu
-        settingSoundBtn.SetActive(false); // Sembunyikan panel setting
-    }
-
-    public void BackToMenuForText()
-    {
-        menuPanel.SetActive(true); // Tampilkan panel menu
-        settingTextBtn.SetActive(false); // Sembunyikan panel setting
-    }
 
     public void ShowPopUpQuit()
     {
