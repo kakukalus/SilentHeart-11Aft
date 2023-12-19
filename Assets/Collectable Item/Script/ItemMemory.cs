@@ -30,7 +30,7 @@ public class ItemMemory : MonoBehaviour
             isPickedUp = false;
         }
 
-        UpdateCollectionTextOnStart(); // Perbarui teks koleksi ketika scene dimulai.
+        // UpdateCollectionTextOnStart(); // Perbarui teks koleksi ketika scene dimulai.
     }
 
     // Metode untuk mengambil item memory.
