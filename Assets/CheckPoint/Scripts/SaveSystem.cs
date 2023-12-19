@@ -68,24 +68,21 @@ public static class SaveSystem
         // Menulis semua data yang dimodifikasi ke disk.
         PlayerPrefs.Save();
     }
-<<<<<<< HEAD
-=======
 
-        public static void SaveAllDialogTriggers(DialogTrigger[] triggers)
-    {
-        foreach (var trigger in triggers)
-        {
-            PlayerPrefs.SetInt("DialogTrigger_" + trigger.triggerId, trigger.HasBeenTriggered ? 1 : 0);
-        }
-        PlayerPrefs.Save();
-    }
+    //     public static void SaveAllDialogTriggers(DialogTrigger[] triggers)
+    // {
+    //     foreach (var trigger in triggers)
+    //     {
+    //         PlayerPrefs.SetInt("DialogTrigger_" + trigger.triggerId, trigger.HasBeenTriggered ? 1 : 0);
+    //     }
+    //     PlayerPrefs.Save();
+    // }
 
-    public static void LoadAllDialogTriggers(DialogTrigger[] triggers)
-    {
-        foreach (var trigger in triggers)
-        {
-            trigger.HasBeenTriggered = PlayerPrefs.GetInt("DialogTrigger_" + trigger.triggerId, 0) == 1;
-        }
-    }
->>>>>>> 5cb07d58ed10ca197af2fd8ed82831edd9d6d5c4
+    // public static void LoadAllDialogTriggers(DialogTrigger[] triggers)
+    // {
+    //     foreach (var trigger in triggers)
+    //     {
+    //         trigger.HasBeenTriggered = PlayerPrefs.GetInt("DialogTrigger_" + trigger.triggerId, 0) == 1;
+    //     }
+    // }
 }

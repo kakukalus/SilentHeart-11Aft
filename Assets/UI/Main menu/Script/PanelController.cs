@@ -6,22 +6,12 @@ using UnityEngine.SceneManagement;
 
 public class PanelController : MonoBehaviour
 {
-<<<<<<< HEAD
-    public GameObject menuPanel; // Seret panel menu Anda ke dalam slot ini di inspector Unity
-    public GameObject memoryPanelLevel1; // Seret panel level 1 ke dalam slot ini di inspector Unity
-    public GameObject memoryPanelLevel2; // Seret panel level 2 ke dalam slot ini di inspector Unity
-    public GameObject settingControls; // Seret panel setting ke dalam slot ini di inspector Unity
-    public GameObject settingSoundBtn; // Seret panel setting ke dalam slot ini di inspector Unity
-    public GameObject settingTextBtn; // Seret panel setting ke dalam slot ini di inspector Unity
-    public GameObject popUpQuit; // Seret panel setting ke dalam slot ini di inspector Unity
-=======
     public GameObject settingsCanvas; // Referensi ke panel pengaturan Anda
     public GameObject canvasMenu; // Referensi ke panel pengaturan Anda
     public GameObject menuPanel; // Seret panel menu Anda ke dalam slot ini di inspector Unity
     public GameObject PanelMemory; // Seret panel menu Anda ke dalam slot ini di inspector Unity
     public GameObject popUpQuit; // Seret panel setting ke dalam slot ini di inspector Unity
     public GameObject panelSetting; // Seret panel setting ke dalam slot ini di inspector Unity
->>>>>>> 5cb07d58ed10ca197af2fd8ed82831edd9d6d5c4
 
     void Start()
     {
@@ -30,11 +20,6 @@ public class PanelController : MonoBehaviour
 
     public void NewGame()
     {
-<<<<<<< HEAD
-        ResetGameData(); // Panggil metode untuk mengatur ulang data game
-        SceneManager.LoadScene("MapLevel1"); // Memuat ulang scene
-        Time.timeScale = 1; // Melanjutkan waktu game
-=======
         ResetGameData();
         SceneManager.LoadScene("TestCharacterDimas");
         SceneManager.sceneLoaded += OnSceneLoaded;
@@ -55,7 +40,6 @@ public class PanelController : MonoBehaviour
             // Remove the listener to prevent it from being called again on subsequent scene loads
             SceneManager.sceneLoaded -= OnSceneLoaded;
         }
->>>>>>> 5cb07d58ed10ca197af2fd8ed82831edd9d6d5c4
     }
 
     private void ResetGameData()

@@ -42,11 +42,7 @@ public class Checkpoint : MonoBehaviour
         MainCharacterHealth playerHealth = FindObjectOfType<MainCharacterHealth>();
         if (playerHealth != null)
         {
-<<<<<<< HEAD
             // LastCheckpointHealth = playerHealth.GetCurrentHealth();
-=======
-            LastCheckpointHealth = playerHealth.GetCurrentHealth();
->>>>>>> 5cb07d58ed10ca197af2fd8ed82831edd9d6d5c4
         }
         if (playerSanity != null)
         {
