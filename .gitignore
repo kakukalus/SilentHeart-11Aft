@@ -4,7 +4,7 @@
 /Assets/TextMesh Pro
 /Packages
 /ProjectSettings
-
+/Export
 #Ignore all .meta file
 *.meta
 #But not source file with postfix. which is everything but a folder
