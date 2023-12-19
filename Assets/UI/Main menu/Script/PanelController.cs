@@ -21,7 +21,7 @@ public class PanelController : MonoBehaviour
     public void NewGame()
     {
         ResetGameData();
-        SceneManager.LoadScene("TestCharacterDimas");
+        SceneManager.LoadScene("IntroCutscene");
         SceneManager.sceneLoaded += OnSceneLoaded;
         Time.timeScale = 1;
     }

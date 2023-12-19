@@ -4,6 +4,8 @@ using UnityEngine.UI;
 
 public class RespawnManager : MonoBehaviour
 {
+
+    public GameObject panelSetting; // assign in the editor
     public GameObject panelRespawn; // assign in the editor
     public Button buttonYes;
     public Button buttonNo;
