@@ -40,7 +40,6 @@ public class JumpscareController : MonoBehaviour
         // UIController[9] = GameObject.Find("Canvas/PanelRespawn");
         // UIController[10] = GameObject.Find("Canvas/PanelSettings");
 
-
         speedSlider = UIController[1].GetComponent<Slider>();
 
         UiHidePlace = GameObject.Find("Canvas/UIHidePlace").GetComponent<RectTransform>();
@@ -58,6 +57,7 @@ public class JumpscareController : MonoBehaviour
         originalRectTransforms = new List<RectTransform>(currentRectTransforms);
         UIPocongJumscare = GameObject.Find("Canvas/pocongJumpscare");
         UIPocongJumscare.SetActive(false);
+        UIController[1].SetActive(false);
         // currentRectTransforms[8].position = UiHidePlace.position;
         // currentRectTransforms[9].position = UiHidePlace.position;
         // currentRectTransforms[10].position = UiHidePlace.position;

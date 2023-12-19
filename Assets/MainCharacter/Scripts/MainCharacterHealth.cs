@@ -59,10 +59,15 @@ public class MainCharacterHealth : MonoBehaviour
         currentHealth = Mathf.Max(0f, currentHealth);
         SetMainCharacterBar(currentHealth);
 
-        // if (currentHealth <= 0)
-        // {
-        //     Die(); // Memanggil metode Die ketika kesehatan habis.
-        // }
+    }
+
+    public void Heal(float heal)
+    {
+        // Mengurangi nilai kesehatan karakter ketika menerima damage.
+        currentHealth += heal;
+        currentHealth = Mathf.Max(0f, currentHealth);
+        SetMainCharacterBar(currentHealth);
+
     }
 
 }

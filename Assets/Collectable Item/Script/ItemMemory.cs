@@ -6,81 +6,71 @@ using UnityEngine.Events;
 
 public class ItemMemory : MonoBehaviour
 {
-    public TextMeshProUGUI collectionText; // Referensi ke UI TextMeshPro untuk menampilkan jumlah item yang telah dikumpulkan.
-    public static event Action<string> OnItemCollected; // Event untuk notifikasi item yang dikumpulkan
-    public string itemMemoryName; // Nama dari item memory ini, digunakan untuk identifikasi.
-    public string[] dialogOnPickup; // Kalimat-kalimat dialog yang akan muncul ketika item diambil
-    // public Sprite[] dialogSprites; // Array Sprite untuk gambar dialog
-    public DialogManager dialogManager; // Referensi ke DialogManager
-    public PickButton pickButton; // Referensi ke tombol ambil yang terkait dengan item ini.
+    public TextMeshProUGUI collectionText;
+    public static event Action<string> OnItemCollected;
+    public string itemMemoryID; // Unique identifier for each item.
+    public string[] dialogOnPickup;
+    public DialogManager dialogManager;
+    public PickButton pickButton;
 
-    private bool isPickedUp = false; // Status yang menandakan apakah item telah diambil.
+    private bool isPickedUp = false;
 
-    // Di dalam metode Start() atau Awake()
     private void Start()
     {
-        // Periksa apakah item ini sudah dikumpulkan berdasarkan data yang tersimpan.
-        if (PlayerPrefs.GetInt(itemMemoryName, 0) == 1)
+        // Check if the item is already collected based on the unique identifier.
+        if (PlayerPrefs.GetInt(itemMemoryID, 0) == 1)
         {
             isPickedUp = true;
-            gameObject.SetActive(false); // Nonaktifkan game object jika item sudah dikumpulkan sebelumnya.
+            gameObject.SetActive(false);
         }
         else
         {
             isPickedUp = false;
         }
 
-        // UpdateCollectionTextOnStart(); // Perbarui teks koleksi ketika scene dimulai.
+        // UpdateCollectionTextOnStart();
     }
 
-    // Metode untuk mengambil item memory.
     public void PickUp()
     {
         if (!isPickedUp)
         {
             isPickedUp = true;
-
-            // Menyimpan status item sebagai telah dikumpulkan.
-            PlayerPrefs.SetInt(itemMemoryName, 1); // Simpan dengan nilai 1 yang menandakan telah dikumpulkan.
+            PlayerPrefs.SetInt(itemMemoryID, 1);
             PlayerPrefs.Save();
 
-            // Notifikasi bahwa item telah dikumpulkan.
-            OnItemCollected?.Invoke(itemMemoryName);
+            OnItemCollected?.Invoke(itemMemoryID);
 
-            // Perbarui UI dan tampilkan log.
             UpdateCollectionText();
-            Debug.Log($"Collected memory: {itemMemoryName}");
-            // Cek jika ada dialog yang terkait dengan pengambilan item ini
+            Debug.Log($"Collected memory: {itemMemoryID}");
+
             if (dialogOnPickup.Length > 0 && dialogManager != null)
             {
-                dialogManager.StartDialog(dialogOnPickup); // Memulai dialog yang terkait dengan item ini
+                dialogManager.StartDialog(dialogOnPickup);
             }
             else
             {
-                Debug.LogWarning($"No dialog is set for {itemMemoryName} or DialogManager is not assigned.");
+                Debug.LogWarning($"No dialog is set for {itemMemoryID} or DialogManager is not assigned.");
             }
 
-            gameObject.SetActive(false); // Nonaktifkan objek setelah dikumpulkan.
-
+            gameObject.SetActive(false);
         }
     }
 
-    // Fungsi untuk memperbarui teks koleksi.
     private void UpdateCollectionText()
     {
         if (collectionText != null)
         {
-            int currentCount = int.Parse(collectionText.text); // Dapatkan jumlah koleksi saat ini dari teks UI.
-            currentCount++; // Tambahkan satu ke jumlah tersebut.
-            collectionText.text = currentCount.ToString(); // Perbarui teks UI dengan jumlah terbaru.
+            int currentCount = int.Parse(collectionText.text);
+            currentCount++;
+            collectionText.text = currentCount.ToString();
 
-            // Simpan jumlah koleksi yang telah diperbarui.
             PlayerPrefs.SetInt("TotalCollectedItems", currentCount);
             PlayerPrefs.Save();
         }
         else
         {
-            Debug.LogError("Collection Text is not set on " + gameObject.name); // Tampilkan error jika TextMeshProUGUI tidak diatur.
+            Debug.LogError("Collection Text is not set on " + gameObject.name);
         }
     }
 
@@ -88,15 +78,14 @@ public class ItemMemory : MonoBehaviour
     {
         if (other.CompareTag("Player") && !isPickedUp)
         {
-            // Aktifkan tombol ambil ketika pemain mendekat dan item belum dikumpulkan.
             if (pickButton != null)
             {
                 pickButton.EnableButton();
-                pickButton.GetComponent<Button>().onClick.AddListener(PickUp); // Tambahkan listener ke tombol.
+                pickButton.GetComponent<Button>().onClick.AddListener(PickUp);
             }
             else
             {
-                Debug.LogError("PickButton is not assigned in the inspector."); // Tampilkan error jika PickButton tidak diatur.
+                Debug.LogError("PickButton is not assigned in the inspector.");
             }
         }
     }
@@ -105,39 +94,38 @@ public class ItemMemory : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            // Nonaktifkan tombol ambil ketika pemain menjauh.
             if (pickButton != null)
             {
                 pickButton.DisableButton();
-                pickButton.GetComponent<Button>().onClick.RemoveListener(PickUp); // Hapus listener dari tombol.
+                pickButton.GetComponent<Button>().onClick.RemoveListener(PickUp);
             }
             else
             {
-                Debug.LogError("PickButton is not assigned in the inspector."); // Tampilkan error jika PickButton tidak diatur.
+                Debug.LogError("PickButton is not assigned in the inspector.");
             }
         }
     }
 
-    // Memperbarui teks koleksi saat scene dimulai.
     private void UpdateCollectionTextOnStart()
     {
-        int totalCollectedItems = PlayerPrefs.GetInt("TotalCollectedItems", 0); // Dapatkan total item yang telah dikumpulkan.
+        int totalCollectedItems = PlayerPrefs.GetInt("TotalCollectedItems", 0);
         if (collectionText != null)
         {
-            collectionText.text = totalCollectedItems.ToString(); // Perbarui teks UI dengan total yang dikumpulkan.
+            collectionText.text = totalCollectedItems.ToString();
         }
         else
         {
-            Debug.LogError("Collection Text is not set in the inspector."); // Tampilkan error jika TextMeshProUGUI tidak diatur.
+            Debug.LogError("Collection Text is not set in the inspector.");
         }
     }
 
     public void ResetGame()
     {
-        // Reset jumlah total item koleksi.
+        // Reset PlayerPrefs data for the specific item.
+        PlayerPrefs.SetInt(itemMemoryID, 0);
         PlayerPrefs.SetInt("TotalCollectedItems", 0);
         PlayerPrefs.Save();
 
-        UpdateCollectionTextOnStart(); // Perbarui UI setelah mereset.
+        UpdateCollectionTextOnStart();
     }
 }
