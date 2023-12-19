@@ -57,12 +57,8 @@ public class PanelController : MonoBehaviour
         PlayerPrefs.DeleteKey("Item Memory 1");
         PlayerPrefs.DeleteKey("Item Memory 2");
         PlayerPrefs.DeleteKey("Item Memory 3");
-<<<<<<< HEAD
 
-=======
-        
-        
->>>>>>> 5cb07d58ed10ca197af2fd8ed82831edd9d6d5c4
+
         // Tambahkan penghapusan kunci untuk inventori
         int numberOfInventorySlots = 2; // Ganti dengan jumlah sebenarnya dari slot inventori Anda
         for (int i = 0; i < numberOfInventorySlots; i++)
@@ -73,94 +69,6 @@ public class PanelController : MonoBehaviour
         PlayerPrefs.Save(); // Jangan lupa untuk menyimpan perubahan setelah menghapus
     }
 
-<<<<<<< HEAD
-
-    // Fungsi untuk menampilkan panel memori
-    public void ShowMemoryPanel()
-    {
-        menuPanel.SetActive(false); // Sembunyikan panel menu
-        memoryPanelLevel1.SetActive(true); // Menampilkan panel memori
-    }
-
-    public void BackToMenuForMemory()
-    {
-        menuPanel.SetActive(true); // Tampilkan panel menu
-        memoryPanelLevel1.SetActive(false); // Sembunyikan panel memori
-        memoryPanelLevel2.SetActive(false); // Sembunyikan panel memori
-    }
-
-    public void NextMemory2()
-    {
-        memoryPanelLevel1.SetActive(false); // Sembunyikan panel memori
-        memoryPanelLevel2.SetActive(true); // Menampilkan panel memori
-    }
-
-    public void PreviousMemory1()
-    {
-        memoryPanelLevel1.SetActive(true); // Menampilkan panel memori
-        memoryPanelLevel2.SetActive(false); // Sembunyikan panel memori
-    }
-
-    public void ShowSettingControls()
-    {
-        menuPanel.SetActive(false); // Sembunyikan panel menu
-        settingControls.SetActive(true); // Menampilkan panel setting
-    }
-
-    public void ShowSettingSound()
-    {
-        settingControls.SetActive(false); // Sembunyikan panel setting
-        settingSoundBtn.SetActive(true); // Menampilkan panel setting
-    }
-
-    public void ShowSettingText()
-    {
-        settingControls.SetActive(false); // Sembunyikan panel setting
-        settingTextBtn.SetActive(true); // Menampilkan panel setting
-    }
-
-    public void BackToControllForSound()
-    {
-        settingSoundBtn.SetActive(false); // Sembunyikan panel setting
-        settingControls.SetActive(true); // Menampilkan panel setting
-    }
-
-    public void BackToTextForSound()
-    {
-        settingSoundBtn.SetActive(false); // Sembunyikan panel setting
-        settingTextBtn.SetActive(true); // Menampilkan panel setting
-    }
-
-    public void BackToControllForText()
-    {
-        settingTextBtn.SetActive(false); // Sembunyikan panel setting
-        settingControls.SetActive(true); // Menampilkan panel setting
-    }
-
-    public void BackToSoundForText()
-    {
-        settingTextBtn.SetActive(false); // Sembunyikan panel setting
-        settingSoundBtn.SetActive(true); // Menampilkan panel setting
-    }
-
-    public void BackToMenuForControls()
-    {
-        menuPanel.SetActive(true); // Tampilkan panel menu
-        settingControls.SetActive(false); // Sembunyikan panel setting
-    }
-
-    public void BackToMenuForSound()
-    {
-        menuPanel.SetActive(true); // Tampilkan panel menu
-        settingSoundBtn.SetActive(false); // Sembunyikan panel setting
-    }
-
-    public void BackToMenuForText()
-    {
-        menuPanel.SetActive(true); // Tampilkan panel menu
-        settingTextBtn.SetActive(false); // Sembunyikan panel setting
-    }
-=======
     public void OpenFragment()
     {
         canvasMenu.SetActive(false); // Sembunyikan panel menu
@@ -204,7 +112,6 @@ public class PanelController : MonoBehaviour
     //     PanelMemory.SetActive(true); // Sembunyikan panel menu
     //     canvasMenu.SetActive(false); // Sembunyikan panel menu
     // }
->>>>>>> 5cb07d58ed10ca197af2fd8ed82831edd9d6d5c4
 
     public void ShowPopUpQuit()
     {

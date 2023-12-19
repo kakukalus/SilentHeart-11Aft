@@ -23,7 +23,7 @@ public class MainMenu : MonoBehaviour
 
         // Load dialog triggers status
         DialogTrigger[] allDialogTriggers = FindObjectsOfType<DialogTrigger>();
-        SaveSystem.LoadAllDialogTriggers(allDialogTriggers);
+        // SaveSystem.LoadAllDialogTriggers(allDialogTriggers);
 
     }
 
