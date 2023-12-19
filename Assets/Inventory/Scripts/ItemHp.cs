@@ -20,15 +20,15 @@ public class ItemHP : Item
     public override void Use()
     {
         MainCharacterHealth health = player.GetComponent<MainCharacterHealth>();
-        if (health.GetCurrentHealth() < health.maxHealth) // Cek jika HP pemain belum penuh.
-        {
-            base.Use(); // Panggil implementasi dasar 'Use', jika ada.
-            health.Heal(hpIncrease); // Tambahkan HP ke pemain.
-            Debug.Log("ItemHP Used"); // Log penggunaan item HP.
-        }
-        else
-        {
-            Debug.Log("Health is full. ItemHP will not be used."); // Log jika HP pemain sudah penuh.
-        }
+        // if (health.GetCurrentHealth() < health.maxHealth) // Cek jika HP pemain belum penuh.
+        // {
+        //     base.Use(); // Panggil implementasi dasar 'Use', jika ada.
+        //     health.Heal(hpIncrease); // Tambahkan HP ke pemain.
+        //     Debug.Log("ItemHP Used"); // Log penggunaan item HP.
+        // }
+        // else
+        // {
+        //     Debug.Log("Health is full. ItemHP will not be used."); // Log jika HP pemain sudah penuh.
+        // }
     }
 }

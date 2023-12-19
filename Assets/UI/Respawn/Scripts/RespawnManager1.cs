@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class RespawnManager : MonoBehaviour
+public class RespawnManager1 : MonoBehaviour
 {
     public GameObject panelRespawn; // assign in the editor
     public Button buttonYes;
@@ -14,7 +14,7 @@ public class RespawnManager : MonoBehaviour
         // Subscribe to button events
         buttonYes.onClick.AddListener(OnYesClicked);
         buttonNo.onClick.AddListener(OnNoClicked);
-        
+
         // Hide panel at start
         panelRespawn.SetActive(false);
     }
@@ -33,8 +33,8 @@ public class RespawnManager : MonoBehaviour
         Time.timeScale = 1f;
 
         // Respawn player at last checkpoint
-        mainCharacterHealth.RespawnAtLastCheckpoint();
-        
+        // mainCharacterHealth.RespawnAtLastCheckpoint();
+
         // Hide the panel after respawning
         panelRespawn.SetActive(false);
     }

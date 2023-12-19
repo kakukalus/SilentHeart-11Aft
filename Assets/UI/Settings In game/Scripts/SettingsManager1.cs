@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class SettingsManager : MonoBehaviour
+public class SettingsManager1 : MonoBehaviour
 {
     public GameObject settingsPanel; // Referensi ke panel pengaturan Anda
     public GameObject inSettingsPanel;
@@ -17,7 +17,7 @@ public class SettingsManager : MonoBehaviour
     {
         settingsPanel.SetActive(false);
         inSettingsPanel.SetActive(true);
-        
+
     }
 
     public void inSettingsPanelClose()
