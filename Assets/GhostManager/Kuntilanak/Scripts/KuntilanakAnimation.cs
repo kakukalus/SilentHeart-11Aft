@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class PocongAnimation : MonoBehaviour
+public class KuntilanakAnimation : MonoBehaviour
 {
     private Vector3 defaultScale;
     private Vector3 currentScale;
