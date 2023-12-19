@@ -7,23 +7,23 @@ public class KuntilanakFollowing : MonoBehaviour
     public float stoppingDistance = 2f;
 
     private Transform player;
-
+    private Animator basekuntilanakAnimator;
+    // private BaseCharacter kuntilanakAnimation;
     public bool isChase;
 
-    private Animator BaseCharacter;
     // private KuntilanakAnimation kuntilanakAnimation;
     public float facingThreshold = 0.1f;  // Ambang batas untuk menentukan arah wajah
 
-    // void Start()
-    // {
-    //     isChase = false;
-    //     // Menemukan referensi ke pemain (dalam hal ini, kita mengasumsikan pemain ada dalam scene)
-    //     player = GameObject.FindGameObjectWithTag("Player").transform;
+    void Start()
+    {
+        isChase = false;
+        // Menemukan referensi ke pemain (dalam hal ini, kita mengasumsikan pemain ada dalam scene)
+        player = GameObject.FindGameObjectWithTag("Player").transform;
 
-    //     // get component from children
-    //     basekuntilanakAnimator = GetComponentInChildren<Animator>();
-    //     kuntilanakAnimation = GetComponentInChildren<BaseCharacter>();
-    // }
+        // get component from children
+        basekuntilanakAnimator = GetComponentInChildren<Animator>();
+        // kuntilanakAnimation = GetComponentInChildren<BaseCharacter>();
+    }
 
     // void Update()
     // {
