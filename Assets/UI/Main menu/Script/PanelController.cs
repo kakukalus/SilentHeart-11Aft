@@ -9,8 +9,9 @@ public class PanelController : MonoBehaviour
     public GameObject settingsCanvas; // Referensi ke panel pengaturan Anda
     public GameObject canvasMenu; // Referensi ke panel pengaturan Anda
     public GameObject menuPanel; // Seret panel menu Anda ke dalam slot ini di inspector Unity
-
+    public GameObject PanelMemory; // Seret panel menu Anda ke dalam slot ini di inspector Unity
     public GameObject popUpQuit; // Seret panel setting ke dalam slot ini di inspector Unity
+    public GameObject panelSetting; // Seret panel setting ke dalam slot ini di inspector Unity
 
     void Start()
     {
@@ -68,20 +69,49 @@ public class PanelController : MonoBehaviour
         PlayerPrefs.Save(); // Jangan lupa untuk menyimpan perubahan setelah menghapus
     }
 
+    public void OpenFragment()
+    {
+        canvasMenu.SetActive(false); // Sembunyikan panel menu
+        PanelMemory.SetActive(true); // Menampilkan panel setting
+        settingsCanvas.SetActive(true); // Sembunyikan panel menu
+    }
+
+    public void BackToMainMenu()
+    {
+        canvasMenu.SetActive(true); // Tampilkan panel menu
+        menuPanel.SetActive(true); // Sembunyikan panel setting
+        PanelMemory.SetActive(false); // Sembunyikan panel setting
+        settingsCanvas.SetActive(false); // Sembunyikan panel menu
+        panelSetting.SetActive(false); // Sembunyikan panel menu
+    }
 
     public void OpenSettings()
     {
         settingsCanvas.SetActive(true); // Menampilkan panel pengaturan
         menuPanel.SetActive(false); // Sembunyikan panel menu
+        canvasMenu.SetActive(false); // Sembunyikan panel menu
+        panelSetting.SetActive(true); // Sembunyikan panel menu
     }
 
-    public void CloseSettings()
-    {
-        canvasMenu.SetActive(true); // Menampilkan panel pengaturan
-        settingsCanvas.SetActive(false); // Sembunyikan panel menu
-        menuPanel.SetActive(true); // Sembunyikan panel menu
-    }
 
+    // public void OpenSettings()
+    // {
+    //     settingsCanvas.SetActive(true); // Menampilkan panel pengaturan
+    //     menuPanel.SetActive(false); // Sembunyikan panel menu
+    // }
+
+    // public void CloseSettings()
+    // {
+    //     canvasMenu.SetActive(true); // Menampilkan panel pengaturan
+    //     settingsCanvas.SetActive(false); // Sembunyikan panel menu
+    //     menuPanel.SetActive(true); // Sembunyikan panel menu
+    // }
+
+    // public void ShowMemory()
+    // {
+    //     PanelMemory.SetActive(true); // Sembunyikan panel menu
+    //     canvasMenu.SetActive(false); // Sembunyikan panel menu
+    // }
 
     public void ShowPopUpQuit()
     {

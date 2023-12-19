@@ -1,10 +1,13 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.Events;
 
 public class ItemMemory : MonoBehaviour
 {
     public TextMeshProUGUI collectionText; // Referensi ke UI TextMeshPro untuk menampilkan jumlah item yang telah dikumpulkan.
+    public static event Action<string> OnItemCollected; // Event untuk notifikasi item yang dikumpulkan
     public string itemMemoryName; // Nama dari item memory ini, digunakan untuk identifikasi.
     public string[] dialogOnPickup; // Kalimat-kalimat dialog yang akan muncul ketika item diambil
     // public Sprite[] dialogSprites; // Array Sprite untuk gambar dialog
@@ -40,6 +43,9 @@ public class ItemMemory : MonoBehaviour
             // Menyimpan status item sebagai telah dikumpulkan.
             PlayerPrefs.SetInt(itemMemoryName, 1); // Simpan dengan nilai 1 yang menandakan telah dikumpulkan.
             PlayerPrefs.Save();
+
+            // Notifikasi bahwa item telah dikumpulkan.
+            OnItemCollected?.Invoke(itemMemoryName);
 
             // Perbarui UI dan tampilkan log.
             UpdateCollectionText();
