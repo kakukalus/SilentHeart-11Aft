@@ -5,7 +5,17 @@ using UnityEngine.UI;
 public class SettingsManager : MonoBehaviour
 {
     public GameObject settingsPanel; // Referensi ke panel pengaturan Anda
-    
+
+
+    void Start()
+    {
+        settingsPanel = GameObject.Find("Canvas/PanelSettings");
+
+        settingsPanel.SetActive(false);
+        // UIController[9] = GameObject.Find("Canvas/PanelRespawn");
+        // UIController[10] = GameObject.Find("Canvas/PanelSettings");
+    }
+
     // Fungsi untuk mem-pause game dan menampilkan panel pengaturan
     public void OpenSettings()
     {

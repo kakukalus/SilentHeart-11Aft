@@ -8,6 +8,8 @@ public class MainCharacterHealth : MonoBehaviour
     private Animator baseCharacterAnimator;
     public Image MainCharacterHpBar; // Referensi ke UI Image untuk health bar
     public float currentHealth = 100f;  // Nilai hp saat ini
+
+    public RespawnManager RespawnManager;
     private void Start()
     {
         MainCharacterHpBar = GameObject.Find("Canvas/HealthBar/HealthBar Fill").GetComponent<Image>();
@@ -29,11 +31,13 @@ public class MainCharacterHealth : MonoBehaviour
 
     private void Update()
     {
-        if (currentHealth <= 0)
-        {
-            baseCharacterAnimator.SetBool("isAlive", false);
-            baseCharacterAnimator.SetBool("isDead", true);
-        }
+
+    }
+
+    public void MainCharacterDead()
+    {
+        baseCharacterAnimator.SetBool("isAlive", false);
+        baseCharacterAnimator.SetBool("isDead", true);
     }
 
     // Mengatur fillAmount berdasarkan nilai hp dalam rentang 0-100

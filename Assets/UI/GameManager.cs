@@ -26,13 +26,4 @@ public class GameManager : MonoBehaviour
 
     }
 
-    public void PlayerDied()
-    {
-
-        foreach (GameObject canvas in UIController)
-        {
-            canvas.gameObject.SetActive(false);
-        }
-
-    }
 }
