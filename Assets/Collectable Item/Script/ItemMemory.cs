@@ -6,7 +6,9 @@ public class ItemMemory : MonoBehaviour
 {
     public TextMeshProUGUI collectionText; // Referensi ke UI TextMeshPro untuk menampilkan jumlah item yang telah dikumpulkan.
     public string itemMemoryName; // Nama dari item memory ini, digunakan untuk identifikasi.
-
+    public string[] dialogOnPickup; // Kalimat-kalimat dialog yang akan muncul ketika item diambil
+    // public Sprite[] dialogSprites; // Array Sprite untuk gambar dialog
+    public DialogManager dialogManager; // Referensi ke DialogManager
     public PickButton pickButton; // Referensi ke tombol ambil yang terkait dengan item ini.
 
     private bool isPickedUp = false; // Status yang menandakan apakah item telah diambil.
@@ -42,7 +44,18 @@ public class ItemMemory : MonoBehaviour
             // Perbarui UI dan tampilkan log.
             UpdateCollectionText();
             Debug.Log($"Collected memory: {itemMemoryName}");
+                   // Cek jika ada dialog yang terkait dengan pengambilan item ini
+            if(dialogOnPickup.Length > 0 && dialogManager != null)
+            {
+                dialogManager.StartDialog(dialogOnPickup); // Memulai dialog yang terkait dengan item ini
+            }
+            else
+            {
+                Debug.LogWarning($"No dialog is set for {itemMemoryName} or DialogManager is not assigned.");
+            }
+
             gameObject.SetActive(false); // Nonaktifkan objek setelah dikumpulkan.
+        
         }
     }
 

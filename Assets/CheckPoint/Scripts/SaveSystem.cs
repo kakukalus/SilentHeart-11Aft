@@ -68,4 +68,21 @@ public static class SaveSystem
         // Menulis semua data yang dimodifikasi ke disk.
         PlayerPrefs.Save();
     }
+
+        public static void SaveAllDialogTriggers(DialogTrigger[] triggers)
+    {
+        foreach (var trigger in triggers)
+        {
+            PlayerPrefs.SetInt("DialogTrigger_" + trigger.triggerId, trigger.HasBeenTriggered ? 1 : 0);
+        }
+        PlayerPrefs.Save();
+    }
+
+    public static void LoadAllDialogTriggers(DialogTrigger[] triggers)
+    {
+        foreach (var trigger in triggers)
+        {
+            trigger.HasBeenTriggered = PlayerPrefs.GetInt("DialogTrigger_" + trigger.triggerId, 0) == 1;
+        }
+    }
 }

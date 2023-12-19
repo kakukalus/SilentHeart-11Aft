@@ -8,56 +8,59 @@ public class DialogManager : MonoBehaviour
 {
 
     public TextMeshProUGUI textDisplay;
-    public string[] sentences;
-    private int index;
     public float typingSpeed;
     public GameObject panelDialog;
+    public Button settingsButton;
     public GameObject continueButton;
-    public Button settingsButton; // Tambahkan ini untuk referensi button settings
+
+    private string[] sentences; // Ini akan diisi oleh DialogTrigger
+    private int index;
 
 
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        continueButton.SetActive(false);
-        textDisplay.gameObject.transform.parent.gameObject.SetActive(false);
-        StartCoroutine(Type());
-    }
-
-
-    // Update is called once per frame
     void Update()
     {
-        if(textDisplay.text == sentences[index])
+        // Tambahkan pengecekan untuk memastikan bahwa 'sentences' tidak null dan 'index' tidak melebihi panjang array
+        if(sentences != null && index < sentences.Length && textDisplay.text == sentences[index])
         {
             continueButton.SetActive(true);
         }
     }
 
 
-    public void StartDialog()
+
+    public void StartDialog(string[] sentencesToDisplay)
     {
+        sentences = sentencesToDisplay;
+         if(sentencesToDisplay == null || sentencesToDisplay.Length == 0)
+        {
+            Debug.LogError("Tidak ada kalimat yang diberikan untuk StartDialog");
+            return;
+        }
         Time.timeScale = 0; // Pause the game
-        settingsButton.interactable = false; // Nonaktifkan button settings
+        settingsButton.interactable = false;
         index = 0;
         textDisplay.text = "";
         panelDialog.SetActive(true);
         continueButton.SetActive(false);
-        StartCoroutine(Type()); // Langsung memanggil Type tanpa delay
+        StartCoroutine(Type());
     }
 
 
+    // IEnumerator StartTypingWithDelay()
+    // {
+    //     // Tidak perlu delay saat game sedang pause
+    //     StartCoroutine(Type());
+    // }
 
     IEnumerator Type()
     {
         foreach (char letter in sentences[index].ToCharArray())
         {
             textDisplay.text += letter;
-            yield return new WaitForSecondsRealtime(typingSpeed); // Gunakan WaitForSecondsRealtime agar berfungsi saat pause
+            yield return new WaitForSecondsRealtime(typingSpeed); // Pastikan ini diatur di inspector
         }
-
-        continueButton.SetActive(true);
+        continueButton.SetActive(true); // Aktifkan continue button setelah mengetik selesai
     }
 
 

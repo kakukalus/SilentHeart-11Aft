@@ -19,9 +19,26 @@ public class PanelController : MonoBehaviour
 
     public void NewGame()
     {
-        ResetGameData(); // Panggil metode untuk mengatur ulang data game
-        SceneManager.LoadScene("TestCharacterDimas"); // Memuat ulang scene
-        Time.timeScale = 1; // Melanjutkan waktu game
+        ResetGameData();
+        SceneManager.LoadScene("TestCharacterDimas");
+        SceneManager.sceneLoaded += OnSceneLoaded;
+        Time.timeScale = 1;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        if (scene.name == "TestCharacterDimas")
+        {
+            // Reset dialog triggers
+            DialogTrigger[] allDialogTriggers = FindObjectsOfType<DialogTrigger>();
+            foreach (var trigger in allDialogTriggers)
+            {
+                trigger.ResetTrigger();
+            }
+
+            // Remove the listener to prevent it from being called again on subsequent scene loads
+            SceneManager.sceneLoaded -= OnSceneLoaded;
+        }
     }
 
     private void ResetGameData()
@@ -39,6 +56,7 @@ public class PanelController : MonoBehaviour
         PlayerPrefs.DeleteKey("Item Memory 1");
         PlayerPrefs.DeleteKey("Item Memory 2");
         PlayerPrefs.DeleteKey("Item Memory 3");
+        
         
         // Tambahkan penghapusan kunci untuk inventori
         int numberOfInventorySlots = 2; // Ganti dengan jumlah sebenarnya dari slot inventori Anda
