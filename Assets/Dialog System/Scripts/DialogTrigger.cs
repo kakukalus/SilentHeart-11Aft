@@ -35,7 +35,7 @@ public class DialogTrigger : MonoBehaviour
         SaveTriggerStatus();
     }
 
-    private void SaveTriggerStatus()
+    protected void SaveTriggerStatus()
     {
         PlayerPrefs.SetInt("DialogTrigger_" + triggerId, hasBeenTriggered ? 1 : 0);
         PlayerPrefs.Save();

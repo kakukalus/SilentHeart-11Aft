@@ -17,12 +17,32 @@ public class SettingsManager : MonoBehaviour
     }
 
     // Fungsi untuk mem-pause game dan menampilkan panel pengaturan
-    public void OpenSettings()
+
+
+    public GameObject inSettingsPanel;
+
+
+    public void GoToInSettingsPanel()
     {
-        Time.timeScale = 0; // Menghentikan waktu game, yang efektif mem-pause semua operasi yang bergantung pada waktu
-        settingsPanel.SetActive(true); // Menampilkan panel pengaturan
+        settingsPanel.SetActive(false);
+        inSettingsPanel.SetActive(true);
+
     }
 
+    public void OpenSettings()
+    {
+        Debug.Log("OpenSettings called");
+        Time.timeScale = 0; // Menghentikan waktu game, yang efektif mem-pause semua operasi yang bergantung pada waktu
+        settingsPanel.SetActive(true); // Menampilkan panel pengaturan
+        inSettingsPanel.SetActive(false);
+    }
+
+    public void BackToPanelSettings()
+    {
+        Debug.Log("BackToPanelSettings called");
+        settingsPanel.SetActive(true);
+        inSettingsPanel.SetActive(false);
+    }
 
     // Fungsi untuk melanjutkan game, bisa dipanggil saat tombol play ditekan
     public void PlayGame()
