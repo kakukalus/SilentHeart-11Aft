@@ -14,6 +14,10 @@ public class MainCharacterHealth : MonoBehaviour
     {
         MainCharacterHpBar = GameObject.Find("Canvas/HealthBar/HealthBar Fill").GetComponent<Image>();
         baseCharacterAnimator = GetComponentInChildren<Animator>();
+
+        GameObject respawnManagerGameobject = GameObject.Find("GameManager");
+        RespawnManager = respawnManagerGameobject.GetComponent<RespawnManager>();
+
         // if (SceneManager.GetActiveScene().buildIndex == SaveSystem.LoadCurrentLevel())
         // {
         //     // Jika scene saat ini sama dengan level yang disimpan, muat posisi dan kesehatan dari save data.
@@ -38,6 +42,7 @@ public class MainCharacterHealth : MonoBehaviour
     {
         baseCharacterAnimator.SetBool("isAlive", false);
         baseCharacterAnimator.SetBool("isDead", true);
+        RespawnManager.ShowRespawnPanel();
     }
 
     // Mengatur fillAmount berdasarkan nilai hp dalam rentang 0-100

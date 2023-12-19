@@ -10,6 +10,7 @@ public class JumpscareController : MonoBehaviour
     public GameObject[] UIController;
     public List<RectTransform> currentRectTransforms = new List<RectTransform>();
     public List<Vector3> originalPositions = new List<Vector3>();
+    public List<RectTransform> originalRectTransforms = new List<RectTransform>();
     private RectTransform UiHidePlace;
     public GameObject UIPocongJumscare;
     public GameObject UIKuntilanakJumpscare;
@@ -25,7 +26,7 @@ public class JumpscareController : MonoBehaviour
         mainCharacterHealth = player.GetComponent<MainCharacterHealth>();
         baseCharacterAnimator = player.GetComponentInChildren<Animator>();
 
-        UIController = new GameObject[8];
+        UIController = new GameObject[9];
 
         UIController[0] = GameObject.Find("Canvas/SliderMovement");
         UIController[1] = GameObject.Find("Canvas/ButtonItemPickItem");
@@ -35,11 +36,9 @@ public class JumpscareController : MonoBehaviour
         UIController[5] = GameObject.Find("Canvas/SanityBar");
         UIController[6] = GameObject.Find("Canvas/TotalMemory");
         UIController[7] = GameObject.Find("Canvas/ButtonSettings");
-
-        // UIController[8] = GameObject.Find("Canvas/ButtonTurnBack");
+        UIController[8] = GameObject.Find("Canvas/ButtonTurnBack");
         // UIController[9] = GameObject.Find("Canvas/PanelRespawn");
         // UIController[10] = GameObject.Find("Canvas/PanelSettings");
-
 
 
         speedSlider = UIController[1].GetComponent<Slider>();
@@ -56,10 +55,9 @@ public class JumpscareController : MonoBehaviour
             }
         }
 
-
+        originalRectTransforms = new List<RectTransform>(currentRectTransforms);
         UIPocongJumscare = GameObject.Find("Canvas/pocongJumpscare");
         UIPocongJumscare.SetActive(false);
-
         // currentRectTransforms[8].position = UiHidePlace.position;
         // currentRectTransforms[9].position = UiHidePlace.position;
         // currentRectTransforms[10].position = UiHidePlace.position;
