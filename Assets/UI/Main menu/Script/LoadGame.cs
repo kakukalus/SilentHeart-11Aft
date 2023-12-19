@@ -20,5 +20,16 @@ public class MainMenu : MonoBehaviour
         {
             playerInventory.LoadInventory();
         }
+<<<<<<< HEAD
     }
+=======
+
+         // Load dialog triggers status
+        DialogTrigger[] allDialogTriggers = FindObjectsOfType<DialogTrigger>();
+        SaveSystem.LoadAllDialogTriggers(allDialogTriggers);
+        
+    }
+
+    
+>>>>>>> 5cb07d58ed10ca197af2fd8ed82831edd9d6d5c4
 }

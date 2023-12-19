@@ -45,7 +45,6 @@ public class MainCharacterHealth : MonoBehaviour
         RespawnManager.ShowRespawnPanel();
     }
 
-    // Mengatur fillAmount berdasarkan nilai hp dalam rentang 0-100
     public void SetMainCharacterBar(float hp)
     {
         // Mengatur UI health bar sesuai dengan nilai kesehatan saat ini.

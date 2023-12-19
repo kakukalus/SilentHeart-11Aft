@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class PanelController : MonoBehaviour
 {
+<<<<<<< HEAD
     public GameObject menuPanel; // Seret panel menu Anda ke dalam slot ini di inspector Unity
     public GameObject memoryPanelLevel1; // Seret panel level 1 ke dalam slot ini di inspector Unity
     public GameObject memoryPanelLevel2; // Seret panel level 2 ke dalam slot ini di inspector Unity
@@ -13,6 +14,14 @@ public class PanelController : MonoBehaviour
     public GameObject settingSoundBtn; // Seret panel setting ke dalam slot ini di inspector Unity
     public GameObject settingTextBtn; // Seret panel setting ke dalam slot ini di inspector Unity
     public GameObject popUpQuit; // Seret panel setting ke dalam slot ini di inspector Unity
+=======
+    public GameObject settingsCanvas; // Referensi ke panel pengaturan Anda
+    public GameObject canvasMenu; // Referensi ke panel pengaturan Anda
+    public GameObject menuPanel; // Seret panel menu Anda ke dalam slot ini di inspector Unity
+    public GameObject PanelMemory; // Seret panel menu Anda ke dalam slot ini di inspector Unity
+    public GameObject popUpQuit; // Seret panel setting ke dalam slot ini di inspector Unity
+    public GameObject panelSetting; // Seret panel setting ke dalam slot ini di inspector Unity
+>>>>>>> 5cb07d58ed10ca197af2fd8ed82831edd9d6d5c4
 
     void Start()
     {
@@ -21,9 +30,32 @@ public class PanelController : MonoBehaviour
 
     public void NewGame()
     {
+<<<<<<< HEAD
         ResetGameData(); // Panggil metode untuk mengatur ulang data game
         SceneManager.LoadScene("MapLevel1"); // Memuat ulang scene
         Time.timeScale = 1; // Melanjutkan waktu game
+=======
+        ResetGameData();
+        SceneManager.LoadScene("TestCharacterDimas");
+        SceneManager.sceneLoaded += OnSceneLoaded;
+        Time.timeScale = 1;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        if (scene.name == "TestCharacterDimas")
+        {
+            // Reset dialog triggers
+            DialogTrigger[] allDialogTriggers = FindObjectsOfType<DialogTrigger>();
+            foreach (var trigger in allDialogTriggers)
+            {
+                trigger.ResetTrigger();
+            }
+
+            // Remove the listener to prevent it from being called again on subsequent scene loads
+            SceneManager.sceneLoaded -= OnSceneLoaded;
+        }
+>>>>>>> 5cb07d58ed10ca197af2fd8ed82831edd9d6d5c4
     }
 
     private void ResetGameData()
@@ -41,7 +73,12 @@ public class PanelController : MonoBehaviour
         PlayerPrefs.DeleteKey("Item Memory 1");
         PlayerPrefs.DeleteKey("Item Memory 2");
         PlayerPrefs.DeleteKey("Item Memory 3");
+<<<<<<< HEAD
 
+=======
+        
+        
+>>>>>>> 5cb07d58ed10ca197af2fd8ed82831edd9d6d5c4
         // Tambahkan penghapusan kunci untuk inventori
         int numberOfInventorySlots = 2; // Ganti dengan jumlah sebenarnya dari slot inventori Anda
         for (int i = 0; i < numberOfInventorySlots; i++)
@@ -52,6 +89,7 @@ public class PanelController : MonoBehaviour
         PlayerPrefs.Save(); // Jangan lupa untuk menyimpan perubahan setelah menghapus
     }
 
+<<<<<<< HEAD
 
     // Fungsi untuk menampilkan panel memori
     public void ShowMemoryPanel()
@@ -138,6 +176,51 @@ public class PanelController : MonoBehaviour
         menuPanel.SetActive(true); // Tampilkan panel menu
         settingTextBtn.SetActive(false); // Sembunyikan panel setting
     }
+=======
+    public void OpenFragment()
+    {
+        canvasMenu.SetActive(false); // Sembunyikan panel menu
+        PanelMemory.SetActive(true); // Menampilkan panel setting
+        settingsCanvas.SetActive(true); // Sembunyikan panel menu
+    }
+
+    public void BackToMainMenu()
+    {
+        canvasMenu.SetActive(true); // Tampilkan panel menu
+        menuPanel.SetActive(true); // Sembunyikan panel setting
+        PanelMemory.SetActive(false); // Sembunyikan panel setting
+        settingsCanvas.SetActive(false); // Sembunyikan panel menu
+        panelSetting.SetActive(false); // Sembunyikan panel menu
+    }
+
+    public void OpenSettings()
+    {
+        settingsCanvas.SetActive(true); // Menampilkan panel pengaturan
+        menuPanel.SetActive(false); // Sembunyikan panel menu
+        canvasMenu.SetActive(false); // Sembunyikan panel menu
+        panelSetting.SetActive(true); // Sembunyikan panel menu
+    }
+
+
+    // public void OpenSettings()
+    // {
+    //     settingsCanvas.SetActive(true); // Menampilkan panel pengaturan
+    //     menuPanel.SetActive(false); // Sembunyikan panel menu
+    // }
+
+    // public void CloseSettings()
+    // {
+    //     canvasMenu.SetActive(true); // Menampilkan panel pengaturan
+    //     settingsCanvas.SetActive(false); // Sembunyikan panel menu
+    //     menuPanel.SetActive(true); // Sembunyikan panel menu
+    // }
+
+    // public void ShowMemory()
+    // {
+    //     PanelMemory.SetActive(true); // Sembunyikan panel menu
+    //     canvasMenu.SetActive(false); // Sembunyikan panel menu
+    // }
+>>>>>>> 5cb07d58ed10ca197af2fd8ed82831edd9d6d5c4
 
     public void ShowPopUpQuit()
     {
